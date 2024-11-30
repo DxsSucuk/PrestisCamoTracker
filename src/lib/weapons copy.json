@@ -1,0 +1,595 @@
+{
+  "category": [
+    "assault",
+    "smg",
+    "shotgun",
+    "lmg",
+    "marksman",
+    "sniper",
+    "pistol",
+    "launcher",
+    "special",
+    "melee"
+  ],
+  "category_weapon_map": [
+    {
+      "category": "assault",
+      "weapons": [
+        "xm4",
+        "ak74",
+        "ames",
+        "gpr",
+        "model_l",
+        "goblin",
+        "as_val",
+        "krig_c"
+      ]
+    },
+    {
+      "category": "smg",
+      "weapons": [
+        "c9",
+        "ksv",
+        "tanto",
+        "pp",
+        "jackal",
+        "kompakt",
+        "saug"
+      ]
+    },
+    {
+      "category": "shotgun",
+      "weapons": [
+        "marine",
+        "asg"
+      ]
+    },
+    {
+      "category": "lmg",
+      "weapons": [
+        "pu21",
+        "gpmg",
+        "xmg"
+      ]
+    },
+    {
+      "category": "marksman",
+      "weapons": [
+        "swat",
+        "tsarkov",
+        "aek_973",
+        "dm_10"
+      ]
+    },
+    {
+      "category": "sniper",
+      "weapons": [
+        "l3a1",
+        "svd",
+        "lr_7"
+      ]
+    },
+    {
+      "category": "pistol",
+      "weapons": [
+        "9mm_pm",
+        "grek",
+        "gs45",
+        "stryder"
+      ]
+    },
+    {
+      "category": "launcher",
+      "weapons": [
+        "sigma",
+        "he"
+      ]
+    },
+    {
+      "category": "special",
+      "weapons": [
+        "sirin"
+      ]
+    },
+    {
+      "category": "melee",
+      "weapons": [
+        "knife",
+        "bat",
+        "drill"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "id": "xm4",
+      "name": "XM4",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "ak74",
+      "name": "AK-74",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "ames",
+      "name": "AMES 85",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "gpr",
+      "name": "GPR 91",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "model_l",
+      "name": "Model L",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin MK2",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "as_val",
+      "name": "AS VAL",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "krig_c",
+      "name": "Krig C",
+      "image": "https://ree6.de",
+      "category": "assault",
+      "camos": {}
+    },
+    {
+      "id": "c9",
+      "name": "C9",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "ksv",
+      "name": "KSV",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "tanto",
+      "name": "Tanto .22",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "pp",
+      "name": "PP-919",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "jackal",
+      "name": "Jackal PDW",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "kompakt",
+      "name": "Kompakt 92",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "saug",
+      "name": "Saug",
+      "image": "https://ree6.de",
+      "category": "smg",
+      "camos": {}
+    },
+    {
+      "id": "marine",
+      "name": "Marine SP",
+      "image": "https://ree6.de",
+      "category": "shotgun",
+      "camos": {}
+    },
+    {
+      "id": "asg",
+      "name": "ASG-89",
+      "image": "https://ree6.de",
+      "category": "shotgun",
+      "camos": {}
+    },
+    {
+      "id": "pu21",
+      "name": "PU-21",
+      "image": "https://ree6.de",
+      "category": "lmg",
+      "camos": {}
+    },
+    {
+      "id": "gpmg",
+      "name": "GPMG-7",
+      "image": "https://ree6.de",
+      "category": "lmg",
+      "camos": {}
+    },
+    {
+      "id": "xmg",
+      "name": "XMG",
+      "image": "https://ree6.de",
+      "category": "lmg",
+      "camos": {}
+    },
+    {
+      "id": "swat",
+      "name": "SWAT 5.56",
+      "image": "https://ree6.de",
+      "category": "marksman",
+      "camos": {}
+    },
+    {
+      "id": "tsarkov",
+      "name": "Tsarkov 7.62",
+      "image": "https://ree6.de",
+      "category": "marksman",
+      "camos": {}
+    },
+    {
+      "id": "aek_973",
+      "name": "AEK-973",
+      "image": "https://ree6.de",
+      "category": "marksman",
+      "camos": {}
+    },
+    {
+      "id": "dm_10",
+      "name": "DM-10",
+      "image": "https://ree6.de",
+      "category": "marksman",
+      "camos": {}
+    },
+    {
+      "id": "l3a1",
+      "name": "L3A1 FROSTLINE",
+      "image": "https://ree6.de",
+      "category": "sniper",
+      "camos": {}
+    },
+    {
+      "id": "svd",
+      "name": "SVD",
+      "image": "https://ree6.de",
+      "category": "sniper",
+      "camos": {}
+    },
+    {
+      "id": "lr_7",
+      "name": "LR 7.62",
+      "image": "https://ree6.de",
+      "category": "sniper",
+      "camos": {}
+    },
+    {
+      "id": "9mm_pm",
+      "name": "9mm PM",
+      "image": "https://ree6.de",
+      "category": "pistol",
+      "camos": {}
+    },
+    {
+      "id": "grek",
+      "name": "Grekhova",
+      "image": "https://ree6.de",
+      "category": "pistol",
+      "camos": {}
+    },
+    {
+      "id": "gs45",
+      "name": "GS45",
+      "notice": {
+        "zombies": "Criticals are not possible when Pack-A-Punched."
+      },
+      "image": "https://ree6.de",
+      "category": "pistol",
+      "camos": {}
+    },
+    {
+      "id": "stryder",
+      "name": "Stryder .22",
+      "image": "https://ree6.de",
+      "category": "pistol",
+      "camos": {}
+    },
+    {
+      "id": "sigma",
+      "name": "CIGMA 2B",
+      "image": "https://ree6.de",
+      "category": "launcher",
+      "camos": {}
+    },
+    {
+      "id": "he",
+      "name": "HE-1",
+      "image": "https://ree6.de",
+      "category": "launcher",
+      "camos": {}
+    },
+    {
+      "id": "sirin",
+      "name": "Sirin 9mm",
+      "image": "https://ree6.de",
+      "category": "special",
+      "camos": {}
+    },
+    {
+      "id": "knife",
+      "name": "Knife",
+      "image": "https://ree6.de",
+      "category": "melee",
+      "camos": {}
+    },
+    {
+      "id": "bat",
+      "name": "Baseball Bat",
+      "image": "https://ree6.de",
+      "category": "melee",
+      "camos": {}
+    },
+    {
+      "id": "drill",
+      "name": "Power Drill",
+      "image": "https://ree6.de",
+      "category": "melee",
+      "camos": {}
+    }
+  ],
+  "global_camo": {
+    "zombies": [
+      {
+        "id": "slate",
+        "display": "Slate",
+        "image": "https://ree6.de",
+        "amount": 100,
+        "description": "Get 100 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "desert",
+        "require": "slate",
+        "display": "Desert",
+        "image": "https://ree6.de",
+        "amount": 200,
+        "description": "Get 200 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "evergreen",
+        "require": "desert",
+        "display": "Evergreen",
+        "image": "https://ree6.de",
+        "amount": 300,
+        "description": "Get 300 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "rugged",
+        "require": "evergreen",
+        "display": "Rugged",
+        "image": "https://ree6.de",
+        "amount": 400,
+        "description": "Get 400 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "grim",
+        "require": "rugged",
+        "display": "Grim",
+        "image": "https://ree6.de",
+        "amount": 600,
+        "description": "Get 600 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "stripe",
+        "require": "grim",
+        "display": "Stripe",
+        "image": "https://ree6.de",
+        "amount": 800,
+        "description": "Get 800 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "oceanic",
+        "require": "stripe",
+        "display": "oceanic",
+        "image": "https://ree6.de",
+        "amount": 1000,
+        "description": "Get 1000 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "whiteout",
+        "require": "oceanic",
+        "display": "Whiteout",
+        "image": "https://ree6.de",
+        "amount": 1500,
+        "description": "Get 1500 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "purple_tiger",
+        "require": "whiteout",
+        "display": "Purple Tiger",
+        "image": "https://ree6.de",
+        "amount": 2000,
+        "description": "Get 2000 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "mystic_gold",
+        "require": "specials",
+        "display": "Mystic Gold",
+        "image": "https://ree6.de",
+        "amount": 15,
+        "description": "Get 10 Kills Rapidly 15 Times with the %weapon%"
+      },
+      {
+        "id": "opal",
+        "require": "category_mystic_gold",
+        "display": "Opal",
+        "image": "https://ree6.de",
+        "amount": 30,
+        "description": "Get 30 Special Zombie Kills with the %weapon%"
+      },
+      {
+        "id": "afterlife",
+        "require": "all_opal",
+        "display": "Afterlife",
+        "image": "https://ree6.de",
+        "amount": 10,
+        "description": "Get 20 Or More Consecutive Kills 10 Times Without Taking Damage with the %weapon%"
+      },
+      {
+        "id": "nebula",
+        "require": "all_afterlife",
+        "display": "Nebula",
+        "image": "https://ree6.de",
+        "amount": 10,
+        "description": "Get 10 Elite Zombie Kills with the %weapon%"
+      }
+    ],
+    "multiplayer": [
+      {
+        "id": "granite",
+        "display": "Granite",
+        "image": "https://ree6.de",
+        "amount": 5,
+        "description": "Get 5 headshots with the %weapon%"
+      },
+      {
+        "id": "woodland",
+        "require": "granite",
+        "display": "Woodland",
+        "image": "https://ree6.de",
+        "amount": 10,
+        "description": "Get 10 headshots with the %weapon%"
+      },
+      {
+        "id": "savanna",
+        "require": "woodland",
+        "display": "Savanna",
+        "image": "https://ree6.de",
+        "amount": 15,
+        "description": "Get 15 headshots with the %weapon%"
+      },
+      {
+        "id": "splinter",
+        "require": "savanna",
+        "display": "Splinter",
+        "image": "https://ree6.de",
+        "amount": 20,
+        "description": "Get 20 headshots with the %weapon%"
+      },
+      {
+        "id": "moss",
+        "require": "splinter",
+        "display": "Moss",
+        "image": "https://ree6.de",
+        "amount": 30,
+        "description": "Get 30 headshots with the %weapon%"
+      },
+      {
+        "id": "saboteur",
+        "require": "moss",
+        "display": "Saboteur",
+        "image": "https://ree6.de",
+        "amount": 40,
+        "description": "Get 40 headshots with the %weapon%"
+      },
+      {
+        "id": "digital",
+        "require": "saboteur",
+        "display": "Digital",
+        "image": "https://ree6.de",
+        "amount": 50,
+        "description": "Get 50 headshots with the %weapon%"
+      },
+      {
+        "id": "tide",
+        "require": "digital",
+        "display": "Tide",
+        "image": "https://ree6.de",
+        "amount": 75,
+        "description": "Get 75 headshots with the %weapon%"
+      },
+      {
+        "id": "red_tiger",
+        "require": "tide",
+        "display": "Red Tiger",
+        "image": "https://ree6.de",
+        "amount": 100,
+        "description": "Get 100 headshots with the %weapon%"
+      },
+      {
+        "id": "gold",
+        "require": "specials",
+        "display": "Gold",
+        "image": "https://ree6.de",
+        "amount": 10,
+        "description": "Get 10 double kills with the %weapon%"
+      },
+      {
+        "id": "diamond",
+        "require": "category_gold",
+        "display": "Diamond",
+        "image": "https://ree6.de",
+        "amount": 10,
+        "description": "Get 3 kills without dying 10 times with the %weapon%"
+      },
+      {
+        "id": "darkspine",
+        "require": "all_diamond",
+        "display": "Dark Spine",
+        "image": "https://ree6.de",
+        "amount": 3,
+        "description": "Get 3 triple kills with the %weapon%"
+      },
+      {
+        "id": "dark_matter",
+        "require": "all_dakrspine",
+        "display": "Dark Matter",
+        "image": "https://ree6.de",
+        "amount": 3,
+        "description": "Get 5 kills without dying 3 times with the %weapon%"
+      }
+    ],
+    "warzone": [],
+    "overwrite": {
+      "category_all": {
+        "assault": 7,
+        "smg": 6,
+        "shotgun": 2,
+        "lmg": 3,
+        "marksman": 4,
+        "sniper": 3,
+        "pistol": 4,
+        "launcher": 2,
+        "special": 1,
+        "melee": 2
+      },
+      "all": 33
+    }
+  }
+}

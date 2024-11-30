@@ -1,0 +1,950 @@
+{
+  "category": [
+    {
+      "id": "assault",
+      "display": "Assault Rifles"
+    },
+    {
+      "id": "smg",
+      "display": "SMGs"
+    },
+    {
+      "id": "shotgun",
+      "display": "Shotguns"
+    },
+    {
+      "id": "lmg",
+      "display": "LMGs"
+    },
+    {
+      "id": "marksman",
+      "display": "Marksman Rifles"
+    },
+    {
+      "id": "sniper",
+      "display": "Sniper Rifles"
+    },
+    {
+      "id": "pistol",
+      "display": "Pistols"
+    },
+    {
+      "id": "launcher",
+      "display": "Launchers"
+    },
+    {
+      "id": "special",
+      "display": "Specials"
+    },
+    {
+      "id": "melee",
+      "display": "Melees"
+    }
+  ],
+  "category_weapon_map": [
+    {
+      "category": "assault",
+      "weapons": [
+        "xm4",
+        "ak74",
+        "ames",
+        "gpr",
+        "model_l",
+        "goblin",
+        "as_val",
+        "krig_c"
+      ]
+    },
+    {
+      "category": "smg",
+      "weapons": [
+        "c9",
+        "ksv",
+        "tanto",
+        "pp",
+        "jackal",
+        "kompakt",
+        "saug"
+      ]
+    },
+    {
+      "category": "shotgun",
+      "weapons": [
+        "marine",
+        "asg"
+      ]
+    },
+    {
+      "category": "lmg",
+      "weapons": [
+        "pu21",
+        "gpmg",
+        "xmg"
+      ]
+    },
+    {
+      "category": "marksman",
+      "weapons": [
+        "swat",
+        "tsarkov",
+        "aek_973",
+        "dm_10"
+      ]
+    },
+    {
+      "category": "sniper",
+      "weapons": [
+        "l3a1",
+        "svd",
+        "lr_7"
+      ]
+    },
+    {
+      "category": "pistol",
+      "weapons": [
+        "9mm_pm",
+        "grek",
+        "gs45",
+        "stryder"
+      ]
+    },
+    {
+      "category": "launcher",
+      "weapons": [
+        "sigma",
+        "he"
+      ]
+    },
+    {
+      "category": "special",
+      "weapons": [
+        "sirin"
+      ]
+    },
+    {
+      "category": "melee",
+      "weapons": [
+        "knife",
+        "bat",
+        "drill"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "id": "xm4",
+      "name": "XM4",
+      "image": "http://localhost:5173/images/weapons/assault/xm4.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "muddled",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Muddled",
+          "image": "http://localhost:5173/images/camos/special/mp/muddled.webp",
+          "amount": 30,
+          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "machina",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Machina",
+          "image": "http://localhost:5173/images/camos/special/mp/machina.webp",
+          "amount": 30,
+          "description": "Get 1 kill without taking any damage 30 times with the %weapon%"
+        },
+        {
+          "id": "liquify",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Liquify",
+          "image": "http://localhost:5173/images/camos/special/zm/liquify.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Napalm Burst equipped with the %weapon%"
+        },
+        {
+          "id": "mainframe",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Mainframe",
+          "image": "http://localhost:5173/images/camos/special/zm/mainframe.webp",
+          "amount": 30,
+          "description": "Get 30 Vermin Eliminations with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "ak74",
+      "name": "AK-74",
+      "image": "http://localhost:5173/images/weapons/assault/ak_74.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "whitecap",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Whitecap",
+          "image": "http://localhost:5173/images/camos/special/mp/whitecap.webp",
+          "amount": 50,
+          "description": "Get 50 while strategist combat specialty is active with the %weapon%"
+        },
+        {
+          "id": "vengeance",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Vengeance",
+          "image": "http://localhost:5173/images/camos/special/mp/vengeance.webp",
+          "amount": 20,
+          "description": "Get 20 kills with underbarrel launcher with the %weapon%"
+        },
+        {
+          "id": "chlorine",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Chlorine",
+          "image": "http://localhost:5173/images/camos/special/zm/chlorine.webp",
+          "amount": 15,
+          "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "haunted",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Haunted",
+          "image": "http://localhost:5173/images/camos/special/zm/haunted.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        }
+      ]
+    },
+    {
+      "id": "ames",
+      "name": "AMES 85",
+      "image": "http://localhost:5173/images/weapons/assault/ames_85.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "heatstroke",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Heatstroke",
+          "image": "http://localhost:5173/images/camos/special/mp/heatstroke.webp",
+          "amount": 30,
+          "description": "Get 1 kill without taking any damage 30 times with the %weapon%"
+        },
+        {
+          "id": "burial",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Burial",
+          "image": "http://localhost:5173/images/camos/special/mp/burial.webp",
+          "amount": 10,
+          "description": "Get 2 kills without reloading 10 times with the %weapon%"
+        },
+        {
+          "id": "hyperion",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Hyperion",
+          "image": "http://localhost:5173/images/camos/special/zm/hyperion.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% at Rare Rarity or higher"
+        },
+        {
+          "id": "graveyard",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Graveyard",
+          "image": "http://localhost:5173/images/camos/special/zm/graveyard.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Brain Rot equipped with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "gpr",
+      "name": "GPR 91",
+      "image": "http://localhost:5173/images/weapons/assault/gpr_91.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "ambush",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Ambush",
+          "image": "http://localhost:5173/images/camos/special/mp/ambush.webp",
+          "amount": 30,
+          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "cacti_cathode",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Cati Cathode",
+          "image": "http://localhost:5173/images/camos/special/mp/cacti-cathode.webp",
+          "amount": 50,
+          "description": "Get 50 kills while moving with the %weapon%"
+        },
+        {
+          "id": "night_stalker",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Night Stalker",
+          "image": "http://localhost:5173/images/camos/special/zm/night-stalker.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Cryo Freeze equipped with the %weapon%"
+        },
+        {
+          "id": "frostblossom",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Frostblossom",
+          "image": "http://localhost:5173/images/camos/special/zm/frostblossom.webp",
+          "amount": 100,
+          "description": "Kills 100 enemies affected by your Tactical Equipment with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "model_l",
+      "name": "Model L",
+      "image": "http://localhost:5173/images/weapons/assault/model_l.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "cherry_blossom",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Cherry Blossom",
+          "image": "http://localhost:5173/images/camos/special/mp/cherry-blossom.webp",
+          "amount": 50,
+          "description": "Get 50 kills while the enforcer combat specialty is active with the %weapon%"
+        },
+        {
+          "id": "cedar",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Cedar",
+          "image": "http://localhost:5173/images/camos/special/mp/cedar.webp",
+          "amount": 50,
+          "description": "Get 50 kills while using a suppressor with the %weapon%"
+        },
+        {
+          "id": "ghost_blossom",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Ghost Blossom",
+          "image": "http://localhost:5173/images/camos/special/zm/ghost-blossom.webp",
+          "amount": 75,
+          "description": "Get 75 Mangler Eliminations with the %weapon%"
+        },
+        {
+          "id": "walnut",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Walnut",
+          "image": "http://localhost:5173/images/camos/special/zm/walnut.webp",
+          "amount": 15,
+          "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin MK2",
+      "image": "http://localhost:5173/images/weapons/assault/goblin_mk2.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "astral_cry",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Astral Cry",
+          "image": "http://localhost:5173/images/camos/special/mp/astral-cry.webp",
+          "amount": 30,
+          "description": "Get 1 kill without taking any damage 30 times with the %weapon%"
+        },
+        {
+          "id": "hammerhead",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Hammerhead",
+          "image": "http://localhost:5173/images/camos/special/mp/hammerhead.webp",
+          "amount": 20,
+          "description": "Get 20 kills with an underbarrel launcher attached with the %weapon%"
+        },
+        {
+          "id": "astral_pride",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Astral Pride",
+          "image": "http://localhost:5173/images/camos/special/zm/astral-pride.webp",
+          "amount": 10,
+          "description": "Get 10 Mangler Eliminations with the %weapon%"
+        },
+        {
+          "id": "blood_scent",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Blood Scent",
+          "image": "http://localhost:5173/images/camos/special/zm/blood-scent.webp",
+          "amount": 15,
+          "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "as_val",
+      "name": "AS VAL",
+      "image": "http://localhost:5173/images/weapons/assault/as_val.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "crimson_steppes",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Crimson Steppes",
+          "image": "http://localhost:5173/images/camos/special/mp/crimson-steppes.webp",
+          "amount": 50,
+          "description": "Get 50 kills while the recon combat specialty is active with the %weapon%"
+        },
+        {
+          "id": "elk",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Elk",
+          "image": "http://localhost:5173/images/camos/special/mp/elk.webp",
+          "amount": 30,
+          "description": "Get 30 hipfire kills with the %weapon%"
+        },
+        {
+          "id": "malachite_steppes",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Malachite Steppes",
+          "image": "http://localhost:5173/images/camos/special/zm/malachite-steppes.webp",
+          "amount": 100,
+          "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "mountain_goat",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Mountain Goat",
+          "image": "http://localhost:5173/images/camos/special/zm/mountain-goat.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "krig_c",
+      "name": "Krig C",
+      "image": "http://localhost:5173/images/weapons/assault/krig_c.jpg",
+      "category": "assault",
+      "camos": [
+        {
+          "id": "monochrome",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Monochrome",
+          "image": "http://localhost:5173/images/camos/special/mp/monochrome.webp",
+          "amount": 30,
+          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "dreadshade",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Dreadshade",
+          "image": "http://localhost:5173/images/camos/special/mp/dreadshade.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "sunny_splash",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Sunny Splash",
+          "image": "http://localhost:5173/images/camos/special/zm/sunny-splash.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Cryo Freeze equipped with the %weapon%"
+        },
+        {
+          "id": "crowsbane",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Crowsbane",
+          "image": "http://localhost:5173/images/camos/special/zm/crowsbane.webp",
+          "amount": 100,
+          "description": "Kills 100 enemies affected by your Tactical Equipment with the %weapon%"
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "name": "C9",
+      "image": "http://localhost:5173/images/weapons/smg/c9.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "ksv",
+      "name": "KSV",
+      "image": "http://localhost:5173/images/weapons/smg/ksv.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "tanto",
+      "name": "Tanto .22",
+      "image": "http://localhost:5173/images/weapons/smg/tanto.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "pp",
+      "name": "PP-919",
+      "image": "http://localhost:5173/images/weapons/smg/pp.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "jackal",
+      "name": "Jackal PDW",
+      "image": "http://localhost:5173/images/weapons/smg/jackal.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "kompakt",
+      "name": "Kompakt 92",
+      "image": "http://localhost:5173/images/weapons/smg/kompakt.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "saug",
+      "name": "Saug",
+      "image": "http://localhost:5173/images/weapons/smg/saug.jpg",
+      "category": "smg",
+      "camos": []
+    },
+    {
+      "id": "marine",
+      "name": "Marine SP",
+      "image": "http://localhost:5173/images/weapons/shotgun/marine.jpg",
+      "category": "shotgun",
+      "camos": []
+    },
+    {
+      "id": "asg",
+      "name": "ASG-89",
+      "image": "http://localhost:5173/images/weapons/shotgun/asg.jpg",
+      "category": "shotgun",
+      "camos": []
+    },
+    {
+      "id": "pu21",
+      "name": "PU-21",
+      "image": "http://localhost:5173/images/weapons/lmg/pu21.jpg",
+      "category": "lmg",
+      "camos": []
+    },
+    {
+      "id": "gpmg",
+      "name": "GPMG-7",
+      "image": "http://localhost:5173/images/weapons/lmg/gpmg.jpg",
+      "category": "lmg",
+      "camos": []
+    },
+    {
+      "id": "xmg",
+      "name": "XMG",
+      "image": "http://localhost:5173/images/weapons/lmg/xmg.jpg",
+      "category": "lmg",
+      "camos": []
+    },
+    {
+      "id": "swat",
+      "name": "SWAT 5.56",
+      "image": "http://localhost:5173/images/weapons/marksman/swat.jpg",
+      "category": "marksman",
+      "camos": []
+    },
+    {
+      "id": "tsarkov",
+      "name": "Tsarkov 7.62",
+      "image": "http://localhost:5173/images/weapons/marksman/tsarkov.jpg",
+      "category": "marksman",
+      "camos": []
+    },
+    {
+      "id": "aek_973",
+      "name": "AEK-973",
+      "image": "http://localhost:5173/images/weapons/marksman/aek_973.jpg",
+      "category": "marksman",
+      "camos": []
+    },
+    {
+      "id": "dm_10",
+      "name": "DM-10",
+      "image": "http://localhost:5173/images/weapons/marksman/dm_10.jpg",
+      "category": "marksman",
+      "camos": []
+    },
+    {
+      "id": "l3a1",
+      "name": "L3A1 FROSTLINE",
+      "image": "http://localhost:5173/images/weapons/sniper/l3a1.jpg",
+      "category": "sniper",
+      "camos": []
+    },
+    {
+      "id": "svd",
+      "name": "SVD",
+      "image": "http://localhost:5173/images/weapons/sniper/svd.jpg",
+      "category": "sniper",
+      "camos": []
+    },
+    {
+      "id": "lr_7",
+      "name": "LR 7.62",
+      "notice": {
+        "zombies": "Criticals are not possible when Pack-A-Punched."
+      },
+      "image": "http://localhost:5173/images/weapons/sniper/lr_7.jpg",
+      "category": "sniper",
+      "camos": []
+    },
+    {
+      "id": "9mm_pm",
+      "name": "9mm PM",
+      "image": "http://localhost:5173/images/weapons/pistol/9mm_pm.jpg",
+      "category": "pistol",
+      "camos": []
+    },
+    {
+      "id": "grek",
+      "name": "Grekhova",
+      "image": "http://localhost:5173/images/weapons/pistol/grek.jpg",
+      "category": "pistol",
+      "camos": []
+    },
+    {
+      "id": "gs45",
+      "name": "GS45",
+      "notice": {
+        "zombies": "Criticals are not possible when Pack-A-Punched."
+      },
+      "image": "http://localhost:5173/images/weapons/pistol/gs45.jpg",
+      "category": "pistol",
+      "camos": []
+    },
+    {
+      "id": "stryder",
+      "name": "Stryder .22",
+      "image": "http://localhost:5173/images/weapons/pistol/stryder.jpg",
+      "category": "pistol",
+      "camos": []
+    },
+    {
+      "id": "sigma",
+      "name": "CIGMA 2B",
+      "image": "http://localhost:5173/images/weapons/launcher/sigma.jpg",
+      "category": "launcher",
+      "camos": []
+    },
+    {
+      "id": "he",
+      "name": "HE-1",
+      "image": "http://localhost:5173/images/weapons/launcher/he.jpg",
+      "category": "launcher",
+      "camos": []
+    },
+    {
+      "id": "sirin",
+      "name": "Sirin 9mm",
+      "image": "http://localhost:5173/images/weapons/special/sirin.jpg",
+      "category": "special",
+      "camos": []
+    },
+    {
+      "id": "knife",
+      "name": "Knife",
+      "image": "http://localhost:5173/images/weapons/melee/knife.jpg",
+      "category": "melee",
+      "camos": []
+    },
+    {
+      "id": "bat",
+      "name": "Baseball Bat",
+      "image": "http://localhost:5173/images/weapons/melee/bat.jpg",
+      "category": "melee",
+      "camos": []
+    },
+    {
+      "id": "drill",
+      "name": "Power Drill",
+      "image": "http://localhost:5173/images/weapons/melee/drill.jpg",
+      "category": "melee",
+      "camos": []
+    }
+  ],
+  "global_camo": {
+    "zombies": [
+      {
+        "id": "slate",
+        "category": "military",
+        "display": "Slate",
+        "image": "http://localhost:5173/images/camos/military/zm/slate.webp",
+        "amount": 100,
+        "description": "Get 100 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "desert",
+        "category": "military",
+        "require": "slate",
+        "display": "Desert",
+        "image": "http://localhost:5173/images/camos/military/zm/desert.webp",
+        "amount": 200,
+        "description": "Get 200 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "evergreen",
+        "category": "military",
+        "require": "desert",
+        "display": "Evergreen",
+        "image": "http://localhost:5173/images/camos/military/zm/evergreen.webp",
+        "amount": 300,
+        "description": "Get 300 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "rugged",
+        "category": "military",
+        "require": "evergreen",
+        "display": "Rugged",
+        "image": "http://localhost:5173/images/camos/military/zm/rugged.webp",
+        "amount": 400,
+        "description": "Get 400 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "grim",
+        "category": "military",
+        "require": "rugged",
+        "display": "Grim",
+        "image": "http://localhost:5173/images/camos/military/zm/grim.webp",
+        "amount": 600,
+        "description": "Get 600 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "stripe",
+        "category": "military",
+        "require": "grim",
+        "display": "Stripe",
+        "image": "http://localhost:5173/images/camos/military/zm/stripe.webp",
+        "amount": 800,
+        "description": "Get 800 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "oceanic",
+        "category": "military",
+        "require": "stripe",
+        "display": "Oceanic",
+        "image": "http://localhost:5173/images/camos/military/zm/oceanic.webp",
+        "amount": 1000,
+        "description": "Get 1000 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "whiteout",
+        "category": "military",
+        "require": "oceanic",
+        "display": "Whiteout",
+        "image": "http://localhost:5173/images/camos/military/zm/whiteout.webp",
+        "amount": 1500,
+        "description": "Get 1500 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "purple_tiger",
+        "category": "military",
+        "require": "whiteout",
+        "display": "Purple Tiger",
+        "image": "http://localhost:5173/images/camos/military/zm/purple-tiger.webp",
+        "amount": 2000,
+        "description": "Get 2000 Critical Kills with the %weapon%"
+      },
+      {
+        "id": "mystic_gold",
+        "category": "mastery",
+        "require": "specials_zm",
+        "display": "Mystic Gold",
+        "image": "http://localhost:5173/images/camos/mastery/zm/mystic-gold.webp",
+        "amount": 15,
+        "description": "Get 10 Kills Rapidly 15 Times with the %weapon%"
+      },
+      {
+        "id": "opal",
+        "category": "mastery",
+        "require": "category_mystic_gold",
+        "display": "Opal",
+        "image": "http://localhost:5173/images/camos/mastery/zm/opal.webp",
+        "amount": 30,
+        "description": "Get 30 Special Zombie Kills with the %weapon%"
+      },
+      {
+        "id": "afterlife",
+        "category": "mastery",
+        "require": "all_opal",
+        "display": "Afterlife",
+        "image": "http://localhost:5173/images/camos/mastery/zm/afterlife.webp",
+        "amount": 10,
+        "description": "Get 20 Or More Consecutive Kills 10 Times Without Taking Damage with the %weapon%"
+      },
+      {
+        "id": "nebula",
+        "category": "mastery",
+        "require": "all_afterlife",
+        "display": "Nebula",
+        "image": "http://localhost:5173/images/camos/mastery/zm/nebula.webp",
+        "amount": 10,
+        "description": "Get 10 Elite Zombie Kills with the %weapon%"
+      }
+    ],
+    "multiplayer": [
+      {
+        "id": "granite",
+        "category": "military",
+        "display": "Granite",
+        "image": "http://localhost:5173/images/camos/military/mp/granite.webp",
+        "amount": 5,
+        "description": "Get 5 headshots with the %weapon%"
+      },
+      {
+        "id": "woodland",
+        "category": "military",
+        "require": "granite",
+        "display": "Woodland",
+        "image": "http://localhost:5173/images/camos/military/mp/woodland.webp",
+        "amount": 10,
+        "description": "Get 10 headshots with the %weapon%"
+      },
+      {
+        "id": "savanna",
+        "category": "military",
+        "require": "woodland",
+        "display": "Savanna",
+        "image": "http://localhost:5173/images/camos/military/mp/savanna.webp",
+        "amount": 15,
+        "description": "Get 15 headshots with the %weapon%"
+      },
+      {
+        "id": "splinter",
+        "category": "military",
+        "require": "savanna",
+        "display": "Splinter",
+        "image": "http://localhost:5173/images/camos/military/mp/splinter.webp",
+        "amount": 20,
+        "description": "Get 20 headshots with the %weapon%"
+      },
+      {
+        "id": "moss",
+        "category": "military",
+        "require": "splinter",
+        "display": "Moss",
+        "image": "http://localhost:5173/images/camos/military/mp/moss.webp",
+        "amount": 30,
+        "description": "Get 30 headshots with the %weapon%"
+      },
+      {
+        "id": "saboteur",
+        "category": "military",
+        "require": "moss",
+        "display": "Saboteur",
+        "image": "http://localhost:5173/images/camos/military/mp/saboteur.webp",
+        "amount": 40,
+        "description": "Get 40 headshots with the %weapon%"
+      },
+      {
+        "id": "digital",
+        "category": "military",
+        "require": "saboteur",
+        "display": "Digital",
+        "image": "http://localhost:5173/images/camos/military/mp/digital.webp",
+        "amount": 50,
+        "description": "Get 50 headshots with the %weapon%"
+      },
+      {
+        "id": "tide",
+        "category": "military",
+        "require": "digital",
+        "display": "Tide",
+        "image": "http://localhost:5173/images/camos/military/mp/tide.webp",
+        "amount": 75,
+        "description": "Get 75 headshots with the %weapon%"
+      },
+      {
+        "id": "red_tiger",
+        "category": "military",
+        "require": "tide",
+        "display": "Red Tiger",
+        "image": "http://localhost:5173/images/camos/military/mp/red-tiger.webp",
+        "amount": 100,
+        "description": "Get 100 headshots with the %weapon%"
+      },
+      {
+        "id": "gold",
+        "category": "mastery",
+        "require": "specials_mp",
+        "display": "Gold",
+        "image": "http://localhost:5173/images/camos/mastery/mp/gold.webp",
+        "amount": 10,
+        "description": "Get 10 double kills with the %weapon%"
+      },
+      {
+        "id": "diamond",
+        "category": "mastery",
+        "require": "category_gold",
+        "display": "Diamond",
+        "image": "http://localhost:5173/images/camos/mastery/mp/diamond.webp",
+        "amount": 10,
+        "description": "Get 3 kills without dying 10 times with the %weapon%"
+      },
+      {
+        "id": "darkspine",
+        "category": "mastery",
+        "require": "all_diamond",
+        "display": "Dark Spine",
+        "image": "http://localhost:5173/images/camos/mastery/mp/dark-spine.webp",
+        "amount": 3,
+        "description": "Get 3 triple kills with the %weapon%"
+      },
+      {
+        "id": "dark_matter",
+        "category": "mastery",
+        "require": "all_dakrspine",
+        "display": "Dark Matter",
+        "image": "http://localhost:5173/images/camos/mastery/mp/dark-matter.webp",
+        "amount": 3,
+        "description": "Get 5 kills without dying 3 times with the %weapon%"
+      }
+    ],
+    "warzone": [],
+    "overwrite": {
+      "category_all": {
+        "assault": 7,
+        "smg": 6,
+        "shotgun": 2,
+        "lmg": 3,
+        "marksman": 4,
+        "sniper": 3,
+        "pistol": 4,
+        "launcher": 2,
+        "special": 1,
+        "melee": 2
+      },
+      "all": 33
+    }
+  }
+}
