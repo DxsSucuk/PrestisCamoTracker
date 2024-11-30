@@ -21,5 +21,13 @@ export function loadAll() {
 }
 
 export function getCategory(id: string) : Category | undefined {
-    return get(categoryList).find(c => c.id == id);
+    if (id.includes("TEST")) {
+        return {
+            display: "Test Category",
+            id: "TEST"
+        }
+    }
+    let category = get(categoryList);
+    if (category === undefined) return undefined;
+    return category.find(c => c.id == id);
 }

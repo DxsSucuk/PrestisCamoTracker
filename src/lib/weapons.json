@@ -1764,6 +1764,55 @@
           "description": "Get 10 Mangler Eliminations with the %weapon%"
         }
       ]
+    },
+    {
+      "id": "test",
+      "name": "TEST_WEAPON_NOT_FOR_USE",
+      "notice": {
+        "zombies":"Criticals are not possible when Pack-A-Punched.",
+        "multiplayer": "Criticals are not possible when Pack-A-Punched",
+        "warzone": "Criticals are not possible when Pack-A-Punched"
+      },
+      "image": "https://camo.presti.me/images/weapons/smg/c9.jpg",
+      "category": "TEST",
+      "camos": [
+        {
+          "id": "heatwave",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Heatwave",
+          "image": "https://camo.presti.me/images/camos/special/mp/heatwave.webp",
+          "amount": 30,
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "panther",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Panther",
+          "image": "https://camo.presti.me/images/camos/special/mp/panther.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while using a suppressor with the %weapon%"
+        },
+        {
+          "id": "infrared",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Infrared",
+          "image": "https://camo.presti.me/images/camos/special/zm/infrared.webp",
+          "amount": 30,
+          "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "lynx",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Lynx",
+          "image": "https://camo.presti.me/images/camos/special/zm/lynx.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        }
+      ]
     }
   ],
   "global_camo": {

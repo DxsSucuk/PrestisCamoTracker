@@ -11,6 +11,9 @@
 	var allWeapons: Weapon[];
 	var weaponCategoryMaps: WeaponCategoryMap[];
 	var weapons: Weapon[];
+
+	let addTestWeapon: boolean;
+
 	onMount(async () => {
 		categoryList.subscribe((c) => (categories = c));
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
@@ -29,6 +32,9 @@
 			searchQuery = $page.url.searchParams.get('search')!;
 			searchForWeapon();
 		}
+
+		addTestWeapon = $page.url.searchParams.has('testmode');
+		console.log(addTestWeapon);
 	});
 
 	let array: Weapon[] = [];
@@ -39,12 +45,24 @@
 		weapons = categoryMap
 			? allWeapons.filter((c) => categoryMap!.weapons.indexOf(c.id) > -1)
 			: array;
+		addTestWeapons();
 	}
 
 	var searchQuery: string;
 
 	function searchForWeapon() {
 		weapons = allWeapons.filter((c) => c.name.toUpperCase().includes(searchQuery.toUpperCase()));
+		addTestWeapons();
+	}
+
+	function addTestWeapons() {
+		if (addTestWeapon) {
+			console.log('Adding test weapons!');
+			let testWeapons: Weapon[] = allWeapons.filter((c) => c.category.includes('TEST'));
+			testWeapons.forEach((element) => {
+				weapons.push(element);
+			});
+		}
 	}
 
 	function openWeapon(weapon: Weapon) {
@@ -105,6 +123,31 @@
 							<p class="text-base text-gray-400">
 								{getCategory(weaponToDisplay.category)?.display}
 							</p>
+							{#if weaponToDisplay.notice !== undefined}
+								<div class="absolute top-4 right-4 flex space-x-2">
+									{#if weaponToDisplay.notice.multiplayer !== undefined}
+										<div
+											class="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full text-white font-bold text-lg"
+										>
+											!
+										</div>
+									{/if}
+									{#if weaponToDisplay.notice.zombies !== undefined}
+										<div
+											class="flex items-center justify-center w-8 h-8 bg-green-500 rounded-full text-white font-bold text-lg"
+										>
+											!
+										</div>
+									{/if}
+									{#if weaponToDisplay.notice.warzone !== undefined}
+										<div
+											class="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full text-white font-bold text-lg"
+										>
+											!
+										</div>
+									{/if}
+								</div>
+							{/if}
 							<div class="absolute bottom-4 right-4 flex space-x-2">
 								<span class="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded">MP</span>
 								<span class="bg-green-500 text-white text-sm font-bold px-3 py-1 rounded">ZM</span>
