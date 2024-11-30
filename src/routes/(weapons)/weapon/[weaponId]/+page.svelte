@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import {
-	getCamoProgress,
+		getCamoProgress,
 		getCamoProgressById,
 		getCategory,
 		globalMultiplayerCamos,
@@ -35,8 +35,8 @@
 		let weaponId = $page.params.weaponId;
 		let typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : '0';
 
-		currentProgress = getCamoProgressById(weaponId)
-		progress.subscribe((c) => currentProgress = getCamoProgress(c, weaponId))
+		currentProgress = getCamoProgressById(weaponId);
+		progress.subscribe((c) => (currentProgress = getCamoProgress(c, weaponId)));
 
 		currentWeapon = get(weaponsList).find((c) => c.id == weaponId);
 		globalZombiesCamos.subscribe((c) => (globalZMCamos = c));
@@ -46,13 +46,37 @@
 		updateCamos(typId);
 	});
 
-	function pressCamo(camo:Camo) {
-		let index = currentProgress.camo.findIndex(c => c.id === camo.id);
+	function pressCamoWithOverwrite(camo: Camo, setDone: boolean) {
+		let index = currentProgress.camo.findIndex((c) => c.id === camo.id);
 		let tempCamo: CamoProgress;
 		if (index > -1) {
-			tempCamo = currentProgress.camo[index]
-			tempCamo.done = !tempCamo.done
-			currentProgress.camo[index] = tempCamo
+			tempCamo = currentProgress.camo[index];
+			tempCamo.done = setDone;
+			currentProgress.camo[index] = tempCamo;
+		} else {
+			tempCamo = {
+				position: camo.position,
+				category: camo.category,
+				done: setDone,
+				progress: 0,
+				id: camo.id
+			};
+			currentProgress.camo.push(tempCamo);
+		}
+
+		updateCamoProgress(currentProgress);
+
+		if (tempCamo.done) document.getElementById(camo.id)?.classList.add('ring-2', 'ring-green-500');
+		else document.getElementById(camo.id)?.classList.remove('ring-2', 'ring-green-500');
+	}
+
+	function pressCamo(camo: Camo) {
+		let index = currentProgress.camo.findIndex((c) => c.id === camo.id);
+		let tempCamo: CamoProgress;
+		if (index > -1) {
+			tempCamo = currentProgress.camo[index];
+			tempCamo.done = !tempCamo.done;
+			currentProgress.camo[index] = tempCamo;
 		} else {
 			tempCamo = {
 				position: camo.position,
@@ -60,16 +84,14 @@
 				done: true,
 				progress: 0,
 				id: camo.id
-			}
-			currentProgress.camo.push(tempCamo)
+			};
+			currentProgress.camo.push(tempCamo);
 		}
 
-		updateCamoProgress(currentProgress)
+		updateCamoProgress(currentProgress);
 
-		if (tempCamo.done)
-			document.getElementById(camo.id)?.classList.add("ring-2", "ring-green-500")
-		else		
-			document.getElementById(camo.id)?.classList.remove("ring-2", "ring-green-500")
+		if (tempCamo.done) document.getElementById(camo.id)?.classList.add('ring-2', 'ring-green-500');
+		else document.getElementById(camo.id)?.classList.remove('ring-2', 'ring-green-500');
 	}
 
 	function updateCamos(typ: string) {
@@ -77,31 +99,31 @@
 
 		if (typ == '0') {
 			toUseCamoList = get(globalMultiplayerCamos);
-			militaryFilter = 'military_mp'
+			militaryFilter = 'military_mp';
 			specialFilter = 'special_mp';
-			masteryFilter = "mastery_mp"
+			masteryFilter = 'mastery_mp';
 		} else if (typ == '1') {
 			toUseCamoList = get(globalZombiesCamos);
-			militaryFilter = 'military_zm'
+			militaryFilter = 'military_zm';
 			specialFilter = 'special_zm';
-			masteryFilter = "mastery_zm"
+			masteryFilter = 'mastery_zm';
 		} else {
 			toUseCamoList = get(globalWarzoneCamos);
-			militaryFilter = 'military_wz'
+			militaryFilter = 'military_wz';
 			specialFilter = 'special_wz';
-			masteryFilter = "mastery_wz"
+			masteryFilter = 'mastery_wz';
 		}
 
 		militaryCamos = toUseCamoList.filter((c) => c.category == militaryFilter);
 		masteryCamos = toUseCamoList.filter((c) => c.category == masteryFilter);
 	}
 
-	function isCamoDone(camo:Camo):boolean {
-		let index = currentProgress.camo.findIndex(c => c.id === camo.id);
+	function isCamoDone(camo: Camo): boolean {
+		let index = currentProgress.camo.findIndex((c) => c.id === camo.id);
 		let tempCamo: CamoProgress;
 		if (index > -1) {
-			tempCamo = currentProgress.camo[index]
-			return tempCamo.done
+			tempCamo = currentProgress.camo[index];
+			return tempCamo.done;
 		} else {
 			tempCamo = {
 				position: camo.position,
@@ -109,13 +131,53 @@
 				done: false,
 				progress: 0,
 				id: camo.id
-			}
-			return false
+			};
+			return false;
 		}
 	}
 
 	function goBack() {
 		goto('/?category=' + currentWeapon?.category);
+	}
+
+	function doneAll(category:string) {
+		if (category.includes("military")) {
+			militaryCamos.forEach(c => {
+				pressCamoWithOverwrite(c, true)
+			})
+		}
+
+		if (category.includes("special")) {
+			currentWeapon?.camos.forEach(c => {
+				pressCamoWithOverwrite(c, true)
+			})
+		}
+
+		if (category.includes("mastery")) {
+			masteryCamos.forEach(c => {
+				pressCamoWithOverwrite(c, true)
+			})
+		}
+	}
+
+	function clearAll(category:string) {
+		if (category.includes("military")) {
+			militaryCamos.forEach(c => {
+				pressCamoWithOverwrite(c, false)
+			})
+		}
+
+		if (category.includes("special")) {
+			currentWeapon?.camos.forEach(c => {
+				pressCamoWithOverwrite(c, false)
+			})
+		}
+
+		if (category.includes("mastery")) {
+			masteryCamos.forEach(c => {
+				pressCamoWithOverwrite(c, false)
+			})
+		}
 	}
 </script>
 
@@ -229,20 +291,52 @@
 			{/if}
 
 			{#key specialFilter}
-				<div class="space-y-4"
-				in:fly={{ x: -500, duration: 500, delay: 250 }} out:fly={{ x: 500, duration: 200 }}>
-					
+				<div
+					class="space-y-4"
+					in:fly={{ x: -500, duration: 500, delay: 250 }}
+					out:fly={{ x: 500, duration: 200 }}
+				>
 					<!-- Grid 1 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
-					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
-					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
-					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
+					<div
+						class="relative space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes('zm')
+							? 'ring-2 ring-green-500'
+							: specialFilter.includes('mp')
+								? 'ring-2 ring-blue-500'
+								: specialFilter.includes('wz')
+									? 'ring-2 ring-red-500'
+									: ''}"
+					>
 						<h2 class="text-2xl font-semibold">Military</h2>
+						<!-- Buttons -->
+						<div class="absolute right-5 top-0 flex space-x-2">
+							<button
+								class="bg-green-500 text-white px-4 py-1 rounded shadow hover:bg-green-600 transition"
+								on:click={() => doneAll('military')}
+							>
+								Done
+							</button>
+							<button
+								class="bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-600 transition"
+								on:click={() => clearAll('military')}
+							>
+								Clear
+							</button>
+						</div>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each militaryCamos as camoEntry}
-								<div id="{camoEntry.id}"class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry)
-								}}>
+								<div
+									id={camoEntry.id}
+									class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(
+										camoEntry
+									)
+										? 'ring-2 ring-green-500'
+										: ''}"
+									role="button"
+									on:click={() => {
+										pressCamo(camoEntry);
+									}}
+								>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
@@ -264,16 +358,46 @@
 					</div>
 
 					<!-- Grid 2 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
-					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
-					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
-					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
+					<div
+						class="relative space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes('zm')
+							? 'ring-2 ring-green-500'
+							: specialFilter.includes('mp')
+								? 'ring-2 ring-blue-500'
+								: specialFilter.includes('wz')
+									? 'ring-2 ring-red-500'
+									: ''}"
+					>
 						<h2 class="text-2xl font-semibold">Special</h2>
+						<!-- Buttons -->
+						<div class="absolute right-5 top-0 flex space-x-2">
+							<button
+								class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 transition"
+								on:click={() => doneAll('special')}
+							>
+								Done
+							</button>
+							<button
+								class="bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-600 transition"
+								on:click={() => clearAll('special')}
+							>
+								Clear
+							</button>
+						</div>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each currentWeapon?.camos.filter((c) => c.category == specialFilter) as camoEntry}
-								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry)
-								}}>
+								<div
+									id={camoEntry.id}
+									class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(
+										camoEntry
+									)
+										? 'ring-2 ring-green-500'
+										: ''}"
+									role="button"
+									on:click={() => {
+										pressCamo(camoEntry);
+									}}
+								>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
@@ -295,16 +419,46 @@
 					</div>
 
 					<!-- Grid 3 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
-					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
-					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
-					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
+					<div
+						class="relative space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes('zm')
+							? 'ring-2 ring-green-500'
+							: specialFilter.includes('mp')
+								? 'ring-2 ring-blue-500'
+								: specialFilter.includes('wz')
+									? 'ring-2 ring-red-500'
+									: ''}"
+					>
 						<h2 class="text-2xl font-semibold">Mastery</h2>
+						<!-- Buttons -->
+						<div class="absolute right-5 top-0 flex space-x-2">
+							<button
+								class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600 transition"
+								on:click={() => doneAll('mastery')}
+							>
+								Done
+							</button>
+							<button
+								class="bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-600 transition"
+								on:click={() => clearAll('mastery')}
+							>
+								Clear
+							</button>
+						</div>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each masteryCamos as camoEntry}
-								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry)
-								}}>
+								<div
+									id={camoEntry.id}
+									class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(
+										camoEntry
+									)
+										? 'ring-2 ring-green-500'
+										: ''}"
+									role="button"
+									on:click={() => {
+										pressCamo(camoEntry);
+									}}
+								>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
