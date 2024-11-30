@@ -159,10 +159,10 @@
 					>
 						<!-- Text Content -->
 						<div class="flex-1">
-							<h4 class="text-lg font-semibold">Warzone</h4>
+							<h4 class="text-lg font-semibold">Camo Issues</h4>
 							<p class="text-base text-gray-400 mt-2">
-								Warzone Military Camo descriptions are wrong for Meeles and Launchers.<br>
-								And neither are the Specials for any weapon added on Warzone.
+								Warzone Special Camos are completly missing and need to be added. <br>
+								Category specific Camo descriptions are not implemented: Meeles and Launcher required less kills.
 							</p>
 						</div>
 					</div>
