@@ -144,7 +144,7 @@
           "display": "Muddled",
           "image": "https://camo.presti.me/images/camos/special/mp/muddled.webp",
           "amount": 30,
-          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
         },
         {
           "id": "machina",
@@ -197,7 +197,7 @@
           "display": "Vengeance",
           "image": "https://camo.presti.me/images/camos/special/mp/vengeance.webp",
           "amount": 20,
-          "description": "Get 20 kills with underbarrel launcher with the %weapon%"
+          "description": "Get 20 Kills with underbarrel launcher with the %weapon%"
         },
         {
           "id": "chlorine",
@@ -241,7 +241,7 @@
           "display": "Burial",
           "image": "https://camo.presti.me/images/camos/special/mp/burial.webp",
           "amount": 10,
-          "description": "Get 2 kills without reloading 10 times with the %weapon%"
+          "description": "Get 2 Kills without reloading 10 times with the %weapon%"
         },
         {
           "id": "hyperion",
@@ -276,7 +276,7 @@
           "display": "Ambush",
           "image": "https://camo.presti.me/images/camos/special/mp/ambush.webp",
           "amount": 30,
-          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
         },
         {
           "id": "cacti_cathode",
@@ -285,7 +285,7 @@
           "display": "Cati Cathode",
           "image": "https://camo.presti.me/images/camos/special/mp/cacti-cathode.webp",
           "amount": 50,
-          "description": "Get 50 kills while moving with the %weapon%"
+          "description": "Get 50 Kills while moving with the %weapon%"
         },
         {
           "id": "night_stalker",
@@ -320,7 +320,7 @@
           "display": "Cherry Blossom",
           "image": "https://camo.presti.me/images/camos/special/mp/cherry-blossom.webp",
           "amount": 50,
-          "description": "Get 50 kills while the enforcer combat specialty is active with the %weapon%"
+          "description": "Get 50 Kills while the enforcer combat specialty is active with the %weapon%"
         },
         {
           "id": "cedar",
@@ -329,7 +329,7 @@
           "display": "Cedar",
           "image": "https://camo.presti.me/images/camos/special/mp/cedar.webp",
           "amount": 50,
-          "description": "Get 50 kills while using a suppressor with the %weapon%"
+          "description": "Get 50 Kills while using a suppressor with the %weapon%"
         },
         {
           "id": "ghost_blossom",
@@ -373,7 +373,7 @@
           "display": "Hammerhead",
           "image": "https://camo.presti.me/images/camos/special/mp/hammerhead.webp",
           "amount": 20,
-          "description": "Get 20 kills with an underbarrel launcher attached with the %weapon%"
+          "description": "Get 20 Kills with an underbarrel launcher attached with the %weapon%"
         },
         {
           "id": "astral_pride",
@@ -408,7 +408,7 @@
           "display": "Crimson Steppes",
           "image": "https://camo.presti.me/images/camos/special/mp/crimson-steppes.webp",
           "amount": 50,
-          "description": "Get 50 kills while the recon combat specialty is active with the %weapon%"
+          "description": "Get 50 Kills while the recon combat specialty is active with the %weapon%"
         },
         {
           "id": "elk",
@@ -417,7 +417,7 @@
           "display": "Elk",
           "image": "https://camo.presti.me/images/camos/special/mp/elk.webp",
           "amount": 30,
-          "description": "Get 30 hipfire kills with the %weapon%"
+          "description": "Get 30 hipfire Kills with the %weapon%"
         },
         {
           "id": "malachite_steppes",
@@ -452,7 +452,7 @@
           "display": "Monochrome",
           "image": "https://camo.presti.me/images/camos/special/mp/monochrome.webp",
           "amount": 30,
-          "description": "Get 30 kills shortly after sprinting with the %weapon%"
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
         },
         {
           "id": "dreadshade",
@@ -488,49 +488,308 @@
       "name": "C9",
       "image": "https://camo.presti.me/images/weapons/smg/c9.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "heatwave",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Heatwave",
+          "image": "https://camo.presti.me/images/camos/special/mp/heatwave.webp",
+          "amount": 30,
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "panther",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Panther",
+          "image": "https://camo.presti.me/images/camos/special/mp/panther.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while using a suppressor with the %weapon%"
+        },
+        {
+          "id": "infrared",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Infrared",
+          "image": "https://camo.presti.me/images/camos/special/zm/infrared.webp",
+          "amount": 30,
+          "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "lynx",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Lynx",
+          "image": "https://camo.presti.me/images/camos/special/zm/lynx.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        }
+      ]
     },
     {
       "id": "ksv",
       "name": "KSV",
       "image": "https://camo.presti.me/images/weapons/smg/ksv.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "kakapo",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Kakapo",
+          "image": "https://camo.presti.me/images/camos/special/mp/kakapo.webp",
+          "amount": 10,
+          "description": "Get 2 Kills without reloading 10 times with the %weapon%"
+        },
+        {
+          "id": "throwback",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Throwback",
+          "image": "https://camo.presti.me/images/camos/special/mp/throwback.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "phoenix",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Phoenix",
+          "image": "https://camo.presti.me/images/camos/special/zm/phoenix.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        },
+        {
+          "id": "throttle",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Throttle",
+          "image": "https://camo.presti.me/images/camos/special/zm/throttle.webp",
+          "amount": 300,
+          "description": "Get 300 Hipfire Kills with the %weapon%"
+        }
+      ]
     },
     {
       "id": "tanto",
       "name": "Tanto .22",
       "image": "https://camo.presti.me/images/weapons/smg/tanto.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "amorphous",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Amorphous",
+          "image": "https://camo.presti.me/images/camos/special/mp/amorphous.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "go_bananas",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Go Bananas",
+          "image": "https://camo.presti.me/images/camos/special/mp/go-bananas.webp",
+          "amount": 30,
+          "description": "Get 1 kill without taking any damage 30 times with the %weapon%"
+        },
+        {
+          "id": "solemn",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Solemn",
+          "image": "https://camo.presti.me/images/camos/special/zm/solemn.webp",
+          "amount": 15,
+          "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "aloha",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Aloha",
+          "image": "https://camo.presti.me/images/camos/special/zm/aloha.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        }
+      ]
     },
     {
       "id": "pp",
       "name": "PP-919",
       "image": "https://camo.presti.me/images/weapons/smg/pp.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "radiant_bath",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Radiant Bath",
+          "image": "https://camo.presti.me/images/camos/special/mp/radiant-bath.webp",
+          "amount": 30,
+          "description": "Get 30 hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "midnight_prowl",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Midnight Prowl",
+          "image": "https://camo.presti.me/images/camos/special/mp/midnight-prowl.webp",
+          "amount": 20,
+          "description": "Get 20 while strategist combat specialty is active with the %weapon%"
+        },
+        {
+          "id": "solvent",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Solvent",
+          "image": "https://camo.presti.me/images/camos/special/zm/solvent.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Cryo Freeze equipped with the %weapon%"
+        },
+        {
+          "id": "stalking_shadow",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Stalking Shadow",
+          "image": "https://camo.presti.me/images/camos/special/zm/stalking-shadow.webp",
+          "amount": 15,
+          "description": "Get 10 Kills Rapidly 15 Times with the %weapon%"
+        }
+      ]
     },
     {
       "id": "jackal",
       "name": "Jackal PDW",
       "image": "https://camo.presti.me/images/weapons/smg/jackal.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "deep_end",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Deep End",
+          "image": "https://camo.presti.me/images/camos/special/mp/deep-end.webp",
+          "amount": 30,
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "dread",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Dread",
+          "image": "https://camo.presti.me/images/camos/special/mp/dread.webp",
+          "amount": 50,
+          "description": "Get 30 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "plunge",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Plunge",
+          "image": "https://camo.presti.me/images/camos/special/zm/plunge.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Napalm Burst equipped with the %weapon%"
+        },
+        {
+          "id": "distress",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Distress",
+          "image": "https://camo.presti.me/images/camos/special/zm/distress.webp",
+          "amount": 300,
+          "description": "Get 300 Hipfire Kills with the %weapon%"
+        }
+      ]
     },
     {
       "id": "kompakt",
       "name": "Kompakt 92",
       "image": "https://camo.presti.me/images/weapons/smg/kompakt.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "kingfisher",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Kingfisher",
+          "image": "https://camo.presti.me/images/camos/special/mp/kingfisher.webp",
+          "amount": 30,
+          "description": "Get 30 hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "blackthorn",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Blackthorn",
+          "image": "https://camo.presti.me/images/camos/special/mp/blackthorn.webp",
+          "amount": 30,
+          "description": "Get 30 Kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "tequila_sunrise",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Tequila Sunrise",
+          "image": "https://camo.presti.me/images/camos/special/zm/tequila-sunrise.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with the %weapon% at Rare Rarity or higher"
+        },
+        {
+          "id": "voidthorn",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Voidthorn",
+          "image": "https://camo.presti.me/images/camos/special/zm/voidthorn.webp",
+          "amount": 300,
+          "description": "Get 300 Point Blank Kills with the %weapon%"
+        }
+      ]
     },
     {
       "id": "saug",
       "name": "Saug",
       "image": "https://camo.presti.me/images/weapons/smg/saug.jpg",
       "category": "smg",
-      "camos": []
+      "camos": [
+        {
+          "id": "netherworld",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Netherworld",
+          "image": "https://camo.presti.me/images/camos/special/mp/netherworld.webp",
+          "amount": 30,
+          "description": "Get 30 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "solar_tide",
+          "category": "special_mp",
+          "require": "red_tiger",
+          "display": "Solar Tide",
+          "image": "https://camo.presti.me/images/camos/special/mp/solar-tide.webp",
+          "amount": 50,
+          "description": "Get 50 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "whisper",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Whisper",
+          "image": "https://camo.presti.me/images/camos/special/zm/whisper.webp",
+          "amount": 300,
+          "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        },
+        {
+          "id": "limewave",
+          "category": "special_zm",
+          "require": "purple_tiger",
+          "display": "Limewave",
+          "image": "https://camo.presti.me/images/camos/special/zm/limewave.webp",
+          "amount": 300,
+          "description": "Get 300 Point Blank Kills with the %weapon%"
+        }
+      ]
     },
     {
       "id": "marine",
@@ -900,7 +1159,7 @@
         "display": "Gold",
         "image": "https://camo.presti.me/images/camos/mastery/mp/gold.webp",
         "amount": 10,
-        "description": "Get 10 double kills with the %weapon%"
+        "description": "Get 10 double Kills with the %weapon%"
       },
       {
         "id": "diamond",
@@ -909,7 +1168,7 @@
         "display": "Diamond",
         "image": "https://camo.presti.me/images/camos/mastery/mp/diamond.webp",
         "amount": 10,
-        "description": "Get 3 kills without dying 10 times with the %weapon%"
+        "description": "Get 3 Kills without dying 10 times with the %weapon%"
       },
       {
         "id": "darkspine",
@@ -918,7 +1177,7 @@
         "display": "Dark Spine",
         "image": "https://camo.presti.me/images/camos/mastery/mp/dark-spine.webp",
         "amount": 3,
-        "description": "Get 3 triple kills with the %weapon%"
+        "description": "Get 3 triple Kills with the %weapon%"
       },
       {
         "id": "dark_matter",
@@ -927,7 +1186,7 @@
         "display": "Dark Matter",
         "image": "https://camo.presti.me/images/camos/mastery/mp/dark-matter.webp",
         "amount": 3,
-        "description": "Get 5 kills without dying 3 times with the %weapon%"
+        "description": "Get 5 Kills without dying 3 times with the %weapon%"
       }
     ],
     "warzone": [],
