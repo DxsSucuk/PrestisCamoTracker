@@ -154,7 +154,7 @@
 			<h2 class="text-2xl text-red-500 font-semibold">Notices</h2>
 			<div class="grid grid-cols-1 gap-6">
 					<div
-						class="bg-gray-900 rounded-xl ring-2 ring-blue-500 shadow-lg p-6 flex items-center"
+						class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center"
 					>
 						<!-- Text Content -->
 						<div class="flex-1">
