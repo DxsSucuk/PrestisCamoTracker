@@ -148,7 +148,7 @@
 		}
 
 		if (category.includes("special")) {
-			currentWeapon?.camos.forEach(c => {
+			currentWeapon?.camos.filter(c => c.category.includes(specialFilter)).forEach(c => {
 				pressCamoWithOverwrite(c, true)
 			})
 		}
