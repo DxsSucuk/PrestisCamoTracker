@@ -17,8 +17,8 @@
     <meta name="twitter:description" content="Simple, quick and local. A Black Ops 6 Camo Tracker">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://camo.presti.me/images/branding/medium.jpg">
-    <meta name="twitter:image" content="https://camo.presti.me/images/branding/large.jpg">
+    <meta property="og:image" content="https://camo.presti.me/images/branding/medium.png">
+    <meta name="twitter:image" content="https://camo.presti.me/images/branding/large.png">
     <meta name="twitter:title" content="Prestis Camo Tracker">
 	<title>Prestis Camo Tracker</title>
     <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"Prestis Camo Tracker","url":"https://camo.presti.me"}</script>
