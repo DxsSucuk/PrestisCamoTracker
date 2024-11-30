@@ -108,7 +108,7 @@
 							<div class="absolute bottom-4 right-4 flex space-x-2">
 								<span class="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded">MP</span>
 								<span class="bg-green-500 text-white text-sm font-bold px-3 py-1 rounded">ZM</span>
-								<span class="bg-red-500 text-white text-sm font-bold px-3 py-1 rounded">WA</span>
+								<span class="bg-red-500 text-white text-sm font-bold px-3 py-1 rounded">WZ</span>
 							</div>
 						</div>
 					{/each}
