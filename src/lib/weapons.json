@@ -1724,6 +1724,9 @@
     {
       "id": "sirin",
       "name": "Sirin 9mm",
+      "notice": {
+        "global": "Can be equipped without store bundle or hit-list goal."
+      },
       "image": "https://camo.presti.me/images/weapons/special/sirin.jpg",
       "category": "special",
       "camos": [

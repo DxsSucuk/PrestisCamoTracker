@@ -140,43 +140,45 @@
 		goto('/?category=' + currentWeapon?.category);
 	}
 
-	function doneAll(category:string) {
-		if (category.includes("military")) {
-			militaryCamos.forEach(c => {
-				pressCamoWithOverwrite(c, true)
-			})
+	function doneAll(category: string) {
+		if (category.includes('military')) {
+			militaryCamos.forEach((c) => {
+				pressCamoWithOverwrite(c, true);
+			});
 		}
 
-		if (category.includes("special")) {
-			currentWeapon?.camos.filter(c => c.category.includes(specialFilter)).forEach(c => {
-				pressCamoWithOverwrite(c, true)
-			})
+		if (category.includes('special')) {
+			currentWeapon?.camos
+				.filter((c) => c.category.includes(specialFilter))
+				.forEach((c) => {
+					pressCamoWithOverwrite(c, true);
+				});
 		}
 
-		if (category.includes("mastery")) {
-			masteryCamos.forEach(c => {
-				pressCamoWithOverwrite(c, true)
-			})
+		if (category.includes('mastery')) {
+			masteryCamos.forEach((c) => {
+				pressCamoWithOverwrite(c, true);
+			});
 		}
 	}
 
-	function clearAll(category:string) {
-		if (category.includes("military")) {
-			militaryCamos.forEach(c => {
-				pressCamoWithOverwrite(c, false)
-			})
+	function clearAll(category: string) {
+		if (category.includes('military')) {
+			militaryCamos.forEach((c) => {
+				pressCamoWithOverwrite(c, false);
+			});
 		}
 
-		if (category.includes("special")) {
-			currentWeapon?.camos.forEach(c => {
-				pressCamoWithOverwrite(c, false)
-			})
+		if (category.includes('special')) {
+			currentWeapon?.camos.forEach((c) => {
+				pressCamoWithOverwrite(c, false);
+			});
 		}
 
-		if (category.includes("mastery")) {
-			masteryCamos.forEach(c => {
-				pressCamoWithOverwrite(c, false)
-			})
+		if (category.includes('mastery')) {
+			masteryCamos.forEach((c) => {
+				pressCamoWithOverwrite(c, false);
+			});
 		}
 	}
 </script>
@@ -243,11 +245,24 @@
 				</div>
 			</div>
 
-			{#if currentWeapon.notice !== undefined}
+			{#if currentWeapon.notice}
 				<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4">
 					<h2 class="text-2xl text-red-500 font-semibold">Notices</h2>
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						{#if currentWeapon.notice.multiplayer !== undefined}
+						{#if currentWeapon.notice.global}
+							<div
+								class="bg-gray-800 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center"
+							>
+								<!-- Text Content -->
+								<div class="flex-1">
+									<h4 class="text-lg font-semibold">Global</h4>
+									<p class="text-base text-gray-400 mt-2">
+										{currentWeapon.notice.global}
+									</p>
+								</div>
+							</div>
+						{/if}
+						{#if currentWeapon.notice.multiplayer}
 							<div
 								class="bg-gray-800 rounded-xl ring-2 ring-blue-500 shadow-lg p-6 flex items-center"
 							>
@@ -260,7 +275,7 @@
 								</div>
 							</div>
 						{/if}
-						{#if currentWeapon.notice.zombies !== undefined}
+						{#if currentWeapon.notice.zombies}
 							<div
 								class="bg-gray-800 rounded-xl ring-2 ring-green-500 shadow-lg p-6 flex items-center"
 							>
@@ -273,7 +288,7 @@
 								</div>
 							</div>
 						{/if}
-						{#if currentWeapon.notice.warzone !== undefined}
+						{#if currentWeapon.notice.warzone}
 							<div
 								class="bg-gray-800 rounded-xl ring-2 ring-red-500 shadow-lg p-6 flex items-center"
 							>

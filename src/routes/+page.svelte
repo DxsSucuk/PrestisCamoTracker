@@ -117,7 +117,6 @@
 	}
 </script>
 
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 <div class="p-6 text-white">
 	<!-- Container -->
 	<div class="max-w-6xl mx-auto space-y-6">
@@ -190,21 +189,21 @@
 							</p>
 							{#if weaponToDisplay.notice !== undefined}
 								<div class="absolute top-4 right-4 flex space-x-2">
-									{#if weaponToDisplay.notice.multiplayer !== undefined}
+									{#if weaponToDisplay.notice.multiplayer || weaponToDisplay.notice.global}
 										<div
 											class="flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full text-white font-bold text-lg"
 										>
 											!
 										</div>
 									{/if}
-									{#if weaponToDisplay.notice.zombies !== undefined}
+									{#if weaponToDisplay.notice.zombies || weaponToDisplay.notice.global}
 										<div
 											class="flex items-center justify-center w-8 h-8 bg-green-500 rounded-full text-white font-bold text-lg"
 										>
 											!
 										</div>
 									{/if}
-									{#if weaponToDisplay.notice.warzone !== undefined}
+									{#if weaponToDisplay.notice.warzone || weaponToDisplay.notice.global}
 										<div
 											class="flex items-center justify-center w-8 h-8 bg-red-500 rounded-full text-white font-bold text-lg"
 										>

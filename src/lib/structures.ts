@@ -27,6 +27,7 @@ export interface Notice {
     zombies?: string,
     multiplayer?: string,
     warzone?: string
+    global?: string
 }
 
 export interface WeaponCategoryMap {
@@ -126,9 +127,10 @@ export function parseNotices(values: any): Notice[] {
 
 export function parseNotice(value: any): Notice {
     return {
-        zombies: value.zombies ? value.zombies : undefined,
-        multiplayer: value.multiplayer ? value.multiplayer : undefined,
-        warzone: value.warzone ? value.warzone : undefined
+        zombies: value.zombies || undefined,
+        multiplayer: value.multiplayer || undefined,
+        warzone: value.warzone || undefined,
+        global: value.global || undefined,
     };
 }
 
