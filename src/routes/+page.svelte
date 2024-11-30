@@ -13,6 +13,7 @@
 	var weapons: Weapon[];
 
 	let addTestWeapon: boolean;
+	let updateContentList: string;
 
 	onMount(async () => {
 		categoryList.subscribe((c) => (categories = c));
@@ -41,6 +42,7 @@
 
 	function selectCategory(selection: Category) {
 		currentCategory = selection;
+		updateContentList = selection.id
 		var categoryMap = weaponCategoryMaps.find((c) => c.category == selection.id);
 		weapons = categoryMap
 			? allWeapons.filter((c) => categoryMap!.weapons.indexOf(c.id) > -1)
@@ -51,8 +53,8 @@
 	var searchQuery: string;
 
 	function searchForWeapon() {
+		updateContentList = searchQuery
 		weapons = allWeapons.filter((c) => c.name.toUpperCase().includes(searchQuery.toUpperCase()));
-		addTestWeapons();
 	}
 
 	function addTestWeapons() {
@@ -105,7 +107,7 @@
 		</div>
 
 		<!-- Grid Section -->
-		{#key currentCategory}
+		{#key updateContentList}
 			<div
 				class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
 				in:fly={{ x: -500, duration: 500, delay: 250 }}
