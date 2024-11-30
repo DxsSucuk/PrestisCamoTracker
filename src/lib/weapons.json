@@ -139,6 +139,7 @@
       "camos": [
         {
           "id": "muddled",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Muddled",
@@ -148,6 +149,7 @@
         },
         {
           "id": "machina",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Machina",
@@ -157,6 +159,7 @@
         },
         {
           "id": "liquify",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Liquify",
@@ -166,6 +169,7 @@
         },
         {
           "id": "mainframe",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Mainframe",
@@ -183,6 +187,7 @@
       "camos": [
         {
           "id": "whitecap",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Whitecap",
@@ -192,6 +197,7 @@
         },
         {
           "id": "vengeance",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Vengeance",
@@ -201,6 +207,7 @@
         },
         {
           "id": "chlorine",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Chlorine",
@@ -210,6 +217,7 @@
         },
         {
           "id": "haunted",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Haunted",
@@ -227,6 +235,7 @@
       "camos": [
         {
           "id": "heatstroke",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Heatstroke",
@@ -236,6 +245,7 @@
         },
         {
           "id": "burial",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Burial",
@@ -245,6 +255,7 @@
         },
         {
           "id": "hyperion",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Hyperion",
@@ -254,6 +265,7 @@
         },
         {
           "id": "graveyard",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Graveyard",
@@ -271,6 +283,7 @@
       "camos": [
         {
           "id": "ambush",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Ambush",
@@ -280,6 +293,7 @@
         },
         {
           "id": "cacti_cathode",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Cati Cathode",
@@ -289,6 +303,7 @@
         },
         {
           "id": "night_stalker",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Night Stalker",
@@ -298,6 +313,7 @@
         },
         {
           "id": "frostblossom",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Frostblossom",
@@ -315,6 +331,7 @@
       "camos": [
         {
           "id": "cherry_blossom",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Cherry Blossom",
@@ -324,6 +341,7 @@
         },
         {
           "id": "cedar",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Cedar",
@@ -333,6 +351,7 @@
         },
         {
           "id": "ghost_blossom",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Ghost Blossom",
@@ -342,6 +361,7 @@
         },
         {
           "id": "walnut",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Walnut",
@@ -359,6 +379,7 @@
       "camos": [
         {
           "id": "astral_cry",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Astral Cry",
@@ -368,6 +389,7 @@
         },
         {
           "id": "hammerhead",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Hammerhead",
@@ -377,6 +399,7 @@
         },
         {
           "id": "astral_pride",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Astral Pride",
@@ -386,6 +409,7 @@
         },
         {
           "id": "blood_scent",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Blood Scent",
@@ -403,6 +427,7 @@
       "camos": [
         {
           "id": "crimson_steppes",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Crimson Steppes",
@@ -412,6 +437,7 @@
         },
         {
           "id": "elk",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Elk",
@@ -421,6 +447,7 @@
         },
         {
           "id": "malachite_steppes",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Malachite Steppes",
@@ -430,6 +457,7 @@
         },
         {
           "id": "mountain_goat",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Mountain Goat",
@@ -447,6 +475,7 @@
       "camos": [
         {
           "id": "monochrome",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Monochrome",
@@ -456,6 +485,7 @@
         },
         {
           "id": "dreadshade",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Dreadshade",
@@ -465,6 +495,7 @@
         },
         {
           "id": "sunny_splash",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Sunny Splash",
@@ -474,6 +505,7 @@
         },
         {
           "id": "crowsbane",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Crowsbane",
@@ -491,6 +523,7 @@
       "camos": [
         {
           "id": "heatwave",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Heatwave",
@@ -500,6 +533,7 @@
         },
         {
           "id": "panther",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Panther",
@@ -509,6 +543,7 @@
         },
         {
           "id": "infrared",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Infrared",
@@ -518,6 +553,7 @@
         },
         {
           "id": "lynx",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Lynx",
@@ -535,6 +571,7 @@
       "camos": [
         {
           "id": "kakapo",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Kakapo",
@@ -544,6 +581,7 @@
         },
         {
           "id": "throwback",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Throwback",
@@ -553,6 +591,7 @@
         },
         {
           "id": "phoenix",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Phoenix",
@@ -562,6 +601,7 @@
         },
         {
           "id": "throttle",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Throttle",
@@ -579,6 +619,7 @@
       "camos": [
         {
           "id": "amorphous",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Amorphous",
@@ -588,6 +629,7 @@
         },
         {
           "id": "go_bananas",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Go Bananas",
@@ -597,6 +639,7 @@
         },
         {
           "id": "solemn",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Solemn",
@@ -606,6 +649,7 @@
         },
         {
           "id": "aloha",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Aloha",
@@ -623,6 +667,7 @@
       "camos": [
         {
           "id": "radiant_bath",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Radiant Bath",
@@ -632,6 +677,7 @@
         },
         {
           "id": "midnight_prowl",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Midnight Prowl",
@@ -641,6 +687,7 @@
         },
         {
           "id": "solvent",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Solvent",
@@ -650,6 +697,7 @@
         },
         {
           "id": "stalking_shadow",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Stalking Shadow",
@@ -667,6 +715,7 @@
       "camos": [
         {
           "id": "deep_end",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Deep End",
@@ -676,6 +725,7 @@
         },
         {
           "id": "dread",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Dread",
@@ -685,6 +735,7 @@
         },
         {
           "id": "plunge",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Plunge",
@@ -694,6 +745,7 @@
         },
         {
           "id": "distress",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Distress",
@@ -711,6 +763,7 @@
       "camos": [
         {
           "id": "kingfisher",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Kingfisher",
@@ -720,6 +773,7 @@
         },
         {
           "id": "blackthorn",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Blackthorn",
@@ -729,6 +783,7 @@
         },
         {
           "id": "tequila_sunrise",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Tequila Sunrise",
@@ -738,6 +793,7 @@
         },
         {
           "id": "voidthorn",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Voidthorn",
@@ -755,6 +811,7 @@
       "camos": [
         {
           "id": "netherworld",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Netherworld",
@@ -764,6 +821,7 @@
         },
         {
           "id": "solar_tide",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Solar Tide",
@@ -773,6 +831,7 @@
         },
         {
           "id": "whisper",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Whisper",
@@ -782,6 +841,7 @@
         },
         {
           "id": "limewave",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Limewave",
@@ -799,6 +859,7 @@
       "camos": [
         {
           "id": "blueberry_lime",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Blueberry Lime",
@@ -808,6 +869,7 @@
         },
         {
           "id": "chromed_out",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Chromed Out",
@@ -817,6 +879,7 @@
         },
         {
           "id": "strawberry_mint",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Strawberry Mint",
@@ -826,6 +889,7 @@
         },
         {
           "id": "peel_out",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Peel Out",
@@ -843,6 +907,7 @@
       "camos": [
         {
           "id": "night_terror",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Night Terror",
@@ -852,6 +917,7 @@
         },
         {
           "id": "drive_in",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Drive-In",
@@ -861,6 +927,7 @@
         },
         {
           "id": "dream_eater",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Dream Eater",
@@ -870,6 +937,7 @@
         },
         {
           "id": "coin_op",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Coin-Op",
@@ -887,6 +955,7 @@
       "camos": [
         {
           "id": "neon_bath",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Neon Bath",
@@ -896,6 +965,7 @@
         },
         {
           "id": "vigilance",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Vigilance",
@@ -905,6 +975,7 @@
         },
         {
           "id": "vivid",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Vivid",
@@ -914,6 +985,7 @@
         },
         {
           "id": "justice",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Justice",
@@ -931,6 +1003,7 @@
       "camos": [
         {
           "id": "brush_stroke",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Brush Stroke",
@@ -940,6 +1013,7 @@
         },
         {
           "id": "idyllic",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Idyllic",
@@ -949,6 +1023,7 @@
         },
         {
           "id": "impressionist",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Impressionist",
@@ -958,6 +1033,7 @@
         },
         {
           "id": "other_world",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Other World",
@@ -975,6 +1051,7 @@
       "camos": [
         {
           "id": "butt",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Buzz",
@@ -984,6 +1061,7 @@
         },
         {
           "id": "snakebite",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Snakebite",
@@ -993,6 +1071,7 @@
         },
         {
           "id": "hiss",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Hiss",
@@ -1002,6 +1081,7 @@
         },
         {
           "id": "acid_slide",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Acid Slide",
@@ -1019,6 +1099,7 @@
       "camos": [
         {
           "id": "ectoplasm",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Ectoplasm",
@@ -1028,6 +1109,7 @@
         },
         {
           "id": "lumberjack",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Lumberjack",
@@ -1037,6 +1119,7 @@
         },
         {
           "id": "hyperspace",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Hyperspace",
@@ -1046,6 +1129,7 @@
         },
         {
           "id": "wrangler",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Wrangler",
@@ -1063,6 +1147,7 @@
       "camos": [
         {
           "id": "clear_water",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Clear Water",
@@ -1072,6 +1157,7 @@
         },
         {
           "id": "concrete_jungle",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Concrete Jungle",
@@ -1081,6 +1167,7 @@
         },
         {
           "id": "harvest",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Harvest",
@@ -1090,6 +1177,7 @@
         },
         {
           "id": "desert_sunset",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Desert Sunset",
@@ -1107,6 +1195,7 @@
       "camos": [
         {
           "id": "ablaze",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Ablaze",
@@ -1116,6 +1205,7 @@
         },
         {
           "id": "mirage",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Mirage",
@@ -1125,6 +1215,7 @@
         },
         {
           "id": "voidflame",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Voidflame",
@@ -1134,6 +1225,7 @@
         },
         {
           "id": "blood_moon",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Blood Moon",
@@ -1151,6 +1243,7 @@
       "camos": [
         {
           "id": "bellowbloom",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Mellowbloom",
@@ -1160,6 +1253,7 @@
         },
         {
           "id": "cobalt",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Cobalt",
@@ -1169,6 +1263,7 @@
         },
         {
           "id": "furybloom",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Furybloom",
@@ -1178,6 +1273,7 @@
         },
         {
           "id": "manta",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Manta",
@@ -1195,6 +1291,7 @@
       "camos": [
         {
           "id": "copper",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Copper",
@@ -1204,6 +1301,7 @@
         },
         {
           "id": "permafrost",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Permafrost",
@@ -1213,6 +1311,7 @@
         },
         {
           "id": "strata",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Strata",
@@ -1222,6 +1321,7 @@
         },
         {
           "id": "eventide",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Eventide",
@@ -1239,6 +1339,7 @@
       "camos": [
         {
           "id": "pixelized",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Pixelized",
@@ -1248,6 +1349,7 @@
         },
         {
           "id": "patchwork",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Patchwork",
@@ -1257,6 +1359,7 @@
         },
         {
           "id": "cartridge",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Cartridge",
@@ -1266,6 +1369,7 @@
         },
         {
           "id": "integration",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Integration",
@@ -1286,6 +1390,7 @@
       "camos": [
         {
           "id": "chaparral",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Chaparral",
@@ -1295,6 +1400,7 @@
         },
         {
           "id": "nimbus",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Nimbus",
@@ -1304,6 +1410,7 @@
         },
         {
           "id": "foxglove",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Foxglove",
@@ -1313,6 +1420,7 @@
         },
         {
           "id": "overcast",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Overcast",
@@ -1330,6 +1438,7 @@
       "camos": [
         {
           "id": "exabyte",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "exabyte",
@@ -1339,6 +1448,7 @@
         },
         {
           "id": "blue_ring",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Blue Ring",
@@ -1348,6 +1458,7 @@
         },
         {
           "id": "yottabyte",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Yottabyte",
@@ -1357,6 +1468,7 @@
         },
         {
           "id": "red_ring",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Red Ring",
@@ -1374,6 +1486,7 @@
       "camos": [
         {
           "id": "spin",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Spin",
@@ -1383,6 +1496,7 @@
         },
         {
           "id": "demeter",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Demeter",
@@ -1392,6 +1506,7 @@
         },
         {
           "id": "hi_fi",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Hi-Fi",
@@ -1401,6 +1516,7 @@
         },
         {
           "id": "ceres",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Ceres",
@@ -1421,6 +1537,7 @@
       "camos": [
         {
           "id": "thistlevine",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Thistlevine",
@@ -1430,6 +1547,7 @@
         },
         {
           "id": "ragamuffin",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Ragamuffin",
@@ -1439,6 +1557,7 @@
         },
         {
           "id": "velvetvine",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Velvetvine",
@@ -1448,6 +1567,7 @@
         },
         {
           "id": "siamese",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Siamese",
@@ -1465,6 +1585,7 @@
       "camos": [
         {
           "id": "ritual",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Ritual",
@@ -1474,6 +1595,7 @@
         },
         {
           "id": "transcend",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Transcend",
@@ -1483,6 +1605,7 @@
         },
         {
           "id": "wavy",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Wavy",
@@ -1492,6 +1615,7 @@
         },
         {
           "id": "condemn",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Codemn",
@@ -1509,6 +1633,7 @@
       "camos": [
         {
           "id": "policia",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Policia",
@@ -1518,6 +1643,7 @@
         },
         {
           "id": "abstract",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Abstract",
@@ -1527,6 +1653,7 @@
         },
         {
           "id": "cbrne",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "CBRNE",
@@ -1536,6 +1663,7 @@
         },
         {
           "id": "technique",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Technique",
@@ -1553,6 +1681,7 @@
       "camos": [
         {
           "id": "reboot",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Reboot",
@@ -1562,6 +1691,7 @@
         },
         {
           "id": "dreamer",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Dreamer",
@@ -1571,6 +1701,7 @@
         },
         {
           "id": "decrypt",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Decrypt",
@@ -1580,6 +1711,7 @@
         },
         {
           "id": "renewed",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Renewed",
@@ -1597,6 +1729,7 @@
       "camos": [
         {
           "id": "neublon",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Nebulon",
@@ -1606,6 +1739,7 @@
         },
         {
           "id": "enchanted",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Panther",
@@ -1615,6 +1749,7 @@
         },
         {
           "id": "starsync",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Starsync",
@@ -1624,6 +1759,7 @@
         },
         {
           "id": "tempt_fate",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Tempt Fate",
@@ -1641,6 +1777,7 @@
       "camos": [
         {
           "id": "dying_envy",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Dying Envy",
@@ -1650,6 +1787,7 @@
         },
         {
           "id": "tropical_leopard",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Tropical Leopard",
@@ -1659,6 +1797,7 @@
         },
         {
           "id": "dying_bloom",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Dynig Bloom",
@@ -1668,6 +1807,7 @@
         },
         {
           "id": "vacation_leopard",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Vacation Leopard",
@@ -1685,6 +1825,7 @@
       "camos": [
         {
           "id": "torment",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Torment",
@@ -1694,6 +1835,7 @@
         },
         {
           "id": "slip",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Slip",
@@ -1703,6 +1845,7 @@
         },
         {
           "id": "banished",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Banished",
@@ -1712,6 +1855,7 @@
         },
         {
           "id": "contort",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Contort",
@@ -1729,6 +1873,7 @@
       "camos": [
         {
           "id": "twilight_toadstool",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Twilight Toadstool",
@@ -1738,6 +1883,7 @@
         },
         {
           "id": "thermal",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Thermal",
@@ -1747,6 +1893,7 @@
         },
         {
           "id": "glimmering_grove",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Glimmering Grove",
@@ -1756,6 +1903,7 @@
         },
         {
           "id": "shimmer",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Shimmer",
@@ -1778,6 +1926,7 @@
       "camos": [
         {
           "id": "heatwave",
+          "position": 10,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Heatwave",
@@ -1787,6 +1936,7 @@
         },
         {
           "id": "panther",
+          "position": 11,
           "category": "special_mp",
           "require": "red_tiger",
           "display": "Panther",
@@ -1796,6 +1946,7 @@
         },
         {
           "id": "infrared",
+          "position": 10,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Infrared",
@@ -1805,6 +1956,7 @@
         },
         {
           "id": "lynx",
+          "position": 11,
           "category": "special_zm",
           "require": "purple_tiger",
           "display": "Lynx",
@@ -1819,7 +1971,8 @@
     "zombies": [
       {
         "id": "slate",
-        "category": "military",
+        "position": 1,
+        "category": "military_zm",
         "display": "Slate",
         "image": "https://camo.presti.me/images/camos/military/zm/slate.webp",
         "amount": 100,
@@ -1827,7 +1980,8 @@
       },
       {
         "id": "desert",
-        "category": "military",
+        "position": 2,
+        "category": "military_zm",
         "require": "slate",
         "display": "Desert",
         "image": "https://camo.presti.me/images/camos/military/zm/desert.webp",
@@ -1836,7 +1990,8 @@
       },
       {
         "id": "evergreen",
-        "category": "military",
+        "position": 3,
+        "category": "military_zm",
         "require": "desert",
         "display": "Evergreen",
         "image": "https://camo.presti.me/images/camos/military/zm/evergreen.webp",
@@ -1845,7 +2000,8 @@
       },
       {
         "id": "rugged",
-        "category": "military",
+        "position": 4,
+        "category": "military_zm",
         "require": "evergreen",
         "display": "Rugged",
         "image": "https://camo.presti.me/images/camos/military/zm/rugged.webp",
@@ -1854,7 +2010,8 @@
       },
       {
         "id": "grim",
-        "category": "military",
+        "position": 5,
+        "category": "military_zm",
         "require": "rugged",
         "display": "Grim",
         "image": "https://camo.presti.me/images/camos/military/zm/grim.webp",
@@ -1863,7 +2020,8 @@
       },
       {
         "id": "stripe",
-        "category": "military",
+        "position": 6,
+        "category": "military_zm",
         "require": "grim",
         "display": "Stripe",
         "image": "https://camo.presti.me/images/camos/military/zm/stripe.webp",
@@ -1872,7 +2030,8 @@
       },
       {
         "id": "oceanic",
-        "category": "military",
+        "position": 7,
+        "category": "military_zm",
         "require": "stripe",
         "display": "Oceanic",
         "image": "https://camo.presti.me/images/camos/military/zm/oceanic.webp",
@@ -1881,7 +2040,8 @@
       },
       {
         "id": "whiteout",
-        "category": "military",
+        "position": 8,
+        "category": "military_zm",
         "require": "oceanic",
         "display": "Whiteout",
         "image": "https://camo.presti.me/images/camos/military/zm/whiteout.webp",
@@ -1890,7 +2050,8 @@
       },
       {
         "id": "purple_tiger",
-        "category": "military",
+        "position": 9,
+        "category": "military_zm",
         "require": "whiteout",
         "display": "Purple Tiger",
         "image": "https://camo.presti.me/images/camos/military/zm/purple-tiger.webp",
@@ -1899,7 +2060,8 @@
       },
       {
         "id": "mystic_gold",
-        "category": "mastery",
+        "position": 12,
+        "category": "mastery_zm",
         "require": "specials_zm",
         "display": "Mystic Gold",
         "image": "https://camo.presti.me/images/camos/mastery/zm/mystic-gold.webp",
@@ -1908,7 +2070,8 @@
       },
       {
         "id": "opal",
-        "category": "mastery",
+        "position": 13,
+        "category": "mastery_zm",
         "require": "category_mystic_gold",
         "display": "Opal",
         "image": "https://camo.presti.me/images/camos/mastery/zm/opal.webp",
@@ -1917,7 +2080,8 @@
       },
       {
         "id": "afterlife",
-        "category": "mastery",
+        "position": 14,
+        "category": "mastery_zm",
         "require": "all_opal",
         "display": "Afterlife",
         "image": "https://camo.presti.me/images/camos/mastery/zm/afterlife.webp",
@@ -1926,7 +2090,8 @@
       },
       {
         "id": "nebula",
-        "category": "mastery",
+        "position": 15,
+        "category": "mastery_zm",
         "require": "all_afterlife",
         "display": "Nebula",
         "image": "https://camo.presti.me/images/camos/mastery/zm/nebula.webp",
@@ -1937,7 +2102,8 @@
     "multiplayer": [
       {
         "id": "granite",
-        "category": "military",
+        "position": 1,
+        "category": "military_mp",
         "display": "Granite",
         "image": "https://camo.presti.me/images/camos/military/mp/granite.webp",
         "amount": 5,
@@ -1945,7 +2111,8 @@
       },
       {
         "id": "woodland",
-        "category": "military",
+        "position": 2,
+        "category": "military_mp",
         "require": "granite",
         "display": "Woodland",
         "image": "https://camo.presti.me/images/camos/military/mp/woodland.webp",
@@ -1954,7 +2121,8 @@
       },
       {
         "id": "savanna",
-        "category": "military",
+        "position": 3,
+        "category": "military_mp",
         "require": "woodland",
         "display": "Savanna",
         "image": "https://camo.presti.me/images/camos/military/mp/savanna.webp",
@@ -1963,7 +2131,8 @@
       },
       {
         "id": "splinter",
-        "category": "military",
+        "position": 4,
+        "category": "military_mp",
         "require": "savanna",
         "display": "Splinter",
         "image": "https://camo.presti.me/images/camos/military/mp/splinter.webp",
@@ -1972,7 +2141,8 @@
       },
       {
         "id": "moss",
-        "category": "military",
+        "position": 5,
+        "category": "military_mp",
         "require": "splinter",
         "display": "Moss",
         "image": "https://camo.presti.me/images/camos/military/mp/moss.webp",
@@ -1981,7 +2151,8 @@
       },
       {
         "id": "saboteur",
-        "category": "military",
+        "position": 6,
+        "category": "military_mp",
         "require": "moss",
         "display": "Saboteur",
         "image": "https://camo.presti.me/images/camos/military/mp/saboteur.webp",
@@ -1990,7 +2161,8 @@
       },
       {
         "id": "digital",
-        "category": "military",
+        "position": 7,
+        "category": "military_mp",
         "require": "saboteur",
         "display": "Digital",
         "image": "https://camo.presti.me/images/camos/military/mp/digital.webp",
@@ -1999,7 +2171,8 @@
       },
       {
         "id": "tide",
-        "category": "military",
+        "position": 8,
+        "category": "military_mp",
         "require": "digital",
         "display": "Tide",
         "image": "https://camo.presti.me/images/camos/military/mp/tide.webp",
@@ -2008,7 +2181,8 @@
       },
       {
         "id": "red_tiger",
-        "category": "military",
+        "position": 9,
+        "category": "military_mp",
         "require": "tide",
         "display": "Red Tiger",
         "image": "https://camo.presti.me/images/camos/military/mp/red-tiger.webp",
@@ -2017,7 +2191,8 @@
       },
       {
         "id": "gold",
-        "category": "mastery",
+        "position": 12,
+        "category": "mastery_mp",
         "require": "specials_mp",
         "display": "Gold",
         "image": "https://camo.presti.me/images/camos/mastery/mp/gold.webp",
@@ -2026,7 +2201,8 @@
       },
       {
         "id": "diamond",
-        "category": "mastery",
+        "position": 13,
+        "category": "mastery_mp",
         "require": "category_gold",
         "display": "Diamond",
         "image": "https://camo.presti.me/images/camos/mastery/mp/diamond.webp",
@@ -2035,7 +2211,8 @@
       },
       {
         "id": "darkspine",
-        "category": "mastery",
+        "position": 14,
+        "category": "mastery_mp",
         "require": "all_diamond",
         "display": "Dark Spine",
         "image": "https://camo.presti.me/images/camos/mastery/mp/dark-spine.webp",
@@ -2044,7 +2221,8 @@
       },
       {
         "id": "dark_matter",
-        "category": "mastery",
+        "position": 15,
+        "category": "mastery_mp",
         "require": "all_dakrspine",
         "display": "Dark Matter",
         "image": "https://camo.presti.me/images/camos/mastery/mp/dark-matter.webp",
@@ -2055,7 +2233,8 @@
     "warzone": [
       {
         "id": "quartz",
-        "category": "military",
+        "position": 1,
+        "category": "military_wz",
         "display": "Quartz",
         "image": "https://camo.presti.me/images/camos/military/wz/quartz.webp",
         "amount": 5,
@@ -2063,7 +2242,8 @@
       },
       {
         "id": "tundra",
-        "category": "military",
+        "position": 2,
+        "category": "military_wz",
         "require": "granite",
         "display": "Tundra",
         "image": "https://camo.presti.me/images/camos/military/wz/tundra.webp",
@@ -2072,7 +2252,8 @@
       },
       {
         "id": "canyon",
-        "category": "military",
+        "position": 3,
+        "category": "military_wz",
         "require": "tundra",
         "display": "Canyon",
         "image": "https://camo.presti.me/images/camos/military/wz/canyon.webp",
@@ -2081,7 +2262,8 @@
       },
       {
         "id": "pine",
-        "category": "military",
+        "position": 4,
+        "category": "military_wz",
         "require": "canyon",
         "display": "Pine",
         "image": "https://camo.presti.me/images/camos/military/wz/pine.webp",
@@ -2090,7 +2272,8 @@
       },
       {
         "id": "undergrowth",
-        "category": "military",
+        "position": 5,
+        "category": "military_wz",
         "require": "pine",
         "display": "Undergrowth",
         "image": "https://camo.presti.me/images/camos/military/wz/undergrowth.webp",
@@ -2099,7 +2282,8 @@
       },
       {
         "id": "snakeskin",
-        "category": "military",
+        "position": 6,
+        "category": "military_wz",
         "require": "undergrowth",
         "display": "Snakeskin",
         "image": "https://camo.presti.me/images/camos/military/wz/snakeskin.webp",
@@ -2108,7 +2292,8 @@
       },
       {
         "id": "siberia",
-        "category": "military",
+        "position": 7,
+        "category": "military_wz",
         "require": "snakeskin",
         "display": "Siberia",
         "image": "https://camo.presti.me/images/camos/military/wz/siberia.webp",
@@ -2117,7 +2302,8 @@
       },
       {
         "id": "smolder",
-        "category": "military",
+        "position": 8,
+        "category": "military_wz",
         "require": "siberia",
         "display": "Smolder",
         "image": "https://camo.presti.me/images/camos/military/wz/smolder.webp",
@@ -2126,7 +2312,8 @@
       },
       {
         "id": "blue_tiger",
-        "category": "military",
+        "position": 9,
+        "category": "military_wz",
         "require": "smolder",
         "display": "Blue Tiger",
         "image": "https://camo.presti.me/images/camos/military/wz/blue-tiger.webp",
@@ -2135,7 +2322,8 @@
       },
       {
         "id": "gold_tiger",
-        "category": "mastery",
+        "position": 12,
+        "category": "mastery_wz",
         "require": "specials_mp",
         "display": "Gold Tiger",
         "image": "https://camo.presti.me/images/camos/mastery/wz/gold-tiger.webp",
@@ -2144,7 +2332,8 @@
       },
       {
         "id": "kings_ransom",
-        "category": "mastery",
+        "position": 13,
+        "category": "mastery_wz",
         "require": "category_gold_tiger",
         "display": "King's Ransom",
         "image": "https://camo.presti.me/images/camos/mastery/wz/kings-ransom.webp",
@@ -2153,7 +2342,8 @@
       },
       {
         "id": "catalyst",
-        "category": "mastery",
+        "position": 14,
+        "category": "mastery_wz",
         "require": "all_kings_ransom",
         "display": "Catalyst",
         "image": "https://camo.presti.me/images/camos/mastery/wz/catalyst.webp",
@@ -2162,7 +2352,8 @@
       },
       {
         "id": "abyss",
-        "category": "mastery",
+        "position": 15,
+        "category": "mastery_wz",
         "require": "all_catalyst",
         "display": "Abyss",
         "image": "https://camo.presti.me/images/camos/mastery/wz/abyss.webp",

@@ -14,6 +14,7 @@ export interface Category {
 
 export interface Camo {
     id: string,
+    position: number,
     category: string,
     require?: string,
     display: string,
@@ -44,6 +45,8 @@ export interface UnlockedWeaponCamo {
 
 export interface CamoProgress {
     id: string,
+    position: number,
+    category: string,
     progress: number,
     done: boolean
 }
@@ -101,6 +104,7 @@ export function parseCamos(values: any): Camo[] {
 export function parseCamo(value: any): Camo {
     return {
         id: value.id,
+        position: value.position,
         category: value.category,
         require: value.require,
         display: value.display,
@@ -184,6 +188,8 @@ export function parseCamoProgresses(values: any): CamoProgress[] {
 export function parseCamoProgress(value: any): CamoProgress {
     return {
         id: value.id,
+        position: value.position,
+        category: value.category,
         done: value.done,
         progress: value.progress
     };

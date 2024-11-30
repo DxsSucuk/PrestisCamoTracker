@@ -30,10 +30,6 @@
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 		weaponsList.subscribe((c) => (allWeapons = c));
 
-		//onDestroy(catSub)
-		//onDestroy(catMap)
-		//onDestroy(wapSub)
-
 		let defaultCatId = $page.url.searchParams.has('category')
 			? $page.url.searchParams.get('category')!
 			: 'assault';
@@ -86,40 +82,38 @@
 	}
 
 	function getHighestCamo(weapon: Weapon, typ: string): Camo {
-		var toUseCamoList: Camo[];
+		var toUseCamoListGlobal: Camo[];
+		let militaryFilter;
+		let specialFilter;
+		let masteryFilter;
 
 		if (typ == '0') {
-			toUseCamoList = get(globalMultiplayerCamos);
+			toUseCamoListGlobal = get(globalMultiplayerCamos);
+			militaryFilter = 'military_mp'
+			specialFilter = 'special_mp';
+			masteryFilter = "mastery_mp"
 		} else if (typ == '1') {
-			toUseCamoList = get(globalZombiesCamos);
+			toUseCamoListGlobal = get(globalZombiesCamos);
+			militaryFilter = 'military_zm'
+			specialFilter = 'special_zm';
+			masteryFilter = "mastery_zm"
 		} else {
-			toUseCamoList = get(globalWarzoneCamos);
+			toUseCamoListGlobal = get(globalWarzoneCamos);
+			militaryFilter = 'military_wz'
+			specialFilter = 'special_wz';
+			masteryFilter = "mastery_wz"
 		}
 
-		let highestWeaponCamo = getCamoProgressById(weapon.id).camo.findLast((c) => c.done);
+		let highestWeaponCamo = getCamoProgressById(weapon.id).camo.sort((a, b) => a.position < b.position ? -1 : a.position > b.position ? 1 : 0)
+			.findLast((c) => c.done && (c.category.includes(militaryFilter) || c.category.includes(specialFilter) || c.category.includes(masteryFilter)));
 
-		if (!highestWeaponCamo) return toUseCamoList[0];
+		if (!highestWeaponCamo) return toUseCamoListGlobal[0];
 
-		let highestSpecial = weapon.camos.find((c) => c.id == highestWeaponCamo!.id);
-		let highestGlobal = toUseCamoList.find((c) => c.id == highestWeaponCamo!.id);
+		var toUseCamo = highestWeaponCamo.category.includes("special") ? weapon.camos.find((c) => c.id == highestWeaponCamo!.id) :
+		toUseCamoListGlobal.find((c) => c.id == highestWeaponCamo!.id);
 
-		if (highestGlobal) {
-			if (highestGlobal.category.includes('mastery')) {
-				return highestGlobal;
-			} else {
-				if (highestSpecial) {
-					return highestSpecial;
-				}
 
-				return highestGlobal;
-			}
-		} else {
-			if (highestSpecial) {
-				return highestSpecial;
-			}
-
-			return toUseCamoList[0];
-		}
+		return toUseCamo || toUseCamoListGlobal[0]
 	}
 </script>
 

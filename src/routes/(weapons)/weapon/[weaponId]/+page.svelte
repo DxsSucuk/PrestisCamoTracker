@@ -27,7 +27,9 @@
 
 	var currentProgress: UnlockedWeaponCamo;
 
+	var militaryFilter: string;
 	var specialFilter: string;
+	var masteryFilter: string;
 
 	onMount(() => {
 		let weaponId = $page.params.weaponId;
@@ -44,8 +46,8 @@
 		updateCamos(typId);
 	});
 
-	function pressCamo(camo:string) {
-		let index = currentProgress.camo.findIndex(c => c.id === camo);
+	function pressCamo(camo:Camo) {
+		let index = currentProgress.camo.findIndex(c => c.id === camo.id);
 		let tempCamo: CamoProgress;
 		if (index > -1) {
 			tempCamo = currentProgress.camo[index]
@@ -53,9 +55,11 @@
 			currentProgress.camo[index] = tempCamo
 		} else {
 			tempCamo = {
+				position: camo.position,
+				category: camo.category,
 				done: true,
 				progress: 0,
-				id: camo
+				id: camo.id
 			}
 			currentProgress.camo.push(tempCamo)
 		}
@@ -63,9 +67,9 @@
 		updateCamoProgress(currentProgress)
 
 		if (tempCamo.done)
-			document.getElementById(camo)?.classList.add("ring-2", "ring-green-500")
+			document.getElementById(camo.id)?.classList.add("ring-2", "ring-green-500")
 		else		
-			document.getElementById(camo)?.classList.remove("ring-2", "ring-green-500")
+			document.getElementById(camo.id)?.classList.remove("ring-2", "ring-green-500")
 	}
 
 	function updateCamos(typ: string) {
@@ -73,31 +77,38 @@
 
 		if (typ == '0') {
 			toUseCamoList = get(globalMultiplayerCamos);
+			militaryFilter = 'military_mp'
 			specialFilter = 'special_mp';
+			masteryFilter = "mastery_mp"
 		} else if (typ == '1') {
 			toUseCamoList = get(globalZombiesCamos);
+			militaryFilter = 'military_zm'
 			specialFilter = 'special_zm';
+			masteryFilter = "mastery_zm"
 		} else {
 			toUseCamoList = get(globalWarzoneCamos);
-
+			militaryFilter = 'military_wz'
 			specialFilter = 'special_wz';
+			masteryFilter = "mastery_wz"
 		}
 
-		militaryCamos = toUseCamoList.filter((c) => c.category == 'military');
-		masteryCamos = toUseCamoList.filter((c) => c.category == 'mastery');
+		militaryCamos = toUseCamoList.filter((c) => c.category == militaryFilter);
+		masteryCamos = toUseCamoList.filter((c) => c.category == masteryFilter);
 	}
 
-	function isCamoDone(camo:string):boolean {
-		let index = currentProgress.camo.findIndex(c => c.id === camo);
+	function isCamoDone(camo:Camo):boolean {
+		let index = currentProgress.camo.findIndex(c => c.id === camo.id);
 		let tempCamo: CamoProgress;
 		if (index > -1) {
 			tempCamo = currentProgress.camo[index]
 			return tempCamo.done
 		} else {
 			tempCamo = {
+				position: camo.position,
+				category: camo.category,
 				done: false,
 				progress: 0,
-				id: camo
+				id: camo.id
 			}
 			return false
 		}
@@ -225,8 +236,8 @@
 						<h2 class="text-2xl font-semibold">Military</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each militaryCamos as camoEntry}
-								<div id="{camoEntry.id}"class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry.id)
+								<div id="{camoEntry.id}"class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry)
 								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
@@ -253,8 +264,8 @@
 						<h2 class="text-2xl font-semibold">Special</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each currentWeapon?.camos.filter((c) => c.category == specialFilter) as camoEntry}
-								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry.id)
+								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry)
 								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
@@ -281,8 +292,8 @@
 						<h2 class="text-2xl font-semibold">Mastery</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each masteryCamos as camoEntry}
-								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
-									pressCamo(camoEntry.id)
+								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry)
 								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
