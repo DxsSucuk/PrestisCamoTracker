@@ -115,7 +115,7 @@
 								? 'bg-red-500'
 								: 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
 							role="button"
-							aria-disabled="true">WA</span
+							aria-disabled="true">WZ</span
 						>
 					</div>
 				</div>
