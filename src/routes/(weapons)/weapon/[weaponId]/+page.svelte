@@ -229,10 +229,14 @@
 			{/if}
 
 			{#key specialFilter}
-				<div class="space-y-4" in:fly={{ x: -500, duration: 500, delay: 250 }} out:fly={{ x: 500, duration: 200 }}>
+				<div class="space-y-4"
+				in:fly={{ x: -500, duration: 500, delay: 250 }} out:fly={{ x: 500, duration: 200 }}>
 					
 					<!-- Grid 1 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4">
+					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
+					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
+					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
 						<h2 class="text-2xl font-semibold">Military</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each militaryCamos as camoEntry}
@@ -260,7 +264,10 @@
 					</div>
 
 					<!-- Grid 2 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4">
+					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
+					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
+					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
 						<h2 class="text-2xl font-semibold">Special</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each currentWeapon?.camos.filter((c) => c.category == specialFilter) as camoEntry}
@@ -288,7 +295,10 @@
 					</div>
 
 					<!-- Grid 3 Section -->
-					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4">
+					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4
+					{specialFilter.includes("zm") ? "ring-2 ring-green-500" :
+					specialFilter.includes("mp") ? "ring-2 ring-blue-500" :
+					specialFilter.includes("wz") ? "ring-2 ring-red-500" : ""}">
 						<h2 class="text-2xl font-semibold">Mastery</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each masteryCamos as camoEntry}
