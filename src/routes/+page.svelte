@@ -1,10 +1,20 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { categoryList, categoryWeaponMap, weaponsList, getCategory } from '$lib/handler';
-	import type { Category, Weapon, WeaponCategoryMap } from '$lib/structures';
+	import {
+		categoryList,
+		categoryWeaponMap,
+		weaponsList,
+		getCategory,
+		getCamoProgressById,
+		globalMultiplayerCamos,
+		globalZombiesCamos,
+		globalWarzoneCamos
+	} from '$lib/handler';
+	import type { Camo, Category, Weapon, WeaponCategoryMap } from '$lib/structures';
 	import { onMount } from 'svelte';
-	import { fly, scale, slide } from 'svelte/transition';
+	import { get } from 'svelte/store';
+	import { fly } from 'svelte/transition';
 
 	var categories: Category[];
 	var currentCategory: Category;
@@ -19,6 +29,10 @@
 		categoryList.subscribe((c) => (categories = c));
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 		weaponsList.subscribe((c) => (allWeapons = c));
+
+		//onDestroy(catSub)
+		//onDestroy(catMap)
+		//onDestroy(wapSub)
 
 		let defaultCatId = $page.url.searchParams.has('category')
 			? $page.url.searchParams.get('category')!
@@ -42,7 +56,7 @@
 
 	function selectCategory(selection: Category) {
 		currentCategory = selection;
-		updateContentList = selection.id
+		updateContentList = selection.id;
 		var categoryMap = weaponCategoryMaps.find((c) => c.category == selection.id);
 		weapons = categoryMap
 			? allWeapons.filter((c) => categoryMap!.weapons.indexOf(c.id) > -1)
@@ -53,7 +67,7 @@
 	var searchQuery: string;
 
 	function searchForWeapon() {
-		updateContentList = searchQuery
+		updateContentList = searchQuery;
 		weapons = allWeapons.filter((c) => c.name.toUpperCase().includes(searchQuery.toUpperCase()));
 	}
 
@@ -69,6 +83,43 @@
 
 	function openWeapon(weapon: Weapon) {
 		goto('/weapon/' + weapon.id);
+	}
+
+	function getHighestCamo(weapon: Weapon, typ: string): Camo {
+		var toUseCamoList: Camo[];
+
+		if (typ == '0') {
+			toUseCamoList = get(globalMultiplayerCamos);
+		} else if (typ == '1') {
+			toUseCamoList = get(globalZombiesCamos);
+		} else {
+			toUseCamoList = get(globalWarzoneCamos);
+		}
+
+		let highestWeaponCamo = getCamoProgressById(weapon.id).camo.findLast((c) => c.done);
+
+		if (!highestWeaponCamo) return toUseCamoList[0];
+
+		let highestSpecial = weapon.camos.find((c) => c.id == highestWeaponCamo!.id);
+		let highestGlobal = toUseCamoList.find((c) => c.id == highestWeaponCamo!.id);
+
+		if (highestGlobal) {
+			if (highestGlobal.category.includes('mastery')) {
+				return highestGlobal;
+			} else {
+				if (highestSpecial) {
+					return highestSpecial;
+				}
+
+				return highestGlobal;
+			}
+		} else {
+			if (highestSpecial) {
+				return highestSpecial;
+			}
+
+			return toUseCamoList[0];
+		}
 	}
 </script>
 
@@ -103,6 +154,24 @@
 					on:keyup={searchForWeapon}
 					bind:value={searchQuery}
 				/>
+			</div>
+		</div>
+
+		<div class="space-y-4 bg-gray-800 rounded-xl shadow-lg p-4">
+			<h2 class="text-2xl text-red-500 font-semibold">Notices</h2>
+			<div class="grid grid-cols-1 gap-6">
+					<div
+						class="bg-gray-900 rounded-xl ring-2 ring-blue-500 shadow-lg p-6 flex items-center"
+					>
+						<!-- Text Content -->
+						<div class="flex-1">
+							<h4 class="text-lg font-semibold">Warzone</h4>
+							<p class="text-base text-gray-400 mt-2">
+								Warzone Military Camo descriptions are wrong for Meeles and Launchers.<br>
+								And neither are the Specials for any weapon added on Warzone.
+							</p>
+						</div>
+					</div>
 			</div>
 		</div>
 
@@ -151,9 +220,36 @@
 								</div>
 							{/if}
 							<div class="absolute bottom-4 right-4 flex space-x-2">
-								<span class="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded">MP</span>
-								<span class="bg-green-500 text-white text-sm font-bold px-3 py-1 rounded">ZM</span>
-								<span class="bg-red-500 text-white text-sm font-bold px-3 py-1 rounded">WZ</span>
+								<div
+									class="relative ring-2 ring-blue-500 flex items-center justify-center w-12 h-12 rounded text-white text-sm font-bold"
+								>
+									<img
+										src={getHighestCamo(weaponToDisplay, '0').image}
+										alt="{weaponToDisplay.id} highest"
+										class="w-full h-full object-cover rounded"
+									/>
+									<span class="absolute top-1 left-1">MP</span>
+								</div>
+								<div
+									class="relative ring-2 ring-green-500 flex items-center justify-center w-12 h-12 rounded text-white text-sm font-bold"
+								>
+									<img
+										src={getHighestCamo(weaponToDisplay, '1').image}
+										alt="{weaponToDisplay.id} highest"
+										class="w-full h-full object-cover rounded"
+									/>
+									<span class="absolute top-1 left-1">ZM</span>
+								</div>
+								<div
+									class="relative ring-2 ring-red-500 flex items-center justify-center w-12 h-12 rounded text-white text-sm font-bold"
+								>
+									<img
+										src={getHighestCamo(weaponToDisplay, '2').image}
+										alt="{weaponToDisplay.id} highest"
+										class="w-full h-full object-cover rounded"
+									/>
+									<span class="absolute top-1 left-1">WZ</span>
+								</div>
 							</div>
 						</div>
 					{/each}

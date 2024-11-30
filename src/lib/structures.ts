@@ -33,6 +33,21 @@ export interface WeaponCategoryMap {
     weapons: string[]
 }
 
+export interface LocalProgress {
+    weapons: UnlockedWeaponCamo[]
+}
+
+export interface UnlockedWeaponCamo {
+    weapon: string,
+    camo: CamoProgress[]
+}
+
+export interface CamoProgress {
+    id: string,
+    progress: number,
+    done: boolean
+}
+
 export function parseCategories(values: any): Category[] {
     let array: Category[] = [];
 
@@ -43,7 +58,7 @@ export function parseCategories(values: any): Category[] {
     return array;
 }
 
-function parseCategory(value: any): Category {
+export function parseCategory(value: any): Category {
     return {
         id: value.id,
         display: value.display,
@@ -62,7 +77,7 @@ export function parseWeapons(values: any): Weapon[] {
     return array;
 }
 
-function parseWeapon(value: any): Weapon {
+export function parseWeapon(value: any): Weapon {
     return {
         id: value.id,
         name: value.name,
@@ -83,7 +98,7 @@ export function parseCamos(values: any): Camo[] {
     return array;
 }
 
-function parseCamo(value: any): Camo {
+export function parseCamo(value: any): Camo {
     return {
         id: value.id,
         category: value.category,
@@ -105,7 +120,7 @@ export function parseNotices(values: any): Notice[] {
     return array;
 }
 
-function parseNotice(value: any): Notice {
+export function parseNotice(value: any): Notice {
     return {
         zombies: value.zombies ? value.zombies : undefined,
         multiplayer: value.multiplayer ? value.multiplayer : undefined,
@@ -123,10 +138,53 @@ export function parseWeaponCategoryMaps(values: any): WeaponCategoryMap[] {
     return array;
 }
 
-function parseWeaponCategoryMap(value: any): WeaponCategoryMap {
+export function parseWeaponCategoryMap(value: any): WeaponCategoryMap {
     return {
         category: value.category,
         weapons: value.weapons
     };
 }
 
+export function parseLocalProgress(value: any): LocalProgress {
+    let weaponsFromValue = value.weapons
+    return {
+        weapons: weaponsFromValue ? parseWeaponCamoUnlocks(weaponsFromValue) : [],
+    };
+}
+
+export function parseWeaponCamoUnlocks(values: any): UnlockedWeaponCamo[] {
+    let array: UnlockedWeaponCamo[] = [];
+
+    for (const value of values) {
+        let temp = parseWeaponCamoUnlock(value)
+        array.push(temp);
+    }
+
+    return array;
+}
+
+export function parseWeaponCamoUnlock(value: any): UnlockedWeaponCamo {
+    return {
+        camo: parseCamoProgresses(value.camo),
+        weapon: value.weapon,
+    };
+}
+
+export function parseCamoProgresses(values: any): CamoProgress[] {
+    let array: CamoProgress[] = [];
+
+    for (const value of values) {
+        let temp = parseCamoProgress(value)
+        array.push(temp);
+    }
+
+    return array;
+}
+
+export function parseCamoProgress(value: any): CamoProgress {
+    return {
+        id: value.id,
+        done: value.done,
+        progress: value.progress
+    };
+}

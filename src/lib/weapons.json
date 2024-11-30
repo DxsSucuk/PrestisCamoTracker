@@ -2052,7 +2052,124 @@
         "description": "Get 5 Kills without dying 3 times with the %weapon%"
       }
     ],
-    "warzone": [],
+    "warzone": [
+      {
+        "id": "quartz",
+        "category": "military",
+        "display": "Quartz",
+        "image": "https://camo.presti.me/images/camos/military/wz/quartz.webp",
+        "amount": 5,
+        "description": "Get 5 Eliminations with the %weapon%"
+      },
+      {
+        "id": "tundra",
+        "category": "military",
+        "require": "granite",
+        "display": "Tundra",
+        "image": "https://camo.presti.me/images/camos/military/wz/tundra.webp",
+        "amount": 10,
+        "description": "Get 10 Eliminations with the %weapon%"
+      },
+      {
+        "id": "canyon",
+        "category": "military",
+        "require": "tundra",
+        "display": "Canyon",
+        "image": "https://camo.presti.me/images/camos/military/wz/canyon.webp",
+        "amount": 15,
+        "description": "Get 15 Eliminations with the %weapon%"
+      },
+      {
+        "id": "pine",
+        "category": "military",
+        "require": "canyon",
+        "display": "Pine",
+        "image": "https://camo.presti.me/images/camos/military/wz/pine.webp",
+        "amount": 20,
+        "description": "Get 20 Eliminations with the %weapon%"
+      },
+      {
+        "id": "undergrowth",
+        "category": "military",
+        "require": "pine",
+        "display": "Undergrowth",
+        "image": "https://camo.presti.me/images/camos/military/wz/undergrowth.webp",
+        "amount": 30,
+        "description": "Get 30 Eliminations with the %weapon%"
+      },
+      {
+        "id": "snakeskin",
+        "category": "military",
+        "require": "undergrowth",
+        "display": "Snakeskin",
+        "image": "https://camo.presti.me/images/camos/military/wz/snakeskin.webp",
+        "amount": 40,
+        "description": "Get 40 Eliminations with the %weapon%"
+      },
+      {
+        "id": "siberia",
+        "category": "military",
+        "require": "snakeskin",
+        "display": "Siberia",
+        "image": "https://camo.presti.me/images/camos/military/wz/siberia.webp",
+        "amount": 50,
+        "description": "Get 50 Eliminations with the %weapon%"
+      },
+      {
+        "id": "smolder",
+        "category": "military",
+        "require": "siberia",
+        "display": "Smolder",
+        "image": "https://camo.presti.me/images/camos/military/wz/smolder.webp",
+        "amount": 75,
+        "description": "Get 75 Eliminations with the %weapon%"
+      },
+      {
+        "id": "blue_tiger",
+        "category": "military",
+        "require": "smolder",
+        "display": "Blue Tiger",
+        "image": "https://camo.presti.me/images/camos/military/wz/blue-tiger.webp",
+        "amount": 100,
+        "description": "Get 100 Eliminations with the %weapon%"
+      },
+      {
+        "id": "gold_tiger",
+        "category": "mastery",
+        "require": "specials_mp",
+        "display": "Gold Tiger",
+        "image": "https://camo.presti.me/images/camos/mastery/wz/gold-tiger.webp",
+        "amount": 5,
+        "description": "Get 5 Eliminations while being the Most Wanted Contract target with the %weapon%"
+      },
+      {
+        "id": "kings_ransom",
+        "category": "mastery",
+        "require": "category_gold_tiger",
+        "display": "King's Ransom",
+        "image": "https://camo.presti.me/images/camos/mastery/wz/kings-ransom.webp",
+        "amount": 5,
+        "description": "Get 3 Kills without dying 5 times with the %weapon%"
+      },
+      {
+        "id": "catalyst",
+        "category": "mastery",
+        "require": "all_kings_ransom",
+        "display": "Catalyst",
+        "image": "https://camo.presti.me/images/camos/mastery/wz/catalyst.webp",
+        "amount": 5,
+        "description": "Get 5 on enemies affected by your Stun Grenade, Flashban, or Shock Charge with the %weapon%"
+      },
+      {
+        "id": "abyss",
+        "category": "mastery",
+        "require": "all_catalyst",
+        "display": "Abyss",
+        "image": "https://camo.presti.me/images/camos/mastery/wz/abyss.webp",
+        "amount": 2,
+        "description": "Get 5 Kills without dying 2 times with the %weapon%"
+      }
+    ],
     "overwrite": {
       "category_all": {
         "assault": 7,

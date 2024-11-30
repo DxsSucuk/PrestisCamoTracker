@@ -2,16 +2,20 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import {
+	getCamoProgress,
+		getCamoProgressById,
 		getCategory,
 		globalMultiplayerCamos,
 		globalWarzoneCamos,
 		globalZombiesCamos,
+		progress,
+		updateCamoProgress,
 		weaponsList
 	} from '$lib/handler';
-	import type { Camo, Weapon } from '$lib/structures';
+	import type { Camo, CamoProgress, UnlockedWeaponCamo, Weapon } from '$lib/structures';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
-	import { fly, scale, slide } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 
 	var currentWeapon: Weapon | undefined;
 	var globalZMCamos: Camo[];
@@ -21,11 +25,16 @@
 	var militaryCamos: Camo[];
 	var masteryCamos: Camo[];
 
+	var currentProgress: UnlockedWeaponCamo;
+
 	var specialFilter: string;
 
 	onMount(() => {
 		let weaponId = $page.params.weaponId;
 		let typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : '0';
+
+		currentProgress = getCamoProgressById(weaponId)
+		progress.subscribe((c) => currentProgress = getCamoProgress(c, weaponId))
 
 		currentWeapon = get(weaponsList).find((c) => c.id == weaponId);
 		globalZombiesCamos.subscribe((c) => (globalZMCamos = c));
@@ -34,6 +43,30 @@
 
 		updateCamos(typId);
 	});
+
+	function pressCamo(camo:string) {
+		let index = currentProgress.camo.findIndex(c => c.id === camo);
+		let tempCamo: CamoProgress;
+		if (index > -1) {
+			tempCamo = currentProgress.camo[index]
+			tempCamo.done = !tempCamo.done
+			currentProgress.camo[index] = tempCamo
+		} else {
+			tempCamo = {
+				done: true,
+				progress: 0,
+				id: camo
+			}
+			currentProgress.camo.push(tempCamo)
+		}
+
+		updateCamoProgress(currentProgress)
+
+		if (tempCamo.done)
+			document.getElementById(camo)?.classList.add("ring-2", "ring-green-500")
+		else		
+			document.getElementById(camo)?.classList.remove("ring-2", "ring-green-500")
+	}
 
 	function updateCamos(typ: string) {
 		var toUseCamoList: Camo[];
@@ -52,6 +85,22 @@
 
 		militaryCamos = toUseCamoList.filter((c) => c.category == 'military');
 		masteryCamos = toUseCamoList.filter((c) => c.category == 'mastery');
+	}
+
+	function isCamoDone(camo:string):boolean {
+		let index = currentProgress.camo.findIndex(c => c.id === camo);
+		let tempCamo: CamoProgress;
+		if (index > -1) {
+			tempCamo = currentProgress.camo[index]
+			return tempCamo.done
+		} else {
+			tempCamo = {
+				done: false,
+				progress: 0,
+				id: camo
+			}
+			return false
+		}
 	}
 
 	function goBack() {
@@ -115,7 +164,7 @@
 								? 'bg-red-500'
 								: 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
 							role="button"
-							aria-disabled="true">WZ</span
+							on:click={() => updateCamos('2')}>WZ</span
 						>
 					</div>
 				</div>
@@ -170,12 +219,15 @@
 
 			{#key specialFilter}
 				<div class="space-y-4" in:fly={{ x: -500, duration: 500, delay: 250 }} out:fly={{ x: 500, duration: 200 }}>
+					
 					<!-- Grid 1 Section -->
 					<div class="space-y-4 bg-gray-900 rounded-xl shadow-lg p-4">
 						<h2 class="text-2xl font-semibold">Military</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each militaryCamos as camoEntry}
-								<div class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center">
+								<div id="{camoEntry.id}"class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry.id)
+								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
@@ -201,7 +253,9 @@
 						<h2 class="text-2xl font-semibold">Special</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each currentWeapon?.camos.filter((c) => c.category == specialFilter) as camoEntry}
-								<div class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center">
+								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry.id)
+								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
@@ -227,7 +281,9 @@
 						<h2 class="text-2xl font-semibold">Mastery</h2>
 						<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 							{#each masteryCamos as camoEntry}
-								<div class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center">
+								<div id="{camoEntry.id}" class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(camoEntry.id) ? "ring-2 ring-green-500" : ""}" role="button" on:click={() => {
+									pressCamo(camoEntry.id)
+								}}>
 									<!-- Text Content -->
 									<div class="flex-1">
 										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>

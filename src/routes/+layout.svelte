@@ -1,16 +1,24 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-	import { blur, fly, scale, slide } from 'svelte/transition';
+	import { fly, scale } from 'svelte/transition';
 
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
-	import { loadAll } from '$lib/handler';
+	import { defaultProgress, loadAll, progress } from '$lib/handler';
+	import { onMount } from 'svelte';
+	import { parseLocalProgress } from '$lib/structures';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 	loadAll();
 
 	export let data;
+	onMount(() => {
+		let storageProgress = localStorage.getItem("storedProgress")
+		let parsedProgress = storageProgress ? parseLocalProgress(JSON.parse(storageProgress)) : defaultProgress
+		progress.set(parsedProgress)
+		progress.subscribe((x) => localStorage.setItem("storedProgress", JSON.stringify(x)))
+	})
 </script>
 <svelte:head>
 	<meta property="og:description" content="Simple, quick and local. A Black Ops 6 Camo Tracker">
