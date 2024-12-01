@@ -8,7 +8,13 @@ A WIP camo tracker which will allow you to check your overall progress to gettin
 - Information users should keep in mind for specific Weapons (Notice)
 
 ## Planned
-- Importer from other services (FPSAlpha)
+- Importer
+  - from other services (FPSAlpha)
+  - from own service
 - Exporter (export own Progress)
-- Progress Overview for Mastery Camos for Categories
-- Overhaul of the Main Page Search filters.
+- Progress Overview for Mastery
+  - See overall progress for X Mastery camo in the category
+  - See overall progress for X Mastery camo on the weapon
+- Overhaul of the Overview control elements.
+  - Improve search filters
+  - Improve notices
