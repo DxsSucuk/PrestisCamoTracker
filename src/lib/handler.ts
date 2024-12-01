@@ -1,5 +1,5 @@
 import { get, writable } from 'svelte/store'
-import { type Camo, type Category, type LocalProgress, parseCamos, parseCategories, parseWeaponCategoryMaps, parseWeapons, type UnlockedWeaponCamo, type Weapon, type WeaponCategoryMap } from "./structures";
+import { type Camo, type Category, type LocalProgress, type UserConfig, parseCamos, parseCategories, parseWeaponCategoryMaps, parseWeapons, type UnlockedWeaponCamo, type Weapon, type WeaponCategoryMap } from "./structures";
 import infoJson from "$lib/weapons.json"
 
 export const weaponsList = writable<Weapon[]>()
@@ -14,7 +14,12 @@ export const defaultProgress: LocalProgress = {
     weapons: []
 };
 
+export const defaultUserConfig: UserConfig = {
+    defaultMode: 0
+}
+
 export const progress = writable<LocalProgress>(defaultProgress)
+export const config = writable<UserConfig>(defaultUserConfig)
 
 export function loadAll() {
     categoryList.set(parseCategories(infoJson.category))
@@ -24,6 +29,10 @@ export function loadAll() {
     globalZombiesCamos.set(parseCamos(infoJson.global_camo.zombies))
     globalMultiplayerCamos.set(parseCamos(infoJson.global_camo.multiplayer))
     globalWarzoneCamos.set(parseCamos(infoJson.global_camo.warzone))
+}
+
+export function getDefaultMode(): number {
+    return get(config).defaultMode
 }
 
 export function getCategory(id: string): Category | undefined {
@@ -38,7 +47,7 @@ export function getCategory(id: string): Category | undefined {
     return category.find(c => c.id == id);
 }
 
-export function getCamoProgress(storage:LocalProgress, id: string): UnlockedWeaponCamo {
+export function getCamoProgress(storage: LocalProgress, id: string): UnlockedWeaponCamo {
     var index = storage.weapons.findIndex(x => x.weapon == id);
     if (index > -1) {
         return storage.weapons[index]
@@ -66,4 +75,12 @@ export function updateCamoProgress(weaponProgress: UnlockedWeaponCamo) {
     }
 
     progress.set(progressTemp)
+}
+
+
+export function JSONtoDataURL(jsonString: string): string {
+    const blob = 
+    new Blob([jsonString], { type: "application/json" });
+
+    return URL.createObjectURL(blob);
 }

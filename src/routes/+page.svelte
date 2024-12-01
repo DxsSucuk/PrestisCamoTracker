@@ -9,9 +9,12 @@
 		getCamoProgressById,
 		globalMultiplayerCamos,
 		globalZombiesCamos,
-		globalWarzoneCamos
+		globalWarzoneCamos,
+		config,
+		progress,
+		JSONtoDataURL
 	} from '$lib/handler';
-	import type { Camo, Category, Weapon, WeaponCategoryMap } from '$lib/structures';
+	import type { Camo, Category, UserConfig, Weapon, WeaponCategoryMap } from '$lib/structures';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fly } from 'svelte/transition';
@@ -22,10 +25,20 @@
 	var weaponCategoryMaps: WeaponCategoryMap[];
 	var weapons: Weapon[];
 
+	let defaultGameMode: number;
+	var currentConfig: UserConfig;
 	let addTestWeapon: boolean;
 	let updateContentList: string;
+	let progressAsJson: string
 
 	onMount(async () => {
+		config.subscribe((c) => {
+			currentConfig = c;
+			defaultGameMode = c.defaultMode;
+		});
+		progress.subscribe((c) => {
+			progressAsJson = JSONtoDataURL(JSON.stringify(c))
+		})
 		categoryList.subscribe((c) => (categories = c));
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 		weaponsList.subscribe((c) => (allWeapons = c));
@@ -89,31 +102,43 @@
 
 		if (typ == '0') {
 			toUseCamoListGlobal = get(globalMultiplayerCamos);
-			militaryFilter = 'military_mp'
+			militaryFilter = 'military_mp';
 			specialFilter = 'special_mp';
-			masteryFilter = "mastery_mp"
+			masteryFilter = 'mastery_mp';
 		} else if (typ == '1') {
 			toUseCamoListGlobal = get(globalZombiesCamos);
-			militaryFilter = 'military_zm'
+			militaryFilter = 'military_zm';
 			specialFilter = 'special_zm';
-			masteryFilter = "mastery_zm"
+			masteryFilter = 'mastery_zm';
 		} else {
 			toUseCamoListGlobal = get(globalWarzoneCamos);
-			militaryFilter = 'military_wz'
+			militaryFilter = 'military_wz';
 			specialFilter = 'special_wz';
-			masteryFilter = "mastery_wz"
+			masteryFilter = 'mastery_wz';
 		}
 
-		let highestWeaponCamo = getCamoProgressById(weapon.id).camo.sort((a, b) => a.position < b.position ? -1 : a.position > b.position ? 1 : 0)
-			.findLast((c) => c.done && (c.category.includes(militaryFilter) || c.category.includes(specialFilter) || c.category.includes(masteryFilter)));
+		let highestWeaponCamo = getCamoProgressById(weapon.id)
+			.camo.sort((a, b) => (a.position < b.position ? -1 : a.position > b.position ? 1 : 0))
+			.findLast(
+				(c) =>
+					c.done &&
+					(c.category.includes(militaryFilter) ||
+						c.category.includes(specialFilter) ||
+						c.category.includes(masteryFilter))
+			);
 
 		if (!highestWeaponCamo) return toUseCamoListGlobal[0];
 
-		var toUseCamo = highestWeaponCamo.category.includes("special") ? weapon.camos.find((c) => c.id == highestWeaponCamo!.id) :
-		toUseCamoListGlobal.find((c) => c.id == highestWeaponCamo!.id);
+		var toUseCamo = highestWeaponCamo.category.includes('special')
+			? weapon.camos.find((c) => c.id == highestWeaponCamo!.id)
+			: toUseCamoListGlobal.find((c) => c.id == highestWeaponCamo!.id);
 
+		return toUseCamo || toUseCamoListGlobal[0];
+	}
 
-		return toUseCamo || toUseCamoListGlobal[0]
+	function changeDefaultMode(mode:number) {
+		currentConfig.defaultMode = mode
+		config.set(currentConfig)
 	}
 </script>
 
@@ -121,50 +146,93 @@
 	<!-- Container -->
 	<div class="max-w-6xl mx-auto space-y-6">
 		<!-- Categories and Search Section -->
-		<div class="rounded-xl bg-gray-800 p-6 shadow-lg">
+
+		<div class="rounded-xl bg-gray-800 p-6 shadow-lg space-y-4 lg:space-y-0 lg:space-x-4">
 			<div
-				class="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-4"
+				class="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0 lg:space-x-2"
 			>
-				<!-- Categories -->
-				<div class="flex flex-wrap gap-2">
-					{#if categories !== undefined}
-						{#each categories as category}
-							<button
-								class="w-28 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-600 focus:ring-2 focus:ring-blue-400"
-								on:click={() => selectCategory(category)}
-							>
-								{category.display}
-							</button>
-						{/each}
-					{/if}
+				<div class="rounded-xl bg-gray-900 p-6 shadow-lg space-y-3">
+					<h2 class="text-2xl text-green-500 font-semibold">Categories</h2>
+					<!-- Categories -->
+					<div class="flex flex-wrap gap-2 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5">
+						{#if categories !== undefined}
+							{#each categories as category}
+								<button
+									class="w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800"
+									on:click={() => selectCategory(category)}
+								>
+									{category.display}
+								</button>
+							{/each}
+						{/if}
+					</div>
+					<!-- Search -->
+					<input
+						id="searchBar"
+						type="text"
+						placeholder="Search..."
+						class="w-full px-4 py-2 border border-blue-700 rounded-md shadow-sm bg-gray-900 text-white text-sm focus:ring-blue-700 focus:border-blue-700"
+						on:keyup={searchForWeapon}
+						bind:value={searchQuery}
+					/>
 				</div>
-				<!-- Search -->
-				<input
-					id="searchBar"
-					type="text"
-					placeholder="Search..."
-					class="w-1/3 px-4 py-2 border border-gray-700 rounded-md shadow-sm bg-gray-900 text-white text-sm focus:ring-blue-500 focus:border-blue-500"
-					on:keyup={searchForWeapon}
-					bind:value={searchQuery}
-				/>
+				<div class="rounded-xl bg-gray-900 p-6 shadow-lg space-y-3">
+					<h2 class="text-2xl text-green-500 font-semibold">Progress</h2>
+					<button
+						class="w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800 disabled" aria-disabled="true"
+					>
+						Import
+					</button>
+					<a
+						class="button w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800"
+						href="{progressAsJson}" target="_blank"
+					>
+						Export
+					</a>
+					<br />
+					<h2 class="text-2xl text-green-500 font-semibold">Default</h2>
+					<div class="flex space-x-2 bg-gray-700 rounded-xl shadow-lg p-4 flex">
+						<span
+							class="{defaultGameMode == 0 ? 'bg-blue-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							role="button"
+							on:click={() => changeDefaultMode(0)}>MP</span
+						>
+						<span
+							class="{defaultGameMode == 1 ? 'bg-green-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							role="button"
+							on:click={() => changeDefaultMode(1)}>ZM</span
+						>
+						<span
+							class="{defaultGameMode == 2 ? 'bg-red-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							role="button"
+							on:click={() => changeDefaultMode(2)}>WZ</span
+						>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="space-y-4 bg-gray-800 rounded-xl shadow-lg p-4">
+		<div class="space-y-4 rounded-xl bg-gray-800 p-4 shadow-lg">
 			<h2 class="text-2xl text-red-500 font-semibold">Notices</h2>
-			<div class="grid grid-cols-1 gap-6">
-					<div
-						class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center"
-					>
-						<!-- Text Content -->
-						<div class="flex-1">
-							<h4 class="text-lg font-semibold">Camo Issues</h4>
-							<p class="text-base text-gray-400 mt-2">
-								Warzone Special Camos are completly missing and need to be added. <br>
-								Category specific Camo descriptions are not implemented: Meeles and Launcher required less kills.
-							</p>
-						</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center">
+					<!-- Text Content -->
+					<div class="flex-1">
+						<h4 class="text-lg font-semibold">Warzone Specials missing</h4>
+						<p class="text-base text-gray-400 mt-2">
+							Special Camo Tracking for Warzone not available.
+						</p>
 					</div>
+				</div>
+				<div class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center">
+					<!-- Text Content -->
+					<div class="flex-1">
+						<h4 class="text-lg font-semibold">Warzone descriptions wrong</h4>
+						<p class="text-base text-gray-400 mt-2">
+							Melee and Launcher descriptions are not 100% correct in Warzone.
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -181,7 +249,7 @@
 							role="button"
 							class="relative bg-gray-800 rounded-xl shadow-lg p-6 h-56"
 							style="background-image: url({weaponToDisplay.image}); background-size: cover; background-position: center;"
-							on:click={openWeapon(weaponToDisplay)}
+							on:click={() => openWeapon(weaponToDisplay)}
 						>
 							<h3 class="text-xl font-semibold">{weaponToDisplay.name}</h3>
 							<p class="text-base text-gray-400">

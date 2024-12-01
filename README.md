@@ -6,12 +6,14 @@ A WIP camo tracker which will allow you to check your overall progress to gettin
 - Tracking of all Zombie Camos
 - Tracking of Military and Mastery Camos for Warzone
 - Information users should keep in mind for specific Weapons (Notice)
+- Changeable default Gamemode (Open ZM Camos, Open MP Camos or Warzone first)
+- Export
+  - To JSON
 
 ## Planned
 - Importer
   - from other services (FPSAlpha)
   - from own service
-- Exporter (export own Progress)
 - Progress Overview for Mastery
   - See overall progress for X Mastery camo in the category
   - See overall progress for X Mastery camo on the weapon

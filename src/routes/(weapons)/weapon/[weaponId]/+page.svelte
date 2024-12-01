@@ -2,9 +2,10 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import {
-		getCamoProgress,
+	getCamoProgress,
 		getCamoProgressById,
 		getCategory,
+		getDefaultMode,
 		globalMultiplayerCamos,
 		globalWarzoneCamos,
 		globalZombiesCamos,
@@ -33,7 +34,9 @@
 
 	onMount(() => {
 		let weaponId = $page.params.weaponId;
-		let typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : '0';
+		let typId = getDefaultMode().toString();
+
+		typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : typId
 
 		currentProgress = getCamoProgressById(weaponId);
 		progress.subscribe((c) => (currentProgress = getCamoProgress(c, weaponId)));

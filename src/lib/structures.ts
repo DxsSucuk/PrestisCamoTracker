@@ -52,6 +52,16 @@ export interface CamoProgress {
     done: boolean
 }
 
+export interface UserConfig {
+    defaultMode: number
+}
+
+export function parseUserConfig(value: any): UserConfig {
+    return {
+        defaultMode: value.defaultMode
+    };
+}
+
 export function parseCategories(values: any): Category[] {
     let array: Category[] = [];
 
@@ -86,7 +96,7 @@ export function parseWeapon(value: any): Weapon {
         id: value.id,
         name: value.name,
         notice: value.notice ? parseNotice(value.notice) : undefined,
-        image: value.image,
+        image: (value.image as string).replace("https://camo.presti.me", "http://localhost:5173"),
         category: value.category,
         camos: value.camos ? parseCamos(value.camos) : []
     };
@@ -109,7 +119,7 @@ export function parseCamo(value: any): Camo {
         category: value.category,
         require: value.require,
         display: value.display,
-        image: value.image,
+        image: (value.image as string).replace("https://camo.presti.me", "http://localhost:5173"),
         amount: value.amount ? BigInt(value.amount) : BigInt(0),
         description: value.description
     };

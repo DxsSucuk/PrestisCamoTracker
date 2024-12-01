@@ -6,9 +6,9 @@
 	// Floating UI for Popups
 	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
-	import { defaultProgress, loadAll, progress } from '$lib/handler';
+	import { config, defaultProgress, defaultUserConfig, loadAll, progress } from '$lib/handler';
 	import { onMount } from 'svelte';
-	import { parseLocalProgress } from '$lib/structures';
+	import { parseLocalProgress, parseUserConfig } from '$lib/structures';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 	loadAll();
 
@@ -18,6 +18,11 @@
 		let parsedProgress = storageProgress ? parseLocalProgress(JSON.parse(storageProgress)) : defaultProgress
 		progress.set(parsedProgress)
 		progress.subscribe((x) => localStorage.setItem("storedProgress", JSON.stringify(x)))
+
+		let storageConfig = localStorage.getItem("storedConfig")
+		let parsedConfig = storageConfig ? parseUserConfig(JSON.parse(storageConfig)) : defaultUserConfig
+		config.set(parsedConfig)
+		config.subscribe((x) => localStorage.setItem("storedConfig", JSON.stringify(x)))
 	})
 </script>
 <svelte:head>
