@@ -20,4 +20,3 @@ A WIP camo tracker which will allow you to check your overall progress to gettin
 - Overhaul of the Overview control elements.
   - Improve search filters
   - Improve notices
-- Change default Gamemode
