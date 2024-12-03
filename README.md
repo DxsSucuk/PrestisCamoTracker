@@ -4,7 +4,7 @@ A WIP camo tracker which will allow you to check your overall progress to gettin
 ## Features
 - Tracking of all Multiplayer Camos
 - Tracking of all Zombie Camos
-- Tracking of Military and Mastery Camos for Warzone
+- Tracking of all Warzone Camos
 - Information users should keep in mind for specific Weapons (Notice)
 - Changeable default Gamemode (Open ZM Camos, Open MP Camos or Warzone first)
 - Export
