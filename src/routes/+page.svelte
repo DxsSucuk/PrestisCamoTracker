@@ -58,7 +58,6 @@
 		}
 
 		addTestWeapon = $page.url.searchParams.has('testmode');
-		console.log(addTestWeapon);
 	});
 
 	let array: Weapon[] = [];
@@ -212,11 +211,10 @@
 			</div>
 		</div>
 
-		<div class="space-y-4 rounded-xl bg-gray-800 p-4 shadow-lg">
+		<!--<div class="space-y-4 rounded-xl bg-gray-800 p-4 shadow-lg">
 			<h2 class="text-2xl text-red-500 font-semibold">Notices</h2>
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 				<div class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center">
-					<!-- Text Content -->
 					<div class="flex-1">
 						<h4 class="text-lg font-semibold">Warzone Specials missing</h4>
 						<p class="text-base text-gray-400 mt-2">
@@ -224,17 +222,8 @@
 						</p>
 					</div>
 				</div>
-				<div class="bg-gray-900 rounded-xl ring-2 ring-purple-500 shadow-lg p-6 flex items-center">
-					<!-- Text Content -->
-					<div class="flex-1">
-						<h4 class="text-lg font-semibold">Warzone descriptions wrong</h4>
-						<p class="text-base text-gray-400 mt-2">
-							Melee and Launcher descriptions are not 100% correct in Warzone.
-						</p>
-					</div>
-				</div>
 			</div>
-		</div>
+		</div>-->
 
 		<!-- Grid Section -->
 		{#key updateContentList}

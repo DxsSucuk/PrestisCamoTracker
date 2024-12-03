@@ -176,6 +176,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/mainframe.webp",
           "amount": 30,
           "description": "Get 30 Vermin Eliminations with the %weapon%"
+        },
+        {
+          "id": "emulsion",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Emulsion",
+          "image": "https://camo.presti.me/images/camos/special/wz/emulsion.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while under an enemy UAV with the %weapon%"
+        },
+        {
+          "id": "artificial",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Artificial",
+          "image": "https://camo.presti.me/images/camos/special/wz/artificial.webp",
+          "amount": 10,
+          "description": "Get 10 Kills while moving with the %weapon%"
         }
       ]
     },
@@ -224,6 +244,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/haunted.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        },
+        {
+          "id": "sea_foam",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Sea Foam",
+          "image": "https://camo.presti.me/images/camos/special/wz/sea-foam.webp",
+          "amount": 5,
+          "description": "Get 2 Kills within 30 seconds 5 times with the %weapon%"
+        },
+        {
+          "id": "spirits",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Spirits",
+          "image": "https://camo.presti.me/images/camos/special/wz/spirits.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while the Most Wanted Contract target with the %weapon%"
         }
       ]
     },
@@ -272,6 +312,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/graveyard.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Brain Rot equipped with the %weapon%"
+        },
+        {
+          "id": "netherworld",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Netherworld",
+          "image": "https://camo.presti.me/images/camos/special/wz/netherworld.webp",
+          "amount": 5,
+          "description": "Get 5 Longshot Kills with the %weapon%"
+        },
+        {
+          "id": "death_throes",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Death Throes",
+          "image": "https://camo.presti.me/images/camos/special/wz/death-throes.webp",
+          "amount": 5,
+          "description": "Get 3 Kills in a single match 5 times with the %weapon%"
         }
       ]
     },
@@ -320,6 +380,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/frostblossom.webp",
           "amount": 100,
           "description": "Get 100 Eliminations affected by your Tactical Equipment with the %weapon%"
+        },
+        {
+          "id": "ferocity",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Ferocity",
+          "image": "https://camo.presti.me/images/camos/special/wz/ferocity.webp",
+          "amount": 5,
+          "description": "Get 5 Kills against a player that recently damaged you with the %weapon%"
+        },
+        {
+          "id": "tropic_terror",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Tropic Terror",
+          "image": "https://camo.presti.me/images/camos/special/wz/tropic-terror.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sprinting with the %weapon%"
         }
       ]
     },
@@ -368,6 +448,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/walnut.webp",
           "amount": 15,
           "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "chill_blossom",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Chill Blossom",
+          "image": "https://camo.presti.me/images/camos/special/wz/chill-blossom.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on a Most Wanted Contract target with the %weapon%"
+        },
+        {
+          "id": "pine",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Pine",
+          "image": "https://camo.presti.me/images/camos/special/wz/pine.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without reloading 5 times with the %weapon%"
         }
       ]
     },
@@ -416,6 +516,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/blood-scent.webp",
           "amount": 15,
           "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "astral_rage",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Astral Rage",
+          "image": "https://camo.presti.me/images/camos/special/wz/astral-rage.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sliding with the %weapon%"
+        },
+        {
+          "id": "overboard",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Overboard",
+          "image": "https://camo.presti.me/images/camos/special/wz/overboard.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on enemies impaired by your tacticals with the %weapon%"
         }
       ]
     },
@@ -464,6 +584,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/mountain-goat.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        },
+        {
+          "id": "azure_steppes",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Azure Steppes",
+          "image": "https://camo.presti.me/images/camos/special/wz/azure-steppes.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without taking damage 5 times with the %weapon%"
+        },
+        {
+          "id": "quail",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Quail",
+          "image": "https://camo.presti.me/images/camos/special/wz/quail.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after reloading with the %weapon%"
         }
       ]
     },
@@ -512,6 +652,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/crowsbane.webp",
           "amount": 100,
           "description": "Get 100 Eliminations affected by your Tactical Equipment with the %weapon%"
+        },
+        {
+          "id": "berry_bliss",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Berry Bliss",
+          "image": "https://camo.presti.me/images/camos/special/wz/berry-bliss.webp",
+          "amount": 5,
+          "description": "Get 3 Kills in a single match 5 times with the %weapon%"
+        },
+        {
+          "id": "baneblossom",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Baneblossom",
+          "image": "https://camo.presti.me/images/camos/special/wz/baneblossom.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sprinting with the %weapon%"
         }
       ]
     },
@@ -560,6 +720,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/lynx.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        },
+        {
+          "id": "clouded",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Clouded",
+          "image": "https://camo.presti.me/images/camos/special/wz/clouded.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on a Most Wanted Contract target with the %weapon%"
+        },
+        {
+          "id": "puma",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Puma",
+          "image": "https://camo.presti.me/images/camos/special/wz/puma.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after reloading with the %weapon%"
         }
       ]
     },
@@ -608,6 +788,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/throttle.webp",
           "amount": 300,
           "description": "Get 300 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "raven",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Raven",
+          "image": "https://camo.presti.me/images/camos/special/wz/raven.webp",
+          "amount": 10,
+          "description": "Get 10 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "radical",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Radical",
+          "image": "https://camo.presti.me/images/camos/special/wz/radical.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sprinting with the %weapon%"
         }
       ]
     },
@@ -656,6 +856,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/aloha.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with the %weapon% while it's Pack-A-Punched"
+        },
+        {
+          "id": "viscous",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Viscous",
+          "image": "https://camo.presti.me/images/camos/special/wz/viscous.webp",
+          "amount": 5,
+          "description": "Get 5 Kill while under an enemy UAV with the %weapon%"
+        },
+        {
+          "id": "pulped",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Pulped",
+          "image": "https://camo.presti.me/images/camos/special/wz/pulped.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while moving with the %weapon%"
         }
       ]
     },
@@ -704,6 +924,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/stalking-shadow.webp",
           "amount": 15,
           "description": "Get 10 Kills Rapidly 15 Times with the %weapon%"
+        },
+        {
+          "id": "blend",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Blend",
+          "image": "https://camo.presti.me/images/camos/special/wz/blend.webp",
+          "amount": 15,
+          "description": "Get 2 Kills without reloading 15 times with the %weapon%"
+        },
+        {
+          "id": "lurking_beast",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Lurking Beast",
+          "image": "https://camo.presti.me/images/camos/special/wz/lurking-beast.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on enemies impaired by your tacticals with the %weapon%"
         }
       ]
     },
@@ -752,6 +992,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/distress.webp",
           "amount": 300,
           "description": "Get 300 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "bellyflop",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Bellyflop",
+          "image": "https://camo.presti.me/images/camos/special/wz/bellyflop.webp",
+          "amount": 10,
+          "description": "Get 10 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "hellscream",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Hellscream",
+          "image": "https://camo.presti.me/images/camos/special/wz/hellscream.webp",
+          "amount": 10,
+          "description": "Get 10 Kills while moving with the %weapon%"
         }
       ]
     },
@@ -800,6 +1060,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/voidthorn.webp",
           "amount": 300,
           "description": "Get 300 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "blue_lagoon",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Blue Lagoon",
+          "image": "https://camo.presti.me/images/camos/special/wz/blue-lagoon.webp",
+          "amount": 5,
+          "description": "Get 5 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "firethorn",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Firethorn",
+          "image": "https://camo.presti.me/images/camos/special/wz/firethorn.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sliding with the %weapon%"
         }
       ]
     },
@@ -848,6 +1128,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/limewave.webp",
           "amount": 300,
           "description": "Get 300 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "memento_mori",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Memento Mori",
+          "image": "https://camo.presti.me/images/camos/special/wz/memento-mori.webp",
+          "amount": 5,
+          "description": "Get 5 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "dreamcurrent",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Dreamcurrent",
+          "image": "https://camo.presti.me/images/camos/special/wz/dreamcurrent.webp",
+          "amount": 5,
+          "description": "Get 3 Kills in a single match 5 times with the %weapon%"
         }
       ]
     },
@@ -896,6 +1196,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/peel-out.webp",
           "amount": 300,
           "description": "Get 300 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "citrus_mix",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Citrus Mix",
+          "image": "https://camo.presti.me/images/camos/special/wz/citrus-mix.webp",
+          "amount": 5,
+          "description": "Get 5 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "big_block",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Big Block",
+          "image": "https://camo.presti.me/images/camos/special/wz/big-block.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on enemies impaired by your tacticals with the %weapon%"
         }
       ]
     },
@@ -944,6 +1264,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/coin-op.webp",
           "amount": 30,
           "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "sleep_paralysis",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Sleep Paralysis",
+          "image": "https://camo.presti.me/images/camos/special/wz/sleep-paralysis.webp",
+          "amount": 10,
+          "description": "Get 10 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "jukebox",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Jukebox",
+          "image": "https://camo.presti.me/images/camos/special/wz/jukebox.webp",
+          "amount": 5,
+          "description": "Get 5 Kills against a player that recently damaged you with the %weapon%"
         }
       ]
     },
@@ -992,6 +1332,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/justice.webp",
           "amount": 300,
           "description": "Get 300 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "destined",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Destined",
+          "image": "https://camo.presti.me/images/camos/special/wz/destined.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without taking damage 5 times with the %weapon%"
+        },
+        {
+          "id": "bravery",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Bravery",
+          "image": "https://camo.presti.me/images/camos/special/wz/bravery.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on a Most Wanted Contract target with the %weapon%"
         }
       ]
     },
@@ -1040,6 +1400,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/other-world.webp",
           "amount": 15,
           "description": "Get 10 Eliminations Without Reloading 15 Times with the %weapon%"
+        },
+        {
+          "id": "splattered",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Splattered",
+          "image": "https://camo.presti.me/images/camos/special/wz/splattered.webp",
+          "amount": 5,
+          "description": "Get 2 Kills within 30 seconds 5 times with the %weapon%"
+        },
+        {
+          "id": "dark_paradise",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Dark Paradise",
+          "image": "https://camo.presti.me/images/camos/special/wz/dark-paradise.webp",
+          "amount": 10,
+          "description": "Get 10 Kills while prone with the %weapon%"
         }
       ]
     },
@@ -1088,6 +1468,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/acid-slide.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Brain Rot equipped with the %weapon%"
+        },
+        {
+          "id": "fizz",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Fizz",
+          "image": "https://camo.presti.me/images/camos/special/wz/fizz.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without reloading 5 times with the %weapon%"
+        },
+        {
+          "id": "nightfang",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Nightfang",
+          "image": "https://camo.presti.me/images/camos/special/wz/nightfang.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while under an enemy UAV with the %weapon%"
         }
       ]
     },
@@ -1136,6 +1536,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/wrangler.webp",
           "amount": 75,
           "description": "Get 75 Armored Zombie Eliminations with the %weapon%"
+        },
+        {
+          "id": "rogue_waves",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Rogue Waves",
+          "image": "https://camo.presti.me/images/camos/special/wz/rogue-waves.webp",
+          "amount": 5,
+          "description": "Get 5 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "craftsman",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Craftsman",
+          "image": "https://camo.presti.me/images/camos/special/wz/craftsman.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sliding with the %weapon%"
         }
       ]
     },
@@ -1184,6 +1604,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/desert-sunset.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        },
+        {
+          "id": "scout",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Scout",
+          "image": "https://camo.presti.me/images/camos/special/wz/scout.webp",
+          "amount": 5,
+          "description": "Get 2 Kills within 30 seconds 5 times with the %weapon%"
+        },
+        {
+          "id": "sea_to_sky",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Sea To Sky",
+          "image": "https://camo.presti.me/images/camos/special/wz/sea-to-sky.webp",
+          "amount": 10,
+          "description": "Get 10 Kills while prone with the %weapon%"
         }
       ]
     },
@@ -1232,6 +1672,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/blood-moon.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Napalm Burst equipped with the %weapon%"
+        },
+        {
+          "id": "soulfire",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Soulfire",
+          "image": "https://camo.presti.me/images/camos/special/wz/soulfire.webp",
+          "amount": 5,
+          "description": "Get 3 Kills in a single match 5 times with the %weapon%"
+        },
+        {
+          "id": "moonrise",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Moonrise",
+          "image": "https://camo.presti.me/images/camos/special/wz/moonrise.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sprinting with the %weapon%"
         }
       ]
     },
@@ -1280,12 +1740,32 @@
           "image": "https://camo.presti.me/images/camos/special/zm/manta.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with the %weapon% at Rare Rarity or higher"
+        },
+        {
+          "id": "breezebloom",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Breezebloom",
+          "image": "https://camo.presti.me/images/camos/special/wz/breezebloom.webp",
+          "amount": 5,
+          "description": "Get 5 Longshot Kills with the %weapon%"
+        },
+        {
+          "id": "fox",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Fox",
+          "image": "https://camo.presti.me/images/camos/special/wz/fox.webp",
+          "amount": 5,
+          "description": "Get 5 Kills against a player that recently damaged you with the %weapon%"
         }
       ]
     },
     {
       "id": "l3a1",
-      "name": "L3A1 FROSTLINE",
+      "name": "LW3A1 FROSTLINE",
       "image": "https://camo.presti.me/images/weapons/sniper/l3a1.jpg",
       "category": "sniper",
       "camos": [
@@ -1328,6 +1808,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/eventide.webp",
           "amount": 30,
           "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "erosion",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Erosion",
+          "image": "https://camo.presti.me/images/camos/special/wz/erosion.webp",
+          "amount": 5,
+          "description": "Get 2 One-Shot Kills in a single match 5 times with the %weapon%"
+        },
+        {
+          "id": "thaw",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Thaw",
+          "image": "https://camo.presti.me/images/camos/special/wz/thaw.webp",
+          "amount": 5,
+          "description": "Get 5 Kills at extreme range with the %weapon%"
         }
       ]
     },
@@ -1376,6 +1876,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/integration.webp",
           "amount": 300,
           "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "digitized",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Digitized",
+          "image": "https://camo.presti.me/images/camos/special/wz/digitized.webp",
+          "amount": 5,
+          "description": "Get 2 Kills while prone within 20 seconds 5 times with the %weapon%"
+        },
+        {
+          "id": "patterned",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Patterned",
+          "image": "https://camo.presti.me/images/camos/special/wz/patterned.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after swapping weapons with the %weapon%"
         }
       ]
     },
@@ -1427,6 +1947,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/overcast.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Brain Rot equipped with the %weapon%"
+        },
+        {
+          "id": "wisteria",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Wisteria",
+          "image": "https://camo.presti.me/images/camos/special/wz/wisteria.webp",
+          "amount": 5,
+          "description": "Get 5 One-Shot Kills with the %weapon%"
+        },
+        {
+          "id": "atmosphere",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Atmosphere",
+          "image": "https://camo.presti.me/images/camos/special/wz/atmosphere.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after reloading with the %weapon%"
         }
       ]
     },
@@ -1475,6 +2015,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/red-ring.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with Dead Wire equipped with the %weapon%"
+        },
+        {
+          "id": "zettabyte",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Zettabyte",
+          "image": "https://camo.presti.me/images/camos/special/wz/zettabyte.webp",
+          "amount": 10,
+          "description": "Get 10 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "green_ring",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Green Ring",
+          "image": "https://camo.presti.me/images/camos/special/wz/green-ring.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after swapping weapons with the %weapon%"
         }
       ]
     },
@@ -1523,6 +2083,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/ceres.webp",
           "amount": 15,
           "description": "Get 5 Critical Kills rapidly 15 times with the %weapon%"
+        },
+        {
+          "id": "analog",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Analog",
+          "image": "https://camo.presti.me/images/camos/special/wz/analog.webp",
+          "amount": 10,
+          "description": "Get 10 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "gaia",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Gaia",
+          "image": "https://camo.presti.me/images/camos/special/wz/gaia.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after swapping weapons with the %weapon%"
         }
       ]
     },
@@ -1574,6 +2154,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/siamese.webp",
           "amount": 300,
           "description": "Get 300 Hipfire Kills with the %weapon%"
+        },
+        {
+          "id": "honeyvine",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Honeyvine",
+          "image": "https://camo.presti.me/images/camos/special/wz/honeyvine.webp",
+          "amount": 5,
+          "description": "Get 5 Kills against a player that recently damaged you with the %weapon%"
+        },
+        {
+          "id": "calico",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Calico",
+          "image": "https://camo.presti.me/images/camos/special/wz/calico.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after swapping weapons with the %weapon%"
         }
       ]
     },
@@ -1622,6 +2222,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/condemn.webp",
           "amount": 30,
           "description": "Get 30 Vermin Eliminations with the %weapon%"
+        },
+        {
+          "id": "midnight_cooler",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Midnight Cooler",
+          "image": "https://camo.presti.me/images/camos/special/wz/midnight-cooler.webp",
+          "amount": 5,
+          "description": "Get 5 Point Blank Kills with the %weapon%"
+        },
+        {
+          "id": "conviction",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Conviction",
+          "image": "https://camo.presti.me/images/camos/special/wz/conviction.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after swapping weapons with the %weapon%"
         }
       ]
     },
@@ -1670,6 +2290,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/technique.webp",
           "amount": 75,
           "description": "Get 75 Armored Zombie Eliminations with the %weapon%"
+        },
+        {
+          "id": "salvare",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Salvare",
+          "image": "https://camo.presti.me/images/camos/special/wz/salvare.webp",
+          "amount": 5,
+          "description": "Destroy 5 Vehicles driven by enemy Operators with the %weapon%"
+        },
+        {
+          "id": "concept",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Concept",
+          "image": "https://camo.presti.me/images/camos/special/wz/concept.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on an airborne target with the %weapon%"
         }
       ]
     },
@@ -1718,6 +2358,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/renewed.webp",
           "amount": 300,
           "description": "Get 300 Eliminations with the %weapon% at Rare Rarity or higher"
+        },
+        {
+          "id": "calibrate",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Calibrate",
+          "image": "https://camo.presti.me/images/camos/special/wz/calibrate.webp",
+          "amount": 5,
+          "description": "Destroy 5 Vehicles driven by enemy Operators with the %weapon%"
+        },
+        {
+          "id": "dissipate",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Dissipate",
+          "image": "https://camo.presti.me/images/camos/special/wz/dissipate.webp",
+          "amount": 2,
+          "description": "Get 2 Kills in a single match 2 times with the %weapon%"
         }
       ]
     },
@@ -1769,6 +2429,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/tempt-fate.webp",
           "amount": 30,
           "description": "Get 30 Parasite Eliminations with the %weapon%"
+        },
+        {
+          "id": "synthora",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Synthora",
+          "image": "https://camo.presti.me/images/camos/special/wz/synthora.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while moving with the %weapon%"
+        },
+        {
+          "id": "guidance",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Guidance",
+          "image": "https://camo.presti.me/images/camos/special/wz/guidance.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without taking any damage 5 times with the %weapon%"
         }
       ]
     },
@@ -1817,6 +2497,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/vacation-leopard.webp",
           "amount": 75,
           "description": "Get 75 Armored Zombie Eliminations with the %weapon%"
+        },
+        {
+          "id": "dying_ember",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Dying Ember",
+          "image": "https://camo.presti.me/images/camos/special/wz/dying-ember.webp",
+          "amount": 5,
+          "description": "Get 5 Kills shortly after sprinting with the %weapon%"
+        },
+        {
+          "id": "sunrise_leopard",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Sunrise Leopard",
+          "image": "https://camo.presti.me/images/camos/special/wz/sunrise-leopard.webp",
+          "amount": 5,
+          "description": "Get 5 Kills against a player that recently damaged you with the %weapon%"
         }
       ]
     },
@@ -1865,6 +2565,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/contort.webp",
           "amount": 30,
           "description": "Get 30 Vermin Eliminations with the %weapon%"
+        },
+        {
+          "id": "spooked",
+          "position": 110,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Spooked",
+          "image": "https://camo.presti.me/images/camos/special/wz/spooked.webp",
+          "amount": 5,
+          "description": "Get 5 Kills on enemies impaired by your Tacticals with the %weapon%"
+        },
+        {
+          "id": "skew",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Skew",
+          "image": "https://camo.presti.me/images/camos/special/wz/skew.webp",
+          "amount": 5,
+          "description": "Get 5 Kills while under an enemy UAV with the %weapon%"
         }
       ]
     },
@@ -1913,6 +2633,26 @@
           "image": "https://camo.presti.me/images/camos/special/zm/shimmer.webp",
           "amount": 10,
           "description": "Get 10 Mangler Eliminations with the %weapon%"
+        },
+        {
+          "id": "faerie_fungi",
+          "position": 10,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Faerie Fungi",
+          "image": "https://camo.presti.me/images/camos/special/wz/faerie-fungi.webp",
+          "amount": 5,
+          "description": "Get 3 Kills in a single match 5 times with the %weapon%"
+        },
+        {
+          "id": "alloy",
+          "position": 11,
+          "category": "special_wz",
+          "require": "blue_tiger",
+          "display": "Alloy",
+          "image": "https://camo.presti.me/images/camos/special/wz/alloy.webp",
+          "amount": 5,
+          "description": "Get 2 Kills without taking damage 5 times with the %weapon%"
         }
       ]
     },
@@ -2110,7 +2850,7 @@
         "display": "Granite",
         "image": "https://camo.presti.me/images/camos/military/mp/granite.webp",
         "amount": 5,
-        "description": "Get 5 headshots with the %weapon%"
+        "description": "Get 5 Headshots with the %weapon%"
       },
       {
         "id": "woodland",
@@ -2120,7 +2860,7 @@
         "display": "Woodland",
         "image": "https://camo.presti.me/images/camos/military/mp/woodland.webp",
         "amount": 10,
-        "description": "Get 10 headshots with the %weapon%"
+        "description": "Get 10 Headshots with the %weapon%"
       },
       {
         "id": "savanna",
@@ -2130,7 +2870,7 @@
         "display": "Savanna",
         "image": "https://camo.presti.me/images/camos/military/mp/savanna.webp",
         "amount": 15,
-        "description": "Get 15 headshots with the %weapon%"
+        "description": "Get 15 Headshots with the %weapon%"
       },
       {
         "id": "splinter",
@@ -2140,7 +2880,7 @@
         "display": "Splinter",
         "image": "https://camo.presti.me/images/camos/military/mp/splinter.webp",
         "amount": 20,
-        "description": "Get 20 headshots with the %weapon%"
+        "description": "Get 20 Headshots with the %weapon%"
       },
       {
         "id": "moss",
@@ -2150,7 +2890,7 @@
         "display": "Moss",
         "image": "https://camo.presti.me/images/camos/military/mp/moss.webp",
         "amount": 30,
-        "description": "Get 30 headshots with the %weapon%"
+        "description": "Get 30 Headshots with the %weapon%"
       },
       {
         "id": "saboteur",
@@ -2160,7 +2900,7 @@
         "display": "Saboteur",
         "image": "https://camo.presti.me/images/camos/military/mp/saboteur.webp",
         "amount": 40,
-        "description": "Get 40 headshots with the %weapon%"
+        "description": "Get 40 Headshots with the %weapon%"
       },
       {
         "id": "digital",
@@ -2170,7 +2910,7 @@
         "display": "Digital",
         "image": "https://camo.presti.me/images/camos/military/mp/digital.webp",
         "amount": 50,
-        "description": "Get 50 headshots with the %weapon%"
+        "description": "Get 50 Headshots with the %weapon%"
       },
       {
         "id": "tide",
@@ -2180,7 +2920,7 @@
         "display": "Tide",
         "image": "https://camo.presti.me/images/camos/military/mp/tide.webp",
         "amount": 75,
-        "description": "Get 75 headshots with the %weapon%"
+        "description": "Get 75 Headshots with the %weapon%"
       },
       {
         "id": "red_tiger",
@@ -2190,7 +2930,7 @@
         "display": "Red Tiger",
         "image": "https://camo.presti.me/images/camos/military/mp/red-tiger.webp",
         "amount": 100,
-        "description": "Get 100 headshots with the %weapon%"
+        "description": "Get 100 Headshots with the %weapon%"
       },
       {
         "id": "gold",
@@ -2364,20 +3104,598 @@
         "description": "Get 5 Kills without dying 2 times with the %weapon%"
       }
     ],
-    "overwrite": {
-      "category_all": {
-        "assault": 7,
-        "smg": 6,
-        "shotgun": 2,
-        "lmg": 3,
-        "marksman": 4,
-        "sniper": 3,
-        "pistol": 4,
-        "launcher": 2,
-        "special": 1,
-        "melee": 2
+    "overwrite": [
+      {
+        "category": "all",
+        "masteryRequiredAmount": 33,
+        "overwriteCamos": []
       },
-      "all": 33
-    }
+      {
+        "category": "assault",
+        "masteryRequiredAmount": 7,
+        "overwriteCamos": []
+      },
+      {
+        "category": "smg",
+        "masteryRequiredAmount": 6,
+        "overwriteCamos": []
+      },
+      {
+        "category": "shotgun",
+        "masteryRequiredAmount": 2,
+        "overwriteCamos": []
+      },
+      {
+        "category": "lmg",
+        "masteryRequiredAmount": 3,
+        "overwriteCamos": []
+      },
+      {
+        "category": "marksman",
+        "masteryRequiredAmount": 4,
+        "overwriteCamos": []
+      },
+      {
+        "category": "sniper",
+        "masteryRequiredAmount": 3,
+        "overwriteCamos": []
+      },
+      {
+        "category": "pistol",
+        "masteryRequiredAmount": 4,
+        "overwriteCamos": []
+      },
+      {
+        "category": "launcher",
+        "masteryRequiredAmount": 2,
+        "overwriteCamos": [
+          {
+            "id": "granite",
+            "position": 1,
+            "category": "military_mp",
+            "display": "Granite",
+            "image": "https://camo.presti.me/images/camos/military/mp/granite.webp",
+            "amount": 5,
+            "description": "Get 5 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "woodland",
+            "position": 2,
+            "category": "military_mp",
+            "require": "granite",
+            "display": "Woodland",
+            "image": "https://camo.presti.me/images/camos/military/mp/woodland.webp",
+            "amount": 10,
+            "description": "Get 10 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "savanna",
+            "position": 3,
+            "category": "military_mp",
+            "require": "woodland",
+            "display": "Savanna",
+            "image": "https://camo.presti.me/images/camos/military/mp/savanna.webp",
+            "amount": 15,
+            "description": "Get 15 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "splinter",
+            "position": 4,
+            "category": "military_mp",
+            "require": "savanna",
+            "display": "Splinter",
+            "image": "https://camo.presti.me/images/camos/military/mp/splinter.webp",
+            "amount": 20,
+            "description": "Get 20 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "moss",
+            "position": 5,
+            "category": "military_mp",
+            "require": "splinter",
+            "display": "Moss",
+            "image": "https://camo.presti.me/images/camos/military/mp/moss.webp",
+            "amount": 30,
+            "description": "Get 30 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "saboteur",
+            "position": 6,
+            "category": "military_mp",
+            "require": "moss",
+            "display": "Saboteur",
+            "image": "https://camo.presti.me/images/camos/military/mp/saboteur.webp",
+            "amount": 40,
+            "description": "Get 40 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "digital",
+            "position": 7,
+            "category": "military_mp",
+            "require": "saboteur",
+            "display": "Digital",
+            "image": "https://camo.presti.me/images/camos/military/mp/digital.webp",
+            "amount": 50,
+            "description": "Get 50 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "tide",
+            "position": 8,
+            "category": "military_mp",
+            "require": "digital",
+            "display": "Tide",
+            "image": "https://camo.presti.me/images/camos/military/mp/tide.webp",
+            "amount": 75,
+            "description": "Get 75 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "red_tiger",
+            "position": 9,
+            "category": "military_mp",
+            "require": "tide",
+            "display": "Red Tiger",
+            "image": "https://camo.presti.me/images/camos/military/mp/red-tiger.webp",
+            "amount": 100,
+            "description": "Get 100 Kills or Scorestreak Destructions with the %weapon%"
+          },
+          {
+            "id": "slate",
+            "position": 1,
+            "category": "military_zm",
+            "display": "Slate",
+            "image": "https://camo.presti.me/images/camos/military/zm/slate.webp",
+            "amount": 100,
+            "description": "Get 100 Kills with the %weapon%"
+          },
+          {
+            "id": "desert",
+            "position": 2,
+            "category": "military_zm",
+            "require": "slate",
+            "display": "Desert",
+            "image": "https://camo.presti.me/images/camos/military/zm/desert.webp",
+            "amount": 200,
+            "description": "Get 200 Kills with the %weapon%"
+          },
+          {
+            "id": "evergreen",
+            "position": 3,
+            "category": "military_zm",
+            "require": "desert",
+            "display": "Evergreen",
+            "image": "https://camo.presti.me/images/camos/military/zm/evergreen.webp",
+            "amount": 300,
+            "description": "Get 300 Kills with the %weapon%"
+          },
+          {
+            "id": "rugged",
+            "position": 4,
+            "category": "military_zm",
+            "require": "evergreen",
+            "display": "Rugged",
+            "image": "https://camo.presti.me/images/camos/military/zm/rugged.webp",
+            "amount": 400,
+            "description": "Get 400 Kills with the %weapon%"
+          },
+          {
+            "id": "grim",
+            "position": 5,
+            "category": "military_zm",
+            "require": "rugged",
+            "display": "Grim",
+            "image": "https://camo.presti.me/images/camos/military/zm/grim.webp",
+            "amount": 600,
+            "description": "Get 600 Kills with the %weapon%"
+          },
+          {
+            "id": "stripe",
+            "position": 6,
+            "category": "military_zm",
+            "require": "grim",
+            "display": "Stripe",
+            "image": "https://camo.presti.me/images/camos/military/zm/stripe.webp",
+            "amount": 800,
+            "description": "Get 800 Kills with the %weapon%"
+          },
+          {
+            "id": "oceanic",
+            "position": 7,
+            "category": "military_zm",
+            "require": "stripe",
+            "display": "Oceanic",
+            "image": "https://camo.presti.me/images/camos/military/zm/oceanic.webp",
+            "amount": 1000,
+            "description": "Get 1000 Kills with the %weapon%"
+          },
+          {
+            "id": "whiteout",
+            "position": 8,
+            "category": "military_zm",
+            "require": "oceanic",
+            "display": "Whiteout",
+            "image": "https://camo.presti.me/images/camos/military/zm/whiteout.webp",
+            "amount": 1500,
+            "description": "Get 1500 Kills with the %weapon%"
+          },
+          {
+            "id": "purple_tiger",
+            "position": 9,
+            "category": "military_zm",
+            "require": "whiteout",
+            "display": "Purple Tiger",
+            "image": "https://camo.presti.me/images/camos/military/zm/purple-tiger.webp",
+            "amount": 2000,
+            "description": "Get 2000 Kills with the %weapon%"
+          },
+          {
+            "id": "quartz",
+            "position": 1,
+            "category": "military_wz",
+            "display": "Quartz",
+            "image": "https://camo.presti.me/images/camos/military/wz/quartz.webp",
+            "amount": 2,
+            "description": "Get 2 Eliminations with the %weapon%"
+          },
+          {
+            "id": "tundra",
+            "position": 2,
+            "category": "military_wz",
+            "require": "granite",
+            "display": "Tundra",
+            "image": "https://camo.presti.me/images/camos/military/wz/tundra.webp",
+            "amount": 4,
+            "description": "Get 4 Eliminations with the %weapon%"
+          },
+          {
+            "id": "canyon",
+            "position": 3,
+            "category": "military_wz",
+            "require": "tundra",
+            "display": "Canyon",
+            "image": "https://camo.presti.me/images/camos/military/wz/canyon.webp",
+            "amount": 8,
+            "description": "Get 8 Eliminations with the %weapon%"
+          },
+          {
+            "id": "pine",
+            "position": 4,
+            "category": "military_wz",
+            "require": "canyon",
+            "display": "Pine",
+            "image": "https://camo.presti.me/images/camos/military/wz/pine.webp",
+            "amount": 12,
+            "description": "Get 12 Eliminations with the %weapon%"
+          },
+          {
+            "id": "undergrowth",
+            "position": 5,
+            "category": "military_wz",
+            "require": "pine",
+            "display": "Undergrowth",
+            "image": "https://camo.presti.me/images/camos/military/wz/undergrowth.webp",
+            "amount": 16,
+            "description": "Get 16 Eliminations with the %weapon%"
+          },
+          {
+            "id": "snakeskin",
+            "position": 6,
+            "category": "military_wz",
+            "require": "undergrowth",
+            "display": "Snakeskin",
+            "image": "https://camo.presti.me/images/camos/military/wz/snakeskin.webp",
+            "amount": 20,
+            "description": "Get 20 Eliminations with the %weapon%"
+          },
+          {
+            "id": "siberia",
+            "position": 7,
+            "category": "military_wz",
+            "require": "snakeskin",
+            "display": "Siberia",
+            "image": "https://camo.presti.me/images/camos/military/wz/siberia.webp",
+            "amount": 25,
+            "description": "Get 25 Eliminations with the %weapon%"
+          },
+          {
+            "id": "smolder",
+            "position": 8,
+            "category": "military_wz",
+            "require": "siberia",
+            "display": "Smolder",
+            "image": "https://camo.presti.me/images/camos/military/wz/smolder.webp",
+            "amount": 30,
+            "description": "Get 30 Eliminations with the %weapon%"
+          },
+          {
+            "id": "blue_tiger",
+            "position": 9,
+            "category": "military_wz",
+            "require": "smolder",
+            "display": "Blue Tiger",
+            "image": "https://camo.presti.me/images/camos/military/wz/blue-tiger.webp",
+            "amount": 40,
+            "description": "Get 40 Eliminations with the %weapon%"
+          }
+        ]
+      },
+      {
+        "category": "special",
+        "masteryRequiredAmount": 1,
+        "overwriteCamos": []
+      },
+      {
+        "category": "melee",
+        "masteryRequiredAmount": 2,
+        "overwriteCamos": [
+          {
+            "id": "granite",
+            "position": 1,
+            "category": "military_mp",
+            "display": "Granite",
+            "image": "https://camo.presti.me/images/camos/military/mp/granite.webp",
+            "amount": 5,
+            "description": "Get 5 Kills with the %weapon%"
+          },
+          {
+            "id": "woodland",
+            "position": 2,
+            "category": "military_mp",
+            "require": "granite",
+            "display": "Woodland",
+            "image": "https://camo.presti.me/images/camos/military/mp/woodland.webp",
+            "amount": 10,
+            "description": "Get 10 Kills with the %weapon%"
+          },
+          {
+            "id": "savanna",
+            "position": 3,
+            "category": "military_mp",
+            "require": "woodland",
+            "display": "Savanna",
+            "image": "https://camo.presti.me/images/camos/military/mp/savanna.webp",
+            "amount": 15,
+            "description": "Get 15 Kills with the %weapon%"
+          },
+          {
+            "id": "splinter",
+            "position": 4,
+            "category": "military_mp",
+            "require": "savanna",
+            "display": "Splinter",
+            "image": "https://camo.presti.me/images/camos/military/mp/splinter.webp",
+            "amount": 20,
+            "description": "Get 20 Kills with the %weapon%"
+          },
+          {
+            "id": "moss",
+            "position": 5,
+            "category": "military_mp",
+            "require": "splinter",
+            "display": "Moss",
+            "image": "https://camo.presti.me/images/camos/military/mp/moss.webp",
+            "amount": 30,
+            "description": "Get 30 Kills with the %weapon%"
+          },
+          {
+            "id": "saboteur",
+            "position": 6,
+            "category": "military_mp",
+            "require": "moss",
+            "display": "Saboteur",
+            "image": "https://camo.presti.me/images/camos/military/mp/saboteur.webp",
+            "amount": 40,
+            "description": "Get 40 Kills with the %weapon%"
+          },
+          {
+            "id": "digital",
+            "position": 7,
+            "category": "military_mp",
+            "require": "saboteur",
+            "display": "Digital",
+            "image": "https://camo.presti.me/images/camos/military/mp/digital.webp",
+            "amount": 50,
+            "description": "Get 50 Kills with the %weapon%"
+          },
+          {
+            "id": "tide",
+            "position": 8,
+            "category": "military_mp",
+            "require": "digital",
+            "display": "Tide",
+            "image": "https://camo.presti.me/images/camos/military/mp/tide.webp",
+            "amount": 75,
+            "description": "Get 75 Kills with the %weapon%"
+          },
+          {
+            "id": "red_tiger",
+            "position": 9,
+            "category": "military_mp",
+            "require": "tide",
+            "display": "Red Tiger",
+            "image": "https://camo.presti.me/images/camos/military/mp/red-tiger.webp",
+            "amount": 100,
+            "description": "Get 100 Kills with the %weapon%"
+          },
+          {
+            "id": "slate",
+            "position": 1,
+            "category": "military_zm",
+            "display": "Slate",
+            "image": "https://camo.presti.me/images/camos/military/zm/slate.webp",
+            "amount": 100,
+            "description": "Get 100 Kills with the %weapon%"
+          },
+          {
+            "id": "desert",
+            "position": 2,
+            "category": "military_zm",
+            "require": "slate",
+            "display": "Desert",
+            "image": "https://camo.presti.me/images/camos/military/zm/desert.webp",
+            "amount": 200,
+            "description": "Get 200 Kills with the %weapon%"
+          },
+          {
+            "id": "evergreen",
+            "position": 3,
+            "category": "military_zm",
+            "require": "desert",
+            "display": "Evergreen",
+            "image": "https://camo.presti.me/images/camos/military/zm/evergreen.webp",
+            "amount": 300,
+            "description": "Get 300 Kills with the %weapon%"
+          },
+          {
+            "id": "rugged",
+            "position": 4,
+            "category": "military_zm",
+            "require": "evergreen",
+            "display": "Rugged",
+            "image": "https://camo.presti.me/images/camos/military/zm/rugged.webp",
+            "amount": 400,
+            "description": "Get 400 Kills with the %weapon%"
+          },
+          {
+            "id": "grim",
+            "position": 5,
+            "category": "military_zm",
+            "require": "rugged",
+            "display": "Grim",
+            "image": "https://camo.presti.me/images/camos/military/zm/grim.webp",
+            "amount": 600,
+            "description": "Get 600 Kills with the %weapon%"
+          },
+          {
+            "id": "stripe",
+            "position": 6,
+            "category": "military_zm",
+            "require": "grim",
+            "display": "Stripe",
+            "image": "https://camo.presti.me/images/camos/military/zm/stripe.webp",
+            "amount": 800,
+            "description": "Get 800 Kills with the %weapon%"
+          },
+          {
+            "id": "oceanic",
+            "position": 7,
+            "category": "military_zm",
+            "require": "stripe",
+            "display": "Oceanic",
+            "image": "https://camo.presti.me/images/camos/military/zm/oceanic.webp",
+            "amount": 1000,
+            "description": "Get 1000 Kills with the %weapon%"
+          },
+          {
+            "id": "whiteout",
+            "position": 8,
+            "category": "military_zm",
+            "require": "oceanic",
+            "display": "Whiteout",
+            "image": "https://camo.presti.me/images/camos/military/zm/whiteout.webp",
+            "amount": 1500,
+            "description": "Get 1500 Kills with the %weapon%"
+          },
+          {
+            "id": "purple_tiger",
+            "position": 9,
+            "category": "military_zm",
+            "require": "whiteout",
+            "display": "Purple Tiger",
+            "image": "https://camo.presti.me/images/camos/military/zm/purple-tiger.webp",
+            "amount": 2000,
+            "description": "Get 2000 Kills with the %weapon%"
+          },
+          {
+            "id": "quartz",
+            "position": 1,
+            "category": "military_wz",
+            "display": "Quartz",
+            "image": "https://camo.presti.me/images/camos/military/wz/quartz.webp",
+            "amount": 2,
+            "description": "Get 2 Eliminations with the %weapon%"
+          },
+          {
+            "id": "tundra",
+            "position": 2,
+            "category": "military_wz",
+            "require": "granite",
+            "display": "Tundra",
+            "image": "https://camo.presti.me/images/camos/military/wz/tundra.webp",
+            "amount": 5,
+            "description": "Get 5 Eliminations with the %weapon%"
+          },
+          {
+            "id": "canyon",
+            "position": 3,
+            "category": "military_wz",
+            "require": "tundra",
+            "display": "Canyon",
+            "image": "https://camo.presti.me/images/camos/military/wz/canyon.webp",
+            "amount": 10,
+            "description": "Get 10 Eliminations with the %weapon%"
+          },
+          {
+            "id": "pine",
+            "position": 4,
+            "category": "military_wz",
+            "require": "canyon",
+            "display": "Pine",
+            "image": "https://camo.presti.me/images/camos/military/wz/pine.webp",
+            "amount": 15,
+            "description": "Get 15 Eliminations with the %weapon%"
+          },
+          {
+            "id": "undergrowth",
+            "position": 5,
+            "category": "military_wz",
+            "require": "pine",
+            "display": "Undergrowth",
+            "image": "https://camo.presti.me/images/camos/military/wz/undergrowth.webp",
+            "amount": 20,
+            "description": "Get 20 Eliminations with the %weapon%"
+          },
+          {
+            "id": "snakeskin",
+            "position": 6,
+            "category": "military_wz",
+            "require": "undergrowth",
+            "display": "Snakeskin",
+            "image": "https://camo.presti.me/images/camos/military/wz/snakeskin.webp",
+            "amount": 25,
+            "description": "Get 25 Eliminations with the %weapon%"
+          },
+          {
+            "id": "siberia",
+            "position": 7,
+            "category": "military_wz",
+            "require": "snakeskin",
+            "display": "Siberia",
+            "image": "https://camo.presti.me/images/camos/military/wz/siberia.webp",
+            "amount": 30,
+            "description": "Get 30 Eliminations with the %weapon%"
+          },
+          {
+            "id": "smolder",
+            "position": 8,
+            "category": "military_wz",
+            "require": "siberia",
+            "display": "Smolder",
+            "image": "https://camo.presti.me/images/camos/military/wz/smolder.webp",
+            "amount": 40,
+            "description": "Get 40 Eliminations with the %weapon%"
+          },
+          {
+            "id": "blue_tiger",
+            "position": 9,
+            "category": "military_wz",
+            "require": "smolder",
+            "display": "Blue Tiger",
+            "image": "https://camo.presti.me/images/camos/military/wz/blue-tiger.webp",
+            "amount": 50,
+            "description": "Get 50 Eliminations with the %weapon%"
+          }
+        ]
+      }
+    ]
   }
 }

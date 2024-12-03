@@ -1,5 +1,5 @@
 import { get, writable } from 'svelte/store'
-import { type Camo, type Category, type LocalProgress, type UserConfig, parseCamos, parseCategories, parseWeaponCategoryMaps, parseWeapons, type UnlockedWeaponCamo, type Weapon, type WeaponCategoryMap } from "./structures";
+import { type Camo, type Category, type LocalProgress, type UserConfig, parseCamos, parseCategories, parseWeaponCategoryMaps, parseWeapons, type UnlockedWeaponCamo, type Weapon, type WeaponCategoryMap, type CategoryOverwrite, parseCategoryOverwrites } from "./structures";
 import infoJson from "$lib/weapons.json"
 
 export const weaponsList = writable<Weapon[]>()
@@ -9,6 +9,8 @@ export const categoryWeaponMap = writable<WeaponCategoryMap[]>();
 export const globalZombiesCamos = writable<Camo[]>();
 export const globalMultiplayerCamos = writable<Camo[]>();
 export const globalWarzoneCamos = writable<Camo[]>();
+
+export const categoryOverwrites = writable<CategoryOverwrite[]>();
 
 export const defaultProgress: LocalProgress = {
     weapons: []
@@ -29,6 +31,7 @@ export function loadAll() {
     globalZombiesCamos.set(parseCamos(infoJson.global_camo.zombies))
     globalMultiplayerCamos.set(parseCamos(infoJson.global_camo.multiplayer))
     globalWarzoneCamos.set(parseCamos(infoJson.global_camo.warzone))
+    categoryOverwrites.set(parseCategoryOverwrites(infoJson.global_camo.overwrite))
 }
 
 export function getDefaultMode(): number {
@@ -57,6 +60,33 @@ export function getCamoProgress(storage: LocalProgress, id: string): UnlockedWea
             camo: []
         }
     }
+}
+
+export function getOverwriteCategory(category: string): CategoryOverwrite {
+    return getOverwriteCategoryFromArray(category, get(categoryOverwrites))
+}
+
+export function getOverwriteCategoryFromArray(category: string, overwrties: CategoryOverwrite[]): CategoryOverwrite {
+    var result = overwrties.find(x => x.category == category);
+    if (result) {
+        return result;
+    }
+
+    return {
+        category: category,
+        overwriteCamos: [],
+        masteryRequiredAmount: -1
+    }
+}
+
+export function getOverwriteCamo(camo: Camo, overwrites: CategoryOverwrite): Camo {
+    var findInReplace = overwrites.overwriteCamos.find(x => x.id === camo.id);
+
+    if (findInReplace) {
+        return findInReplace
+    }
+
+    return camo;
 }
 
 export function getCamoProgressById(id: string): UnlockedWeaponCamo {

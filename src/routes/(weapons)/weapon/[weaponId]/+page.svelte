@@ -2,10 +2,13 @@
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import {
-	getCamoProgress,
+		categoryOverwrites,
+		getCamoProgress,
 		getCamoProgressById,
 		getCategory,
 		getDefaultMode,
+		getOverwriteCamo,
+		getOverwriteCategoryFromArray,
 		globalMultiplayerCamos,
 		globalWarzoneCamos,
 		globalZombiesCamos,
@@ -13,12 +16,19 @@
 		updateCamoProgress,
 		weaponsList
 	} from '$lib/handler';
-	import type { Camo, CamoProgress, UnlockedWeaponCamo, Weapon } from '$lib/structures';
+	import type {
+		Camo,
+		CamoProgress,
+		CategoryOverwrite,
+		UnlockedWeaponCamo,
+		Weapon
+	} from '$lib/structures';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fly } from 'svelte/transition';
 
 	var currentWeapon: Weapon | undefined;
+	var currentOverwrites: CategoryOverwrite;
 	var globalZMCamos: Camo[];
 	var globalMPCamos: Camo[];
 	var globalWZCamos: Camo[];
@@ -36,7 +46,7 @@
 		let weaponId = $page.params.weaponId;
 		let typId = getDefaultMode().toString();
 
-		typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : typId
+		typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : typId;
 
 		currentProgress = getCamoProgressById(weaponId);
 		progress.subscribe((c) => (currentProgress = getCamoProgress(c, weaponId)));
@@ -45,9 +55,16 @@
 		globalZombiesCamos.subscribe((c) => (globalZMCamos = c));
 		globalMultiplayerCamos.subscribe((c) => (globalMPCamos = c));
 		globalWarzoneCamos.subscribe((c) => (globalWZCamos = c));
+		categoryOverwrites.subscribe(
+			(c) => (currentOverwrites = getOverwriteCategoryFromArray(currentWeapon!.category, c))
+		);
 
 		updateCamos(typId);
 	});
+
+	function applyOverwrites(camo: Camo): Camo {
+		return getOverwriteCamo(camo, currentOverwrites);
+	}
 
 	function pressCamoWithOverwrite(camo: Camo, setDone: boolean) {
 		let index = currentProgress.camo.findIndex((c) => c.id === camo.id);
@@ -119,6 +136,17 @@
 
 		militaryCamos = toUseCamoList.filter((c) => c.category == militaryFilter);
 		masteryCamos = toUseCamoList.filter((c) => c.category == masteryFilter);
+		patchCamos();
+	}
+
+	function patchCamos() {
+		for (let i = 0; i < militaryCamos.length; i++) {
+			militaryCamos[i] = applyOverwrites(militaryCamos[i])
+		}
+		
+		for (let i = 0; i < masteryCamos.length; i++) {
+			masteryCamos[i] = applyOverwrites(masteryCamos[i])
+		}
 	}
 
 	function isCamoDone(camo: Camo): boolean {

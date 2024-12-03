@@ -56,6 +56,30 @@ export interface UserConfig {
     defaultMode: number
 }
 
+export interface CategoryOverwrite {
+    category: string
+    masteryRequiredAmount: number,
+    overwriteCamos: Camo[]
+}
+
+export function parseCategoryOverwrite(value: any) : CategoryOverwrite {
+    return {
+        category: value.category,
+        masteryRequiredAmount: value.masteryRequiredAmount,
+        overwriteCamos: parseCamos(value.overwriteCamos)
+    }
+}
+
+export function parseCategoryOverwrites(values: any): CategoryOverwrite[] {
+    let array: CategoryOverwrite[] = [];
+
+    for (const value of values) {
+        array.push(parseCategoryOverwrite(value));
+    }
+
+    return array;
+}
+
 export function parseUserConfig(value: any): UserConfig {
     return {
         defaultMode: value.defaultMode
