@@ -1287,6 +1287,14 @@
         }
       ]
     },
+	{
+      "id": "maelstrom",
+      "name": "Maelstrom",
+      "image": "https://camo.presti.me/images/weapons/shotgun/maelstrom.jpg",
+      "category": "shotgun",
+      "camos": [
+      ]
+    },
     {
       "id": "pu21",
       "name": "PU-21",
