@@ -1305,14 +1305,13 @@
         }
       ]
     },
-	  {
+    {
       "id": "maelstrom",
       "name": "Maelstrom",
       "release": 1.5,
       "image": "https://camo.presti.me/images/weapons/shotgun/maelstrom.jpg",
       "category": "shotgun",
-      "camos": [
-      ]
+      "camos": []
     },
     {
       "id": "pu21",
@@ -2708,7 +2707,7 @@
       "name": "TEST_WEAPON_NOT_FOR_USE",
       "release": 0,
       "notice": {
-        "zombies":"Criticals are not possible when Pack-A-Punched.",
+        "zombies": "Criticals are not possible when Pack-A-Punched.",
         "multiplayer": "Criticals are not possible when Pack-A-Punched",
         "warzone": "Criticals are not possible when Pack-A-Punched"
       },
