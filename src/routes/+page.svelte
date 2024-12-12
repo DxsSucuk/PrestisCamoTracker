@@ -17,7 +17,7 @@
 	import type { Camo, Category, UserConfig, Weapon, WeaponCategoryMap } from '$lib/structures';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	var categories: Category[];
 	var currentCategory: Category;
@@ -94,10 +94,25 @@
 	}
 
 	function getHighestCamo(weapon: Weapon, typ: string): Camo {
+		return getHighestCamoOrZero(weapon, typ, false)
+	}
+
+	function getHighestCamoOrZero(weapon: Weapon, typ: string, returnZero: boolean): Camo {
 		var toUseCamoListGlobal: Camo[];
 		let militaryFilter;
 		let specialFilter;
 		let masteryFilter;
+
+		let zeroStuff: Camo = {
+			amount: 0,
+			category: "",
+			description: "",
+			display: "",
+			id: "",
+			image: "",
+			position: 0,
+			require: ""
+		}
 
 		if (typ == '0') {
 			toUseCamoListGlobal = get(globalMultiplayerCamos);
@@ -126,13 +141,13 @@
 						c.category.includes(masteryFilter))
 			);
 
-		if (!highestWeaponCamo) return toUseCamoListGlobal[0];
+		if (!highestWeaponCamo) return returnZero ? zeroStuff : toUseCamoListGlobal[0];
 
 		var toUseCamo = highestWeaponCamo.category.includes('special')
 			? weapon.camos.find((c) => c.id == highestWeaponCamo!.id)
 			: toUseCamoListGlobal.find((c) => c.id == highestWeaponCamo!.id);
 
-		return toUseCamo || toUseCamoListGlobal[0];
+		return toUseCamo || (returnZero ? zeroStuff : toUseCamoListGlobal[0]);
 	}
 
 	function changeDefaultMode(mode:number) {
@@ -249,6 +264,13 @@
 									Season {weaponToDisplay.release}
 								</div>
 							</div>
+							{#key defaultGameMode}
+							<div class="absolute bottom-0 left-0 w-full bg-gray-700 rounded-b-full h-2.5"
+									in:fade={{ duration: 200, delay: 250 }}
+									out:fade={{ duration: 200 }}>
+								<div class="{defaultGameMode == 1 ? 'bg-green-500' : defaultGameMode == 2 ? 'bg-red-500' : 'bg-blue-500'} h-2.5 rounded-b-full" style="width: {getHighestCamoOrZero(weaponToDisplay, defaultGameMode.toString(), true).position / 15 * 100}%"></div>
+							</div>
+							{/key}
 							{#if weaponToDisplay.notice !== undefined}
 								<div class="absolute top-4 right-4 flex space-x-2">
 									{#if weaponToDisplay.notice.multiplayer || weaponToDisplay.notice.global}

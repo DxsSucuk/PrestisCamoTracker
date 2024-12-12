@@ -20,7 +20,7 @@ export interface Camo {
     require?: string,
     display: string,
     image: string,
-    amount: bigint,
+    amount: number,
     description: string
 }
 
