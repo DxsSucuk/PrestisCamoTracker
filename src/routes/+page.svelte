@@ -29,7 +29,7 @@
 	var currentConfig: UserConfig;
 	let addTestWeapon: boolean;
 	let updateContentList: string;
-	let progressAsJson: string
+	let progressAsJson: string;
 
 	onMount(async () => {
 		config.subscribe((c) => {
@@ -37,8 +37,8 @@
 			defaultGameMode = c.defaultMode;
 		});
 		progress.subscribe((c) => {
-			progressAsJson = JSONtoDataURL(JSON.stringify(c))
-		})
+			progressAsJson = JSONtoDataURL(JSON.stringify(c));
+		});
 		categoryList.subscribe((c) => (categories = c));
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 		weaponsList.subscribe((c) => (allWeapons = c));
@@ -94,7 +94,7 @@
 	}
 
 	function getHighestCamo(weapon: Weapon, typ: string): Camo {
-		return getHighestCamoOrZero(weapon, typ, false)
+		return getHighestCamoOrZero(weapon, typ, false);
 	}
 
 	function getHighestCamoOrZero(weapon: Weapon, typ: string, returnZero: boolean): Camo {
@@ -105,14 +105,14 @@
 
 		let zeroStuff: Camo = {
 			amount: 0,
-			category: "",
-			description: "",
-			display: "",
-			id: "",
-			image: "",
+			category: '',
+			description: '',
+			display: '',
+			id: '',
+			image: '',
 			position: 0,
-			require: ""
-		}
+			require: ''
+		};
 
 		if (typ == '0') {
 			toUseCamoListGlobal = get(globalMultiplayerCamos);
@@ -150,9 +150,9 @@
 		return toUseCamo || (returnZero ? zeroStuff : toUseCamoListGlobal[0]);
 	}
 
-	function changeDefaultMode(mode:number) {
-		currentConfig.defaultMode = mode
-		config.set(currentConfig)
+	function changeDefaultMode(mode: number) {
+		currentConfig.defaultMode = mode;
+		config.set(currentConfig);
 	}
 </script>
 
@@ -193,13 +193,15 @@
 				<div class="rounded-xl bg-gray-900 p-6 shadow-lg space-y-3">
 					<h2 class="text-2xl text-green-500 font-semibold">Progress</h2>
 					<button
-						class="w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800 disabled" aria-disabled="true"
+						class="w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800 disabled"
+						aria-disabled="true"
 					>
 						Import
 					</button>
 					<a
 						class="button w-auto px-2 py-2 bg-blue-500 text-white text-sm font-medium rounded-md shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-800"
-						href="{progressAsJson}" target="_blank"
+						href={progressAsJson}
+						target="_blank"
 					>
 						Export
 					</a>
@@ -207,17 +209,23 @@
 					<h2 class="text-2xl text-green-500 font-semibold">Default</h2>
 					<div class="flex space-x-2 bg-gray-700 rounded-xl shadow-lg p-4 flex">
 						<span
-							class="{defaultGameMode == 0 ? 'bg-blue-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							class="{defaultGameMode == 0
+								? 'bg-blue-500'
+								: 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
 							role="button"
 							on:click={() => changeDefaultMode(0)}>MP</span
 						>
 						<span
-							class="{defaultGameMode == 1 ? 'bg-green-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							class="{defaultGameMode == 1
+								? 'bg-green-500'
+								: 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
 							role="button"
 							on:click={() => changeDefaultMode(1)}>ZM</span
 						>
 						<span
-							class="{defaultGameMode == 2 ? 'bg-red-500' : 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
+							class="{defaultGameMode == 2
+								? 'bg-red-500'
+								: 'bg-gray-800'} text-white text-sm font-bold px-3 py-1 rounded"
 							role="button"
 							on:click={() => changeDefaultMode(2)}>WZ</span
 						>
@@ -260,16 +268,36 @@
 								{getCategory(weaponToDisplay.category)?.display}
 							</p>
 							<div class="absolute bottom-4 left-4 flex space-x-2">
-								<div class="relative ring-2 ring-yellow-500 flex items-center p-2 justify-center rounded-xl text-white text-sm font-bold">
+								<div
+									class="relative ring-2 ring-yellow-500 flex items-center p-2 justify-center rounded-xl text-white text-sm font-bold"
+								>
 									Season {weaponToDisplay.release}
 								</div>
 							</div>
 							{#key defaultGameMode}
-							<div class="absolute bottom-0 left-0 w-full bg-gray-700 rounded-b-full h-2.5"
+								<div
+									class="absolute bottom-0 left-0 w-full bg-gray-700 rounded-b-full h-2.5"
 									in:fade={{ duration: 200, delay: 250 }}
-									out:fade={{ duration: 200 }}>
-								<div class="{defaultGameMode == 1 ? 'bg-green-500' : defaultGameMode == 2 ? 'bg-red-500' : 'bg-blue-500'} h-2.5 rounded-b-full" style="width: {getHighestCamoOrZero(weaponToDisplay, defaultGameMode.toString(), true).position / 15 * 100}%"></div>
-							</div>
+									out:fade={{ duration: 200 }}
+								>
+									<div
+										class="{defaultGameMode == 1
+											? 'bg-green-500'
+											: defaultGameMode == 2
+												? 'bg-red-500'
+												: 'bg-blue-500'} h-2.5 rounded-b-full text-center leading-none text-xs font-small"
+										style="width: {(getHighestCamoOrZero(
+											weaponToDisplay,
+											defaultGameMode.toString(),
+											true
+										).position /
+											15) *
+											100}%"
+									>
+										{getHighestCamoOrZero(weaponToDisplay, defaultGameMode.toString(), true)
+											.position}/15
+									</div>
+								</div>
 							{/key}
 							{#if weaponToDisplay.notice !== undefined}
 								<div class="absolute top-4 right-4 flex space-x-2">
