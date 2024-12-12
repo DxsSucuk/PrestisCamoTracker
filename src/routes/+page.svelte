@@ -244,6 +244,11 @@
 							<p class="text-base text-gray-400">
 								{getCategory(weaponToDisplay.category)?.display}
 							</p>
+							<div class="absolute bottom-4 left-4 flex space-x-2">
+								<div class="relative ring-2 ring-yellow-500 flex items-center p-2 justify-center rounded-xl text-white text-sm font-bold">
+									Season {weaponToDisplay.release}
+								</div>
+							</div>
 							{#if weaponToDisplay.notice !== undefined}
 								<div class="absolute top-4 right-4 flex space-x-2">
 									{#if weaponToDisplay.notice.multiplayer || weaponToDisplay.notice.global}

@@ -1,6 +1,7 @@
 export interface Weapon {
     id: string,
     name: string,
+    release: number,
     notice?: Notice
     image: string,
     category: string,
@@ -119,6 +120,7 @@ export function parseWeapon(value: any): Weapon {
     return {
         id: value.id,
         name: value.name,
+        release: value.release,
         notice: value.notice ? parseNotice(value.notice) : undefined,
         image: (value.image as string)/*.replace("https://camo.presti.me", "http://localhost:5173")*/,
         category: value.category,

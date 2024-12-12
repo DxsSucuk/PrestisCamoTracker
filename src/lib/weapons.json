@@ -135,6 +135,7 @@
     {
       "id": "xm4",
       "name": "XM4",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/xm4.jpg",
       "category": "assault",
       "camos": [
@@ -203,6 +204,7 @@
     {
       "id": "ak74",
       "name": "AK-74",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/ak_74.jpg",
       "category": "assault",
       "camos": [
@@ -271,6 +273,7 @@
     {
       "id": "ames",
       "name": "AMES 85",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/ames_85.jpg",
       "category": "assault",
       "camos": [
@@ -339,6 +342,7 @@
     {
       "id": "gpr",
       "name": "GPR 91",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/gpr_91.jpg",
       "category": "assault",
       "camos": [
@@ -407,6 +411,7 @@
     {
       "id": "model_l",
       "name": "Model L",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/model_l.jpg",
       "category": "assault",
       "camos": [
@@ -475,6 +480,7 @@
     {
       "id": "goblin",
       "name": "Goblin MK2",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/goblin_mk2.jpg",
       "category": "assault",
       "camos": [
@@ -543,6 +549,7 @@
     {
       "id": "as_val",
       "name": "AS VAL",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/assault/as_val.jpg",
       "category": "assault",
       "camos": [
@@ -611,6 +618,7 @@
     {
       "id": "krig_c",
       "name": "Krig C",
+      "release": 1,
       "image": "https://camo.presti.me/images/weapons/assault/krig_c.jpg",
       "category": "assault",
       "camos": [
@@ -679,6 +687,7 @@
     {
       "id": "c9",
       "name": "C9",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/c9.jpg",
       "category": "smg",
       "camos": [
@@ -747,6 +756,7 @@
     {
       "id": "ksv",
       "name": "KSV",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/ksv.jpg",
       "category": "smg",
       "camos": [
@@ -815,6 +825,7 @@
     {
       "id": "tanto",
       "name": "Tanto .22",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/tanto.jpg",
       "category": "smg",
       "camos": [
@@ -883,6 +894,7 @@
     {
       "id": "pp",
       "name": "PP-919",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/pp.jpg",
       "category": "smg",
       "camos": [
@@ -951,6 +963,7 @@
     {
       "id": "jackal",
       "name": "Jackal PDW",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/jackal.jpg",
       "category": "smg",
       "camos": [
@@ -1019,6 +1032,7 @@
     {
       "id": "kompakt",
       "name": "Kompakt 92",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/smg/kompakt.jpg",
       "category": "smg",
       "camos": [
@@ -1087,6 +1101,7 @@
     {
       "id": "saug",
       "name": "Saug",
+      "release": 1,
       "image": "https://camo.presti.me/images/weapons/smg/saug.jpg",
       "category": "smg",
       "camos": [
@@ -1155,6 +1170,7 @@
     {
       "id": "marine",
       "name": "Marine SP",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/shotgun/marine.jpg",
       "category": "shotgun",
       "camos": [
@@ -1223,6 +1239,7 @@
     {
       "id": "asg",
       "name": "ASG-89",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/shotgun/asg.jpg",
       "category": "shotgun",
       "camos": [
@@ -1288,9 +1305,10 @@
         }
       ]
     },
-	{
+	  {
       "id": "maelstrom",
       "name": "Maelstrom",
+      "release": 1.5,
       "image": "https://camo.presti.me/images/weapons/shotgun/maelstrom.jpg",
       "category": "shotgun",
       "camos": [
@@ -1299,6 +1317,7 @@
     {
       "id": "pu21",
       "name": "PU-21",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/lmg/pu21.jpg",
       "category": "lmg",
       "camos": [
@@ -1367,6 +1386,7 @@
     {
       "id": "gpmg",
       "name": "GPMG-7",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/lmg/gpmg.jpg",
       "category": "lmg",
       "camos": [
@@ -1435,6 +1455,7 @@
     {
       "id": "xmg",
       "name": "XMG",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/lmg/xmg.jpg",
       "category": "lmg",
       "camos": [
@@ -1503,6 +1524,7 @@
     {
       "id": "swat",
       "name": "SWAT 5.56",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/marksman/swat.jpg",
       "category": "marksman",
       "camos": [
@@ -1571,6 +1593,7 @@
     {
       "id": "tsarkov",
       "name": "Tsarkov 7.62",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/marksman/tsarkov.jpg",
       "category": "marksman",
       "camos": [
@@ -1639,6 +1662,7 @@
     {
       "id": "aek_973",
       "name": "AEK-973",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/marksman/aek_973.jpg",
       "category": "marksman",
       "camos": [
@@ -1707,6 +1731,7 @@
     {
       "id": "dm_10",
       "name": "DM-10",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/marksman/dm_10.jpg",
       "category": "marksman",
       "camos": [
@@ -1775,6 +1800,7 @@
     {
       "id": "l3a1",
       "name": "LW3A1 FROSTLINE",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/sniper/l3a1.jpg",
       "category": "sniper",
       "camos": [
@@ -1843,6 +1869,7 @@
     {
       "id": "svd",
       "name": "SVD",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/sniper/svd.jpg",
       "category": "sniper",
       "camos": [
@@ -1911,6 +1938,7 @@
     {
       "id": "lr_7",
       "name": "LR 7.62",
+      "release": 0,
       "notice": {
         "zombies": "Criticals are not possible when Pack-A-Punched."
       },
@@ -1982,6 +2010,7 @@
     {
       "id": "9mm_pm",
       "name": "9mm PM",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/pistol/9mm_pm.jpg",
       "category": "pistol",
       "camos": [
@@ -2050,6 +2079,7 @@
     {
       "id": "grek",
       "name": "Grekhova",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/pistol/grek.jpg",
       "category": "pistol",
       "camos": [
@@ -2118,6 +2148,7 @@
     {
       "id": "gs45",
       "name": "GS45",
+      "release": 0,
       "notice": {
         "zombies": "Criticals are not possible when Pack-A-Punched."
       },
@@ -2189,6 +2220,7 @@
     {
       "id": "stryder",
       "name": "Stryder .22",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/pistol/stryder.jpg",
       "category": "pistol",
       "camos": [
@@ -2257,6 +2289,7 @@
     {
       "id": "sigma",
       "name": "CIGMA 2B",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/launcher/sigma.jpg",
       "category": "launcher",
       "camos": [
@@ -2325,6 +2358,7 @@
     {
       "id": "he",
       "name": "HE-1",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/launcher/he.jpg",
       "category": "launcher",
       "camos": [
@@ -2393,6 +2427,7 @@
     {
       "id": "sirin",
       "name": "Sirin 9mm",
+      "release": 1,
       "notice": {
         "global": "Can be equipped without store bundle or hit-list goal."
       },
@@ -2464,6 +2499,7 @@
     {
       "id": "knife",
       "name": "Knife",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/melee/knife.jpg",
       "category": "melee",
       "camos": [
@@ -2532,6 +2568,7 @@
     {
       "id": "bat",
       "name": "Baseball Bat",
+      "release": 0,
       "image": "https://camo.presti.me/images/weapons/melee/bat.jpg",
       "category": "melee",
       "camos": [
@@ -2600,6 +2637,7 @@
     {
       "id": "drill",
       "name": "Power Drill",
+      "release": 1,
       "image": "https://camo.presti.me/images/weapons/melee/drill.jpg",
       "category": "melee",
       "camos": [
@@ -2668,6 +2706,7 @@
     {
       "id": "test",
       "name": "TEST_WEAPON_NOT_FOR_USE",
+      "release": 0,
       "notice": {
         "zombies":"Criticals are not possible when Pack-A-Punched.",
         "multiplayer": "Criticals are not possible when Pack-A-Punched",
