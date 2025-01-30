@@ -1,5 +1,5 @@
 # Prestis Camo Tracker
-A WIP camo tracker which will allow you to check your overall progress to getting camos like Nebula and Dark Matter.
+A WIP camo tracker that will allow you to check your overall progress to getting camos like Nebula and Dark Matter.
 
 ## Features
 - Tracking of all Multiplayer Camos
@@ -20,3 +20,11 @@ A WIP camo tracker which will allow you to check your overall progress to gettin
 - Overhaul of the Overview control elements.
   - Improve search filters
   - Improve notices
+- Add missing Season 1.5 and 2.0 weapons.
+  - Missing Maelstorm Camos
+  - Add AMR Mod 4 (1.5)
+  - Add Cleaver (1.5)
+  - Add PPSh (2.0)
+  - Add Cypher (2.0)
+  - Add Feng (2.0)
+  - Add TR2 (2.0?)
