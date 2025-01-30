@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import {
 		categoryOverwrites,
+		categoryWeaponMap,
 		getCamoProgress,
 		getCamoProgressById,
 		getCategory,
@@ -20,9 +21,13 @@
 		Camo,
 		CamoProgress,
 		CategoryOverwrite,
+		LocalProgress,
 		UnlockedWeaponCamo,
-		Weapon
+		Weapon,
+		WeaponCategoryMap
+
 	} from '$lib/structures';
+	import { split } from 'postcss/lib/list';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fly } from 'svelte/transition';
@@ -35,7 +40,10 @@
 
 	var militaryCamos: Camo[];
 	var masteryCamos: Camo[];
+	
+	var weaponCategoryMaps: WeaponCategoryMap[];
 
+	var overallProgress: LocalProgress;
 	var currentProgress: UnlockedWeaponCamo;
 
 	var militaryFilter: string;
@@ -49,7 +57,11 @@
 		typId = $page.url.searchParams.has('typ') ? $page.url.searchParams.get('typ')! : typId;
 
 		currentProgress = getCamoProgressById(weaponId);
-		progress.subscribe((c) => (currentProgress = getCamoProgress(c, weaponId)));
+		progress.subscribe((c) => {
+			currentProgress = getCamoProgress(c, weaponId)
+			overallProgress = c
+		});
+		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 
 		currentWeapon = get(weaponsList).find((c) => c.id == weaponId);
 		globalZombiesCamos.subscribe((c) => (globalZMCamos = c));
@@ -211,6 +223,12 @@
 				pressCamoWithOverwrite(c, false);
 			});
 		}
+	}
+
+	function getCamoUnlocksInCategory(camo: string): number {
+		let weaponMap: WeaponCategoryMap | undefined = weaponCategoryMaps.find(c => c.category == currentWeapon?.category)
+		if (weaponMap === undefined) return 0;
+		return overallProgress.weapons.filter(c => weaponMap.weapons.findIndex(z => z === c.weapon) > -1 && c.camo.filter(x => x.id == camo && x.done)).length
 	}
 </script>
 
@@ -520,6 +538,19 @@
 											class="w-full h-full object-cover rounded-xl"
 										/>
 									</div>
+									{#if camoEntry.require && camoEntry.require?.includes('category')}
+									<div class="bottom-0 left-0 w-full bg-gray-700 rounded-b-full h-2.5">
+										<div
+											class="{specialFilter.includes('zm')
+												? 'bg-green-500'
+												: specialFilter.includes('wz')
+													? 'bg-red-500'
+													: 'bg-blue-500'} h-2.5 rounded-b-full text-center leading-none text-xs font-small"
+											style="width: {getCamoUnlocksInCategory(camoEntry.require?.replace('category', '')) / currentOverwrites.masteryRequiredAmount * 100}%">
+											{getCamoUnlocksInCategory(camoEntry.require?.replace('category', '')) + '/' + currentOverwrites.masteryRequiredAmount}
+										</div>
+									</div>
+									{/if}
 								</div>
 							{/each}
 						</div>
