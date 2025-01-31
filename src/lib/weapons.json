@@ -3114,7 +3114,7 @@
         "id": "gold_tiger",
         "position": 12,
         "category": "mastery_wz",
-        "require": "specials_mp",
+        "require": "specials_wz",
         "display": "Gold Tiger",
         "image": "https://camo.presti.me/images/camos/mastery/wz/gold-tiger.webp",
         "amount": 5,
