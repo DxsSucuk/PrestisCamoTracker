@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
+	import '@fortawesome/fontawesome-free/css/all.min.css'
 	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 	import { fly, scale } from 'svelte/transition';
 
@@ -47,20 +48,20 @@
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a
-					class="btn btn-sm variant-ghost-surface"
-					href="https://memerinoto.bsky.social"
+					class="btn btn-l variant-ghost-surface"
+					href="https://bsky.app/profile/presti.onlywiff.com"
 					target="_blank"
 					rel="noreferrer"
 				>
-					BSky
+					<i class="fa-brands fa-bluesky"></i>
 				</a>
 				<a
-					class="btn btn-sm variant-ghost-surface"
+					class="btn btn-l variant-ghost-surface"
 					href="https://github.com/DxsSucuk/PrestisCamoTracker"
 					target="_blank"
 					rel="noreferrer"
 				>
-					GitHub
+					<i class="fa-brands fa-github"></i>
 				</a>
 			</svelte:fragment>
 		</AppBar>
