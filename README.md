@@ -2,20 +2,26 @@
 A WIP camo tracker that will allow you to check your overall progress to getting camos like Nebula and Dark Matter.
 
 ## Features
-- Tracking of all Multiplayer Camos
-- Tracking of all Zombie Camos
-- Tracking of all Warzone Camos
-- Information users should keep in mind for specific Weapons (Notice)
-- Changeable default Gamemode (Open ZM Camos, Open MP Camos or Warzone first)
+- Tracking
+  - All Multiplayer Camos
+  - All Zombie Camos
+  - All Warzone Camos
+- Helpful Information
+  - Information about specific weapons
+    - Example, do not Pack-A-Punch Weapon X, it causes headshots to no longer be counted.
+- Changeable default Gamemode
+  - Open ZM, MP or WZ Camos first
 - Export
-  - To JSON
+  - To Json
+- Progress Overview for Mastery
+  - See overall progress for X Mastery camo on the weapon
 
 ## Planned
 - Importer
   - from other services (FPSAlpha)
   - from own service
 - Progress Overview for Mastery
-  - See overall progress for X Mastery camo in the category (https://github.com/DxsSucuk/PrestisCamoTracker/pull/2)
+  - See overall progress for X Mastery camo in the category
   - See overall progress for X Mastery camo on the weapon
 - Overhaul of the Overview control elements.
   - Improve search filters
