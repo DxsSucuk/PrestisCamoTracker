@@ -146,7 +146,7 @@ export function parseCamo(value: any): Camo {
         require: value.require,
         display: value.display,
         image: (value.image as string)/*.replace("https://camo.presti.me", "http://localhost:5173")*/,
-        amount: value.amount ? BigInt(value.amount) : BigInt(0),
+        amount: value.amount ? Number(value.amount) : Number(0),
         description: value.description
     };
 }
