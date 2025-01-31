@@ -25,9 +25,7 @@
 		UnlockedWeaponCamo,
 		Weapon,
 		WeaponCategoryMap
-
 	} from '$lib/structures';
-	import { split } from 'postcss/lib/list';
 	import { onMount } from 'svelte';
 	import { get } from 'svelte/store';
 	import { fly } from 'svelte/transition';
@@ -40,7 +38,7 @@
 
 	var militaryCamos: Camo[];
 	var masteryCamos: Camo[];
-	
+
 	var weaponCategoryMaps: WeaponCategoryMap[];
 
 	var overallProgress: LocalProgress;
@@ -58,8 +56,8 @@
 
 		currentProgress = getCamoProgressById(weaponId);
 		progress.subscribe((c) => {
-			currentProgress = getCamoProgress(c, weaponId)
-			overallProgress = c
+			currentProgress = getCamoProgress(c, weaponId);
+			overallProgress = c;
 		});
 		categoryWeaponMap.subscribe((c) => (weaponCategoryMaps = c));
 
@@ -126,6 +124,18 @@
 		else document.getElementById(camo.id)?.classList.remove('ring-2', 'ring-green-500');
 	}
 
+	function getNeededAmount(require: string) : number {
+		if (require.includes("specials")) {
+			return 2;
+		}
+
+		if (require.includes("category_")) {
+			return currentOverwrites.masteryRequiredAmount;
+		}
+
+		return 33;
+	}
+
 	function updateCamos(typ: string) {
 		var toUseCamoList: Camo[];
 
@@ -153,11 +163,11 @@
 
 	function patchCamos() {
 		for (let i = 0; i < militaryCamos.length; i++) {
-			militaryCamos[i] = applyOverwrites(militaryCamos[i])
+			militaryCamos[i] = applyOverwrites(militaryCamos[i]);
 		}
-		
+
 		for (let i = 0; i < masteryCamos.length; i++) {
-			masteryCamos[i] = applyOverwrites(masteryCamos[i])
+			masteryCamos[i] = applyOverwrites(masteryCamos[i]);
 		}
 	}
 
@@ -225,10 +235,47 @@
 		}
 	}
 
+	function getCamoUnlocksInSpecific(camo: string) : number {
+		if (camo.includes("special")) {
+			return getCamoUnlocksInWeapon(camo)
+		}
+
+		if (camo.includes('all_')) {
+			return getCamoUnlocksInAll(camo.replace('all_', ''));
+		}
+
+		return getCamoUnlocksInCategory(camo);
+	}
+
 	function getCamoUnlocksInCategory(camo: string): number {
-		let weaponMap: WeaponCategoryMap | undefined = weaponCategoryMaps.find(c => c.category == currentWeapon?.category)
+		let weaponMap: WeaponCategoryMap | undefined = weaponCategoryMaps.find(
+			(c) => c.category == currentWeapon?.category
+		);
 		if (weaponMap === undefined) return 0;
-		return overallProgress.weapons.filter(c => weaponMap.weapons.findIndex(z => z === c.weapon) > -1 && c.camo.filter(x => x.id == camo && x.done)).length
+		return overallProgress.weapons.filter(
+			(c) =>
+				weaponMap.weapons.findIndex((z) => z === c.weapon) > -1
+		)
+		.flatMap(c => c.camo)
+		.filter((x) => x.id == camo && x.done)
+		.length;
+	}
+
+	function getCamoUnlocksInWeapon(category: string): number {
+		return overallProgress.weapons.filter(
+			(c) =>
+				c.weapon.includes(currentWeapon ? currentWeapon.id : '')
+		)
+		.flatMap(c => c.camo)
+		.filter((x) => x.category == category && x.done)
+		.length;
+	}
+
+	function getCamoUnlocksInAll(camo: string): number {
+		return overallProgress.weapons
+		.flatMap(c => c.camo)
+		.filter((x) => x.id == camo && x.done)
+		.length;
 	}
 </script>
 
@@ -513,7 +560,7 @@
 							{#each masteryCamos as camoEntry}
 								<div
 									id={camoEntry.id}
-									class="bg-gray-800 rounded-xl shadow-lg p-6 flex items-center {isCamoDone(
+									class="bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center {isCamoDone(
 										camoEntry
 									)
 										? 'ring-2 ring-green-500'
@@ -523,33 +570,45 @@
 										pressCamo(camoEntry);
 									}}
 								>
-									<!-- Text Content -->
-									<div class="flex-1">
-										<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
-										<p class="text-base text-gray-400 mt-2">
-											{camoEntry.description.replaceAll('%weapon%', currentWeapon.name)}
-										</p>
-									</div>
-									<!-- Image Area -->
-									<div class="ml-4 w-24 h-24 bg-gray-700 rounded-xl flex-shrink-0">
-										<img
-											src={camoEntry.image}
-											alt="{camoEntry.id} pattern"
-											class="w-full h-full object-cover rounded-xl"
-										/>
-									</div>
-									{#if camoEntry.require && camoEntry.require?.includes('category')}
-									<div class="bottom-0 left-0 w-full bg-gray-700 rounded-b-full h-2.5">
-										<div
-											class="{specialFilter.includes('zm')
-												? 'bg-green-500'
-												: specialFilter.includes('wz')
-													? 'bg-red-500'
-													: 'bg-blue-500'} h-2.5 rounded-b-full text-center leading-none text-xs font-small"
-											style="width: {getCamoUnlocksInCategory(camoEntry.require?.replace('category', '')) / currentOverwrites.masteryRequiredAmount * 100}%">
-											{getCamoUnlocksInCategory(camoEntry.require?.replace('category', '')) + '/' + currentOverwrites.masteryRequiredAmount}
+									<div class="flex flex-row">
+										<!-- Text Content -->
+										<div class="flex-1">
+											<h4 class="text-lg font-semibold">{camoEntry.display}</h4>
+											<p class="text-base text-gray-400 mt-2">
+												{camoEntry.description.replaceAll('%weapon%', currentWeapon.name)}
+											</p>
+										</div>
+
+										<!-- Image Area -->
+										<div class="ml-4 w-24 h-24 bg-gray-700 rounded-xl flex-shrink-0">
+											<img
+												src={camoEntry.image}
+												alt="{camoEntry.id} pattern"
+												class="w-full h-full object-cover rounded-xl"
+											/>
 										</div>
 									</div>
+									{#if camoEntry.require && (camoEntry.require?.includes('category_') || camoEntry.require?.includes('specials_') || camoEntry.require?.includes('all_'))}
+										{#key currentProgress}
+										<div class="flex-row w-full mt-auto bg-gray-700 rounded-b-full h-2.5">
+											<div
+												class="{specialFilter.includes('zm')
+													? 'bg-green-500'
+													: specialFilter.includes('wz')
+														? 'bg-red-500'
+														: 'bg-blue-500'} h-2.5 rounded-b-full text-center leading-none text-xs font-small"
+												style="width: {(getCamoUnlocksInSpecific(
+													camoEntry.require?.replace('category_', '').replace('specials_', 'special_')
+												) /
+													getNeededAmount(camoEntry.require)) *
+													100}%"
+											>
+												{getCamoUnlocksInSpecific(camoEntry.require?.replace('category_', '').replace('specials_', 'special_')) +
+													'/' +
+													getNeededAmount(camoEntry.require)}
+											</div>
+										</div>
+										{/key}
 									{/if}
 								</div>
 							{/each}
@@ -558,7 +617,7 @@
 				</div>
 			{/key}
 		{:else}
-			<p>Weapon Id invalid.</p>
+			<p>Still loading or Id invalid.</p>
 		{/if}
 	</div>
 </div>
