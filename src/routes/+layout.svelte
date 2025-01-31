@@ -72,6 +72,9 @@
 			<slot />
 		</div>
 	{/key}
+	<svelte:fragment slot="pageFooter">
+		<p class="text-base text-gray-400 text-center p-6">Call of Duty® is a registered trademark of Activision. This site is not affiliated with Activision.</p>
+	</svelte:fragment>
 	<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 	<script>
 	   kofiWidgetOverlay.draw('presti', {
