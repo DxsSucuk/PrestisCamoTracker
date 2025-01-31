@@ -22,7 +22,6 @@ A WIP camo tracker that will allow you to check your overall progress to getting
   - from own service
 - Progress Overview for Mastery
   - See overall progress for X Mastery camo in the category
-  - See overall progress for X Mastery camo on the weapon
 - Overhaul of the Overview control elements.
   - Improve search filters
   - Improve notices
